@@ -47,13 +47,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	scorehand
 
-} {} {}} {C:/School/CPEN 311/Lab-1/reg4.sv} {1 {vlog -work work -sv -stats=none {C:\School\CPEN 311\Lab-1\reg4.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module reg4
-
-Top level modules:
-	reg4
-
 } {} {}} {C:/School/CPEN 311/Lab-1/Lab-1/task5/card7seg.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/Lab-1/Lab-1/task5/card7seg.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module card7seg

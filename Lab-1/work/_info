@@ -10,7 +10,7 @@ cModel Technology
 dC:/School/CPEN 311/Lab 1
 vcard7seg
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z1 !s110 1695002008
+Z1 !s110 1695089510
 !i10b 1
 !s100 iPc<0n?3enC_n3z?Ti:C11
 IgPLk@6KbHEMofWL[m_>721
@@ -26,7 +26,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1695002008.000000
+Z5 !s108 1695089510.000000
 !s107 C:/School/CPEN 311/Lab-1/Lab-1/task5/card7seg.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/Lab-1/Lab-1/task5/card7seg.sv|
 !i113 1
@@ -82,25 +82,25 @@ R6
 R7
 vreg4
 R0
-Z9 !s110 1695002009
+Z9 !s110 1695089511
 !i10b 1
 !s100 PTY_kgXIN<edKUQE[?M@61
-I:SG2Xz;CnYii1W1F@IIJn3
+IfRVKY[2m;Dl;dE1FD]J0P1
 R2
 !s105 reg4_sv_unit
 S1
 R3
 w1694999596
-8C:\School\CPEN 311\Lab-1\reg4.sv
-FC:\School\CPEN 311\Lab-1\reg4.sv
+8C:/School/CPEN 311/Lab-1/Lab-1/task5/reg4.sv
+FC:/School/CPEN 311/Lab-1/Lab-1/task5/reg4.sv
 L0 1
 R4
 r1
 !s85 0
 31
-Z10 !s108 1695002009.000000
-!s107 C:\School\CPEN 311\Lab-1\reg4.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\School\CPEN 311\Lab-1\reg4.sv|
+Z10 !s108 1695089511.000000
+!s107 C:/School/CPEN 311/Lab-1/Lab-1/task5/reg4.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/Lab-1/Lab-1/task5/reg4.sv|
 !i113 1
 R6
 R7
@@ -154,7 +154,7 @@ R6
 R7
 vtask5
 R0
-R1
+R9
 !i10b 1
 !s100 C]D5^WRA7B69SoQSQG^VG2
 I2LmmNoKk5J<0B5Ajg2D3`3
@@ -170,7 +170,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/School/CPEN 311/Lab-1/Lab-1/task5/task5.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/Lab-1/Lab-1/task5/task5.sv|
 !i113 1
@@ -178,7 +178,7 @@ R6
 R7
 vtb_card7seg
 R0
-R1
+Z11 !s110 1695089509
 !i10b 1
 !s100 n?X8^Mze>LE[7>>Y_TLge3
 IP]K8`95b;ln?LHSSgKKPO3
@@ -194,7 +194,7 @@ R4
 r1
 !s85 0
 31
-R5
+Z12 !s108 1695089509.000000
 !s107 C:/School/CPEN 311/Lab-1/Lab-1/task1/tb_card7seg.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/Lab-1/Lab-1/task1/tb_card7seg.sv|
 !i113 1
@@ -202,7 +202,7 @@ R6
 R7
 vtb_datapath
 R0
-R1
+R9
 !i10b 1
 !s100 >hC:dE0oZeLhTElQU3mSQ1
 IRXLlzO9OCK22?f<9;U5Uc1
@@ -218,7 +218,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_datapath.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_datapath.sv|
 !i113 1
@@ -226,7 +226,7 @@ R6
 R7
 vtb_scorehand
 R0
-R1
+R9
 !i10b 1
 !s100 HF[ZniSjFfQ4YZ`aH;L[B1
 I?m0E4IJ3X`O1NM5bN9Hi81
@@ -242,7 +242,7 @@ R4
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_scorehand.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_scorehand.sv|
 !i113 1
@@ -274,7 +274,7 @@ R6
 R7
 vtb_task5
 R0
-R1
+R11
 !i10b 1
 !s100 Gk@[fa:E@Jk]Z^a9=ImOC2
 IczP4YzBD?nJEncPTjk]WU0
@@ -290,7 +290,7 @@ R4
 r1
 !s85 0
 31
-R5
+R12
 !s107 C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_task5.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_task5.sv|
 !i113 1
