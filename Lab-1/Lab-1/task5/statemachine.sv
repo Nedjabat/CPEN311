@@ -4,7 +4,7 @@ module statemachine(input slow_clock, input resetb,
                     output logic load_dcard1, output logic load_dcard2, output logic load_dcard3,
                     output logic player_win_light, output logic dealer_win_light);
 
-int state, S0, S1, S2, S3, S4, S5, S6, S7, gameover, next_state;
+int state, S0, S1, S2, S3, S4, S5, S6, S7, SStart, gameover, next_state;
 
 always_comb 
 begin : next_state_logic
@@ -31,6 +31,16 @@ end
 always_comb 
 begin : changes_within_State
     case (state)
+        /*SStart: //Start
+            load_pcard1 = 0;
+            load_pcard2 = 0;
+            load_pcard3 = 0;
+            load_dcard1 = 0;
+            load_dcard2 = 0;
+            load_dcard3 = 0;
+            player_win_light = 0;
+            dealer_win_light = 0;
+            */
         S0:  //P card 1
         begin                   
             load_pcard1 = 1;
@@ -143,14 +153,13 @@ begin : changes_within_State
                 end
             end
         default: player_win_light = 1; 
-
     endcase
 end
 
 always_ff @(negedge resetb, posedge slow_clock ) 
 begin
     if(~resetb)
-		state <= S0;
+		state <= SStart;
 	else
 		state <= next_state;
 end
