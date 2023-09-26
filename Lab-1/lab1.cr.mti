@@ -1,37 +1,16 @@
-{C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_task5.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_task5.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module tb_task5
-
-Top level modules:
-	tb_task5
-
-} {} {}} {C:/School/CPEN 311/Lab-1/Lab-1/task5/datapath.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/Lab-1/Lab-1/task5/datapath.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module datapath
-
-Top level modules:
-	datapath
-
-} {} {}} {C:/School/CPEN 311/Lab-1/Lab-1/task5/dealcard.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/Lab-1/Lab-1/task5/dealcard.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module dealcard
-
-Top level modules:
-	dealcard
-
-} {} {}} {C:/School/CPEN 311/Lab-1/Lab-1/task1/tb_card7seg.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/Lab-1/Lab-1/task1/tb_card7seg.sv}
+{C:/School/CPEN 311/Lab-1/Lab-1/task1/tb_card7seg.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/Lab-1/Lab-1/task1/tb_card7seg.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module tb_card7seg
 
 Top level modules:
 	tb_card7seg
 
-} {} {}} {C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_statemachine.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_statemachine.sv}
+} {} {}} {C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_task5.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_task5.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module tb_statemachine
+-- Compiling module tb_task5
 
 Top level modules:
-	tb_statemachine
+	tb_task5
 
 } {} {}} {C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_reg4.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_reg4.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -40,19 +19,26 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	tb_reg4
 
-} {} {}} {C:/School/CPEN 311/Lab-1/Lab-1/task5/card7seg.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/Lab-1/Lab-1/task5/card7seg.sv}
+} {} {}} {C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_statemachine.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_statemachine.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module card7seg
+-- Compiling module tb_statemachine
 
 Top level modules:
-	card7seg
+	tb_statemachine
 
-} {} {}} {C:/School/CPEN 311/Lab-1/Lab-1/task5/task5.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/Lab-1/Lab-1/task5/task5.sv}
+} {} {}} {C:/School/CPEN 311/Lab-1/Lab-1/task5/datapath.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/Lab-1/Lab-1/task5/datapath.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module task5
+-- Compiling module datapath
 
 Top level modules:
-	task5
+	datapath
+
+} {} {}} {C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_datapath.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_datapath.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb_datapath
+
+Top level modules:
+	tb_datapath
 
 } {} {}} {C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_scorehand.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_scorehand.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -61,11 +47,18 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	tb_scorehand
 
-} {} {}} {C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_datapath.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/Lab-1/Lab-1/task5/tb_datapath.sv}
+} {} {}} {C:/School/CPEN 311/Lab-1/Lab-1/task5/task5.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/Lab-1/Lab-1/task5/task5.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module tb_datapath
+-- Compiling module task5
 
 Top level modules:
-	tb_datapath
+	task5
+
+} {} {}} {C:/School/CPEN 311/Lab-1/Lab-1/task5/dealcard.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/Lab-1/Lab-1/task5/dealcard.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module dealcard
+
+Top level modules:
+	dealcard
 
 } {} {}}
