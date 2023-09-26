@@ -33,7 +33,7 @@ always_comb begin
             a_load_dcard3 = 0;
             a_player_win_light = 0;
             a_dealer_win_light = 0;
-		gameover = 0;
+		    gameover = 0;
         end
         S1: //D card 1
         begin
