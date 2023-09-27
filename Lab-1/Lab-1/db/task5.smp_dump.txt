@@ -1,0 +1,13 @@
+
+State Machine - |task5|statemachine:sm|state
+Name state.sleep state.S7 state.S6 state.S5 state.S4B state.S4A state.S3 state.S2 state.S1 state.S0 
+state.S0 0 0 0 0 0 0 0 0 0 0 
+state.S1 0 0 0 0 0 0 0 0 1 1 
+state.S2 0 0 0 0 0 0 0 1 0 1 
+state.S3 0 0 0 0 0 0 1 0 0 1 
+state.S4A 0 0 0 0 0 1 0 0 0 1 
+state.S4B 0 0 0 0 1 0 0 0 0 1 
+state.S5 0 0 0 1 0 0 0 0 0 1 
+state.S6 0 0 1 0 0 0 0 0 0 1 
+state.S7 0 1 0 0 0 0 0 0 0 1 
+state.sleep 1 0 0 0 0 0 0 0 0 1 
