@@ -170,5 +170,5 @@ endmodule
 // Retrieval info: GEN_FILE: TYPE_NORMAL s_mem.cmp FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL s_mem.bsf FALSE
 // Retrieval info: GEN_FILE: TYPE_NORMAL s_mem_inst.v FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL s_mem_bb.v TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL s_mem_bb.v FALSE
 // Retrieval info: LIB_FILE: altera_mf

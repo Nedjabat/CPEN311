@@ -36,7 +36,7 @@ initial begin
 	en = 1;
 	rst_n = 1;
 
-	#10;
+	#5;
 
 	en = 0;
 	

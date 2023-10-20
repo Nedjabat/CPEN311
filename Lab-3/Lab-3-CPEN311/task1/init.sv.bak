@@ -38,7 +38,7 @@ begin
 	casez(state) 
 		9'b0: next_state = 9'd0;
 		9'd256: next_state = 9'd0;
-		9'b?????????: next_state = state + 9'b1; 
+		9'b?????????: next_state = state + 1; 
 		default: next_state = 9'd0;
 
 	endcase
@@ -58,8 +58,8 @@ begin
 		end
 		9'b?????????:begin
 			wren = 1;
-			addr = state[7:0] - 8'b1;
-			wrdata = state[7:0] - 8'b1;
+			addr = state[7:0] - 1;
+			wrdata = state[7:0] - 1;
 		end
 	endcase
 
