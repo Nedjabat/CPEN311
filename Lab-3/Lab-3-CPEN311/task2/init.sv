@@ -1,0 +1,71 @@
+`timescale 1ps / 1ps
+
+module init(input logic clk, input logic rst_n,
+            input logic en, output logic rdy,
+            output logic [7:0] addr, output logic [7:0] wrdata, output logic wren);
+
+reg [8:0] state, next_state;
+
+always_ff @(posedge clk)
+begin
+
+	if(rst_n == 0)begin
+
+		rdy <= 1;
+	
+	end
+
+	else if (en == 1) begin
+
+		state <= 9'd1;
+		rdy <= 0;
+	
+	end
+
+	else begin
+
+		state <= next_state;
+
+	end
+
+end
+
+
+always_comb
+
+begin
+
+	casez(state) 
+		9'b0: next_state = 9'd0;
+		9'd256: next_state = 9'd0;
+		9'b?????????: next_state = state + 9'b1; 
+		default: next_state = 9'd0;
+
+	endcase
+
+
+end
+
+always_comb 
+
+begin
+
+	casez(state)
+		9'b0: begin
+			wren = 0;
+			addr = 0;
+			wrdata = 0;
+		end
+		9'b?????????:begin
+			wren = 1;
+			addr = state[7:0] - 8'b1;
+			wrdata = state[7:0] - 8'b1;
+		end
+	endcase
+
+end
+
+
+
+
+endmodule: init
