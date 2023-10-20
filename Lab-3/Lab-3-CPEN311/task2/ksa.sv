@@ -7,9 +7,10 @@ module ksa(input logic clk, input logic rst_n,
 
 enum reg [3:0] {state_rest, state_ready, state_readi, state_calculatej, state_readj, state_begin, state_writei, state_writej} state, next_state;
 
-reg [7:0] i_data, j_data, j;
+reg [7:0] i_data, j_data;
 
 reg [7:0] counter = 0;
+reg [7:0] j = 0;
 
 always_ff @(posedge clk)
 begin
@@ -31,7 +32,8 @@ begin
 		case(state) 
 
 			state_rest: state <= state_rest;
-			state_ready: begin
+			state_ready: 
+			begin
 				state <= state_ready;
 				j <= 0;
 				i_data <= 0;

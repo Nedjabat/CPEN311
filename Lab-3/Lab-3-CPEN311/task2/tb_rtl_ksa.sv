@@ -1,3 +1,4 @@
+`timescale 1ps / 1ps
 module tb_rtl_ksa();
 
 reg clk;
@@ -26,6 +27,8 @@ ksa DUT(	.clk,
 
 initial begin
 	clk = 0;
+	rddata = 1;
+	key= 24'b000000000000000000000010 ;
 	rst_n = 1;
 	en = 0;
 
