@@ -1,3 +1,4 @@
+`timescale 1ps / 1ps
 module tb_rtl_init();
 
 reg clk;
@@ -31,14 +32,22 @@ initial begin
 	rst_n = 0;
 
 
-	#5;
+	#10;
 
 	en = 1;
 	rst_n = 1;
 
 	#10;
-
+	
 	en = 0;
+	#10;
+	while(addr <= 255) 
+    begin
+		$display(" addr/wrdata = %d", addr);
+		#10;
+		if(addr == 0) break; 
+    end
+    $stop(0);
 	
 
 end
