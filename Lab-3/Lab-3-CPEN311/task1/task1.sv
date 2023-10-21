@@ -37,16 +37,13 @@ logic [7:0] q;
 always_ff @(posedge CLOCK_50)
 begin
 
-	if(rdy)begin
+
+	en <= 0;
+
+	if (rdy) begin
 
 		en <= 1;
 
-	end
-
-	else if (en == 1) begin
-
-		en <= 0;
-	
 	end
 
 

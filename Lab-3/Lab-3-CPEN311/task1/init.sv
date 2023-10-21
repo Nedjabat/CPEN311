@@ -4,62 +4,82 @@ module init(input logic clk, input logic rst_n,
             input logic en, output logic rdy,
             output logic [7:0] addr, output logic [7:0] wrdata, output logic wren);
 
-reg [8:0] state, next_state;
+enum reg [4:0] {state_rest, state_start, state_fill, state_ready} state;
+reg [7:0] counter;
 
 always_ff @(posedge clk)
 begin
 
 	if(rst_n == 0)begin
 
-		rdy <= 1;
+		state <= state_start;
 	
 	end
 
 	else if (en == 1) begin
 
-		state <= 9'd1;
-		rdy <= 0;
+		if (state == state_ready) state <= state_rest;
 	
 	end
 
 	else begin
 
-		state <= next_state;
+	casez(state) 
+		state_rest: begin
+			state <= state_rest;
+		end
+		state_start: begin
+			counter <= 0;
+			state <= state_fill;
+		end
+		state_fill: begin
+			if(counter == 255) state <= state_ready;
+			else state <= state_fill;
+			counter <= counter + 1;
+		end
+		default: state <= state_rest;
+
+	endcase
 
 	end
 
 end
 
-
-always_comb
-
-begin
-
-	casez(state) 
-		9'b0: next_state = 9'd0;
-		9'd256: next_state = 9'd0;
-		9'b?????????: next_state = state + 9'b1; 
-		default: next_state = 9'd0;
-
-	endcase
-
-
-end
 
 always_comb 
 
 begin
 
 	casez(state)
-		9'b0: begin
+		state_rest: begin
+			rdy = 0;
 			wren = 0;
 			addr = 0;
 			wrdata = 0;
 		end
-		9'b?????????:begin
+		state_start: begin
+			rdy = 0;
+			wren = 0;
+			addr = 0;
+			wrdata = 0;
+		end
+		state_fill: begin
+			rdy = 0;
 			wren = 1;
-			addr = state[7:0] - 8'b1;
-			wrdata = state[7:0] - 8'b1;
+			addr = counter;
+			wrdata = counter;
+		end
+		state_ready:begin
+			rdy = 1;
+			wren = 0;
+			addr = 0;
+			wrdata = 0;
+		end
+		default: begin
+			rdy = 0;
+			wren = 0;
+			addr = 0;
+			wrdata = 0;
 		end
 	endcase
 
