@@ -1,0 +1,204 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/School/CPEN 311/Lab-3/Lab-3-CPEN311/task2
+vbutton_pusher
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1698723935
+!i10b 1
+!s100 FdJfASPOg`ZfXQQU:2hJ^0
+I3KnE5V2XQhFSJ7ma4TJPE1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 button_pusher_sv_unit
+S1
+Z3 dC:/School/CPEN 311/CPEN311-lab4/task1
+Z4 w1698039799
+8C:/School/CPEN 311/CPEN311-lab4/de1-gui/button_pusher.sv
+FC:/School/CPEN 311/CPEN311-lab4/de1-gui/button_pusher.sv
+L0 3
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1698723935.000000
+!s107 C:/School/CPEN 311/CPEN311-lab4/de1-gui/button_pusher.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab4/de1-gui/button_pusher.sv|
+!i113 1
+Z7 o-work work -sv
+Z8 tCvgOpt 0
+vde1_gui
+R0
+Z9 DXx6 sv_std 7 mti_fli 0 22 N`967G9WZ3=6fdOR5MX]S1
+R1
+!i10b 1
+!s100 =QRS2jiFLjHjH3@F5mOc31
+Ih;4aL?3>[EEhe1>VnQU?A3
+R2
+!s105 de1_gui_sv_unit
+S1
+R3
+R4
+8C:/School/CPEN 311/CPEN311-lab4/de1-gui/de1_gui.sv
+FC:/School/CPEN 311/CPEN311-lab4/de1-gui/de1_gui.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/School/CPEN 311/CPEN311-lab4/de1-gui/de1_gui.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab4/de1-gui/de1_gui.sv|
+!i113 1
+R7
+R8
+vtb_de1_gui
+R0
+Z10 !s110 1698723934
+!i10b 1
+!s100 Xk3lKUcB8Cc2C]J>nDbM:1
+IY^NT`Ucj]?>>3cndcQlHC0
+R2
+!s105 tb_de1_gui_sv_unit
+S1
+R3
+R4
+8C:/School/CPEN 311/CPEN311-lab4/de1-gui/tb_de1_gui.sv
+FC:/School/CPEN 311/CPEN311-lab4/de1-gui/tb_de1_gui.sv
+L0 3
+R5
+r1
+!s85 0
+31
+Z11 !s108 1698723934.000000
+!s107 C:/School/CPEN 311/CPEN311-lab4/de1-gui/tb_de1_gui.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab4/de1-gui/tb_de1_gui.sv|
+!i113 1
+R7
+R8
+vvga_adapter
+R0
+R9
+R10
+!i10b 1
+!s100 h8aB6A^ia_odOh=<4`Ka>0
+I9I;1Y=m[X^BHUfbYSXk?B2
+R2
+!s105 vga_adapter_sv_unit
+S1
+R3
+Z12 w1641691623
+8C:/School/CPEN 311/CPEN311-lab4/task1/vga_adapter.sv
+FC:/School/CPEN 311/CPEN311-lab4/task1/vga_adapter.sv
+L0 82
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/School/CPEN 311/CPEN311-lab4/task1/vga_adapter.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab4/task1/vga_adapter.sv|
+!i113 1
+R7
+R8
+vvga_address_translator
+R0
+R10
+!i10b 1
+!s100 >4Ck2[^7MRo410`;`mBhG0
+I70zhe0F>i@XC]IzzJzo_k1
+R2
+!s105 vga_address_translator_sv_unit
+S1
+R3
+R12
+8C:/School/CPEN 311/CPEN311-lab4/task1/vga_address_translator.sv
+FC:/School/CPEN 311/CPEN311-lab4/task1/vga_address_translator.sv
+L0 8
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/School/CPEN 311/CPEN311-lab4/task1/vga_address_translator.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab4/task1/vga_address_translator.sv|
+!i113 1
+R7
+R8
+vvga_controller
+R0
+R10
+!i10b 1
+!s100 K^Z0JG9FjLR6T71PJVY]`2
+I>>`Y?:hYM=KAMlUF:=G:40
+R2
+!s105 vga_controller_sv_unit
+S1
+R3
+R12
+8C:/School/CPEN 311/CPEN311-lab4/task1/vga_controller.sv
+FC:/School/CPEN 311/CPEN311-lab4/task1/vga_controller.sv
+L0 13
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/School/CPEN 311/CPEN311-lab4/task1/vga_controller.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab4/task1/vga_controller.sv|
+!i113 1
+R7
+R8
+vvga_demo
+R0
+R10
+!i10b 1
+!s100 7aVGTY:=?Q[B8bW1E7KTe3
+I<Pz4T_MNh3PR5JC1j6e9_1
+R2
+!s105 vga_demo_sv_unit
+S1
+R3
+R12
+8C:/School/CPEN 311/CPEN311-lab4/task1/vga_demo.sv
+FC:/School/CPEN 311/CPEN311-lab4/task1/vga_demo.sv
+L0 5
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/School/CPEN 311/CPEN311-lab4/task1/vga_demo.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab4/task1/vga_demo.sv|
+!i113 1
+R7
+R8
+vvga_pll
+R0
+R10
+!i10b 1
+!s100 B@RTRAe2BCUY;gLZj0kH`3
+IQ]0[G036gBH0o=EHSYbcg0
+R2
+!s105 vga_pll_sv_unit
+S1
+R3
+R12
+8C:/School/CPEN 311/CPEN311-lab4/task1/vga_pll.sv
+FC:/School/CPEN 311/CPEN311-lab4/task1/vga_pll.sv
+L0 36
+R5
+r1
+!s85 0
+31
+R11
+!s107 C:/School/CPEN 311/CPEN311-lab4/task1/vga_pll.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab4/task1/vga_pll.sv|
+!i113 1
+R7
+R8

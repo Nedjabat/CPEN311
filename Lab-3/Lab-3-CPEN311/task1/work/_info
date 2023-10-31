@@ -10,15 +10,15 @@ cModel Technology
 dC:/intelFPGA_lite/18.1/my projects/third year/lab 1
 vinit
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-!s110 1697832820
+!s110 1698341644
 !i10b 1
-!s100 215]hZOFE;bXEkk<H4ZMG2
-ImYal:Z;;5?A[C2KlK=0LU0
+!s100 NO=30OAM@Oz8>zN[Gb[Z30
+I^VJLmLEW8h:LHbNkMBg3J3
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 !s105 init_sv_unit
 S1
 Z2 dC:/School/CPEN 311/Lab-3/Lab-3-CPEN311/task1
-Z3 w1697825863
+Z3 w1697921206
 8C:/School/CPEN 311/Lab-3/Lab-3-CPEN311/task1/init.sv
 FC:/School/CPEN 311/Lab-3/Lab-3-CPEN311/task1/init.sv
 L0 3
@@ -26,20 +26,20 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1697832819.000000
+!s108 1698341644.000000
 !s107 C:/School/CPEN 311/Lab-3/Lab-3-CPEN311/task1/init.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/Lab-3/Lab-3-CPEN311/task1/init.sv|
 !i113 1
-Z6 o-work work -sv
-Z7 tCvgOpt 0
+Z5 o-work work -sv
+Z6 tCvgOpt 0
 vs_mem
-Z8 !s110 1697832819
+Z7 !s110 1698341643
 !i10b 1
 !s100 4Dk;RgZTCj]hOzdGD5c<;1
 I:C?MFdNLKEKCG@:5Am:[Q2
 R1
 R2
-R3
+w1697825863
 8C:/School/CPEN 311/Lab-3/Lab-3-CPEN311/task1/s_mem.v
 FC:/School/CPEN 311/Lab-3/Lab-3-CPEN311/task1/s_mem.v
 L0 39
@@ -47,18 +47,18 @@ R4
 r1
 !s85 0
 31
-R5
+Z8 !s108 1698341643.000000
 !s107 C:/School/CPEN 311/Lab-3/Lab-3-CPEN311/task1/s_mem.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/School/CPEN 311/Lab-3/Lab-3-CPEN311/task1/s_mem.v|
 !i113 1
 o-work work
-R7
+R6
 vtask1
 R0
-R8
+R7
 !i10b 1
-!s100 IZQ7>Lz60DZ6<9PBSmT[V2
-IXcPm^1XVoJ?=IDZA65WWH3
+!s100 _O<?R5HUnc5e9UdSOVOCI1
+IfDG2UQQlO]_imof=INH5e1
 R1
 !s105 task1_sv_unit
 S1
@@ -71,15 +71,15 @@ R4
 r1
 !s85 0
 31
-R5
+R8
 !s107 C:/School/CPEN 311/Lab-3/Lab-3-CPEN311/task1/task1.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/Lab-3/Lab-3-CPEN311/task1/task1.sv|
 !i113 1
+R5
 R6
-R7
 vtb_rtl_init
 R0
-R8
+R7
 !i10b 1
 !s100 O04KViNbmWPi<gFB>SDe=2
 I^V?[IM`]7>SmLz;gV1f7M1
@@ -95,15 +95,15 @@ R4
 r1
 !s85 0
 31
-R5
+R8
 !s107 C:/School/CPEN 311/Lab-3/Lab-3-CPEN311/task1/tb_rtl_init.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/Lab-3/Lab-3-CPEN311/task1/tb_rtl_init.sv|
 !i113 1
+R5
 R6
-R7
 vtb_rtl_task1
 R0
-R8
+R7
 !i10b 1
 !s100 e:b0IeI9gP@G]ko?5GmKe2
 IT9V<TozSC=befRz8i03611
@@ -119,15 +119,15 @@ R4
 r1
 !s85 0
 31
-R5
+R8
 !s107 C:/School/CPEN 311/Lab-3/Lab-3-CPEN311/task1/tb_rtl_task1.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/Lab-3/Lab-3-CPEN311/task1/tb_rtl_task1.sv|
 !i113 1
+R5
 R6
-R7
 vtb_syn_init
 R0
-R8
+R7
 !i10b 1
 !s100 b?Om61oaBoeMjH?X3z=TO2
 I?b]fSm[<J;IbfI;FPf>eF0
@@ -143,15 +143,15 @@ R4
 r1
 !s85 0
 31
-R5
+R8
 !s107 C:/School/CPEN 311/Lab-3/Lab-3-CPEN311/task1/tb_syn_init.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/Lab-3/Lab-3-CPEN311/task1/tb_syn_init.sv|
 !i113 1
+R5
 R6
-R7
 vtb_syn_task1
 R0
-R8
+R7
 !i10b 1
 !s100 WR<IY0bn[939nOQoDSEQj2
 IbFaoT62c`9[@4Jgm4XPln0
@@ -167,9 +167,9 @@ R4
 r1
 !s85 0
 31
-R5
+R8
 !s107 C:/School/CPEN 311/Lab-3/Lab-3-CPEN311/task1/tb_syn_task1.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/Lab-3/Lab-3-CPEN311/task1/tb_syn_task1.sv|
 !i113 1
+R5
 R6
-R7

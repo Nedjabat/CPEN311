@@ -27,8 +27,8 @@ ksa DUT(	.clk,
 
 initial begin
 	clk = 0;
-	rddata = 1;
-	key= 24'b000000000000000000000010 ;
+	rddata = 0;
+	key= 24'b000000110101111100111100 ;
 	rst_n = 1;
 	en = 0;
 
