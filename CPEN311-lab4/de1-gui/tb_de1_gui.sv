@@ -24,7 +24,7 @@ module tb_de1_gui();
 
     de1_gui gui(.SW, .KEY, .LEDR, .HEX5, .HEX4, .HEX3, .HEX2, .HEX1, .HEX0);
     //button_pusher but(.SW, .KEY, .LEDR, .HEX5, .HEX4, .HEX3, .HEX2, .HEX1, .HEX0;)
-    vga_demo dut ( .CLK, .KEY, .SW, .VGA_R, .VGA_G,  .VGA_B,
+    vga_demo dut ( .CLOCK_50(CLK), .KEY, .SW, .VGA_R, .VGA_G,  .VGA_B,
                 .VGA_HS,  .VGA_VS, .VGA_CLK, .VGA_X, .VGA_Y,
                 .VGA_COLOUR,  .VGA_PLOT);
 
