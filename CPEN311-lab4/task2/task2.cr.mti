@@ -47,19 +47,19 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	tb_syn_task2
 
-} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task2/vga_pll.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task2/vga_pll.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module vga_pll
-
-Top level modules:
-	vga_pll
-
 } {} {}} {C:/School/CPEN 311/CPEN311-lab4/task2/task2.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task2/task2.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module task2
 
 Top level modules:
 	task2
+
+} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task2/vga_pll.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task2/vga_pll.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module vga_pll
+
+Top level modules:
+	vga_pll
 
 } {} {}} {C:/School/CPEN 311/CPEN311-lab4/task2/tb_de1_gui.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task2/tb_de1_gui.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -75,18 +75,18 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	vga_address_translator
 
-} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task2/tb_rtl_fillscreen.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task2/tb_rtl_fillscreen.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module tb_rtl_fillscreen
-
-Top level modules:
-	tb_rtl_fillscreen
-
 } {} {}} {C:/School/CPEN 311/CPEN311-lab4/task2/tb_syn_fillscreen.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task2/tb_syn_fillscreen.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module tb_syn_fillscreen
 
 Top level modules:
 	tb_syn_fillscreen
+
+} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task2/tb_rtl_fillscreen.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task2/tb_rtl_fillscreen.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb_rtl_fillscreen
+
+Top level modules:
+	tb_rtl_fillscreen
 
 } {} {}}

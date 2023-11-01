@@ -6,7 +6,7 @@ module fillscreen(input logic clk, input logic rst_n, input logic [2:0] colour,
      
      enum reg [4:0] {state_rest, state_start, state_fillx, state_filly} state;
 
-     always_ff @(posedge clk, negedge clk, negedge rst_n) 
+     always_ff @(posedge clk, negedge rst_n) 
      begin : ahh
           if ((rst_n == 0 || start == 1) && state == state_rest && done == 0)
           begin
@@ -29,15 +29,17 @@ module fillscreen(input logic clk, input logic rst_n, input logic [2:0] colour,
                     if(vga_x == 159)
                     begin 
                          done = 1;
+                         vga_x = 0;
                          state <= state_rest;
                     end
                     else 
                          state <= state_filly;
+                    vga_y = 0;
                     vga_x <= vga_x + 1;
                end
                state_filly: 
                begin
-                    if(vga_y == 119) 
+                    if(vga_y == 118) 
                          state <= state_fillx;
                     else 
                          state <= state_filly;
@@ -53,22 +55,27 @@ module fillscreen(input logic clk, input logic rst_n, input logic [2:0] colour,
           casez(state)
                state_rest: 
                begin
+                    vga_plot = 0;
                     vga_colour = 0;
                end
                state_start: 
                begin
+                    vga_plot = 0;
                     vga_colour = 0;
                end
                state_fillx: 
                begin
+                    vga_plot = 1;
                     vga_colour = vga_x % 8;
                end
                state_filly: 
                begin
+                    vga_plot = 1;
                     vga_colour = vga_x % 8;
                end
                default: 
                begin
+                    vga_plot = 0;
                     vga_colour = 0;
                end
           endcase
