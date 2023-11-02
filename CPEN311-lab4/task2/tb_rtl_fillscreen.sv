@@ -16,15 +16,19 @@ fillscreen DUT(	.clk, .rst_n, .colour, .start,.done,.vga_x,.vga_y,.vga_colour, .
 
 initial 
 begin
+
 clk = 0;
 rst_n = 1;
 start = 0;
 #5;
 rst_n = 0;
 start = 1;
-#5;
+#10;
+rst_n = 1;
+
 end
 
-initial forever #10 clk = ~clk;
+initial forever #5 clk = ~clk;
 
 endmodule: tb_rtl_fillscreen
+
