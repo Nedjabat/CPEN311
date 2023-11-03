@@ -1,4 +1,4 @@
-`timescale 1ns / 1ns
+`timescale 1ps / 1ps
 
 module task2(input logic CLOCK_50, input logic [3:0] KEY,
              input logic [9:0] SW, output logic [9:0] LEDR,
@@ -39,19 +39,22 @@ fillscreen dut (.clk(CLOCK_50), .rst_n, .colour(SW[2:0]), .start, .done, .vga_x,
 always_ff @(posedge CLOCK_50, negedge KEY[3]) 
 begin
 
-	if(KEY[3] == 0) begin
-
+	if(KEY[3] == 0) 
+    begin
 		rst_n <= 0;
 		start <= 1;
 	end
+    else
+    begin
+        rst_n <= 1; 
+    end
 
-	if(done) begin
-		
+	if(done) 
+    begin
 		start <= 0;
-
 	end
 
-	else rst_n <= 1;
+	
 end
 
 

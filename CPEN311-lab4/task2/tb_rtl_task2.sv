@@ -1,7 +1,6 @@
-`timescale 1ns / 1ns
+`timescale 1ps / 1ps
 
 module tb_rtl_task2();
-
 logic CLOCK_50;
 logic [3:0] KEY;
 logic [9:0] SW;
@@ -24,6 +23,7 @@ logic [6:0] VGA_Y;
 logic [2:0] VGA_COLOUR;
 logic VGA_PLOT;
 
+//de1_gui gui(.SW, .KEY, .LEDR, .HEX5, .HEX4, .HEX3, .HEX2, .HEX1, .HEX0);
 
 task2 DUT (.CLOCK_50, .KEY,
              .SW, .LEDR, .HEX0, .HEX1, .HEX2,
@@ -37,20 +37,20 @@ initial
 begin
 
 CLOCK_50 = 0;
-KEY[3] = 1;
-SW = 0;
-
 #5;
-
-KEY[3] = 0;
-
-#10;
-
 KEY[3] = 1;
+#20000;
+KEY[3] = 0;
+#20000;
+KEY[3] = 1;
+
+
 
 end
 
-initial forever #5 CLOCK_50 = ~CLOCK_50;
+initial forever #10000 CLOCK_50 = ~CLOCK_50;
+
+
 
 
 

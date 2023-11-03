@@ -1,4 +1,4 @@
-`timescale 1ns / 1ns
+`timescale 1ps / 1ps
 
 module fillscreen(input logic clk, input logic rst_n, input logic [2:0] colour,
                   input logic start, output logic done,

@@ -12,13 +12,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	vga_address_translator
 
-} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task1/vga_controller.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task1/vga_controller.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module vga_controller
-
-Top level modules:
-	vga_controller
-
 } {} {}} {C:/School/CPEN 311/CPEN311-lab4/task1/vga_pll.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task1/vga_pll.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module vga_pll
@@ -26,19 +19,19 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	vga_pll
 
-} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task1/vga_demo.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task1/vga_demo.sv}
+} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task1/vga_controller.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task1/vga_controller.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module vga_demo
+-- Compiling module vga_controller
 
 Top level modules:
-	vga_demo
+	vga_controller
 
-} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task1/vga_adapter.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task1/vga_adapter.sv}
+} {} {}} {C:/School/CPEN 311/CPEN311-lab4/de1-gui/de1_gui.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/de1-gui/de1_gui.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module vga_adapter
+-- Compiling module de1_gui
 
 Top level modules:
-	vga_adapter
+	de1_gui
 
 } {} {}} {C:/School/CPEN 311/CPEN311-lab4/de1-gui/button_pusher.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/de1-gui/button_pusher.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -47,11 +40,18 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	button_pusher
 
-} {} {}} {C:/School/CPEN 311/CPEN311-lab4/de1-gui/de1_gui.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/de1-gui/de1_gui.sv}
+} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task1/vga_adapter.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task1/vga_adapter.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module de1_gui
+-- Compiling module vga_adapter
 
 Top level modules:
-	de1_gui
+	vga_adapter
+
+} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task1/vga_demo.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task1/vga_demo.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module vga_demo
+
+Top level modules:
+	vga_demo
 
 } {} {}}

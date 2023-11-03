@@ -1,0 +1,43 @@
+{C:/School/CPEN 311/CPEN311-lab4/task3/task3.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/task3.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module task3
+
+Top level modules:
+	task3
+
+} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/circle.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/circle.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module circle
+
+Top level modules:
+	circle
+
+} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/fillscreen.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/fillscreen.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module blackscreen
+
+Top level modules:
+	blackscreen
+
+} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/tb_rtl_task3.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/tb_rtl_task3.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb_rtl_task3
+
+Top level modules:
+	tb_rtl_task3
+
+} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/tb_rtl_circle.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/tb_rtl_circle.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb_rtl_circle
+
+Top level modules:
+	tb_rtl_circle
+
+} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/tb_syn_task3.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/tb_syn_task3.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb_syn_task3
+
+Top level modules:
+	tb_syn_task3
+
+} {} {}}
