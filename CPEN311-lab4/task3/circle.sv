@@ -55,7 +55,7 @@ module circle(input logic clk, input logic rst_n, input logic [2:0] colour,
 			//the calculation for crit needs to be signed somehow
 			// i made everything here signed so hopefully it works
 				offset_y <= offset_y + 1;
-
+				
 				if(crit <= 0) crit <= crit + (2 * offset_y) + 1; 
 				else begin
 					offset_x <= offset_x - 1;
@@ -64,7 +64,12 @@ module circle(input logic clk, input logic rst_n, input logic [2:0] colour,
 				end
 
 				if (offset_y <= offset_x) state <= p1; 
-				else state <= state_rest;
+				else 
+				begin
+					state <= state_rest;
+					done <= 1;
+				end
+				
 			end
 			default: state <= state_rest;
 

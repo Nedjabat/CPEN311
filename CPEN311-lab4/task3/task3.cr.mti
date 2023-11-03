@@ -1,23 +1,37 @@
-{C:/School/CPEN 311/CPEN311-lab4/task3/task3.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/task3.sv}
+{C:/School/CPEN 311/CPEN311-lab4/task3/blackscreen.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/blackscreen.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module blackscreen
+
+Top level modules:
+	blackscreen
+
+} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/vga_controller.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/vga_controller.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module vga_controller
+
+Top level modules:
+	vga_controller
+
+} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/vga_pll.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/vga_pll.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module vga_pll
+
+Top level modules:
+	vga_pll
+
+} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/task3.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/task3.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module task3
 
 Top level modules:
 	task3
 
-} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/circle.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/circle.sv}
+} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/vga_adapter.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/vga_adapter.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module circle
+-- Compiling module vga_adapter
 
 Top level modules:
-	circle
-
-} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/fillscreen.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/fillscreen.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module blackscreen
-
-Top level modules:
-	blackscreen
+	vga_adapter
 
 } {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/tb_rtl_task3.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/tb_rtl_task3.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -26,6 +40,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	tb_rtl_task3
 
+} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/tb_syn_task3.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/tb_syn_task3.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb_syn_task3
+
+Top level modules:
+	tb_syn_task3
+
 } {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/tb_rtl_circle.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/tb_rtl_circle.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module tb_rtl_circle
@@ -33,11 +54,18 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	tb_rtl_circle
 
-} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/tb_syn_task3.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/tb_syn_task3.sv}
+} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/tb_syn_circle.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/tb_syn_circle.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module tb_syn_task3
+-- Compiling module tb_syn_circle
 
 Top level modules:
-	tb_syn_task3
+	tb_syn_circle
+
+} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/vga_address_translator.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/vga_address_translator.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module vga_address_translator
+
+Top level modules:
+	vga_address_translator
 
 } {} {}}
