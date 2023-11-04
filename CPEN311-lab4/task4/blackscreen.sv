@@ -1,4 +1,3 @@
-`timescale 1ps / 1ps
 module reuleaux(input logic clk, input logic rst_n, input logic [2:0] colour,
                 input logic [7:0] centre_x, input logic [6:0] centre_y, input logic [7:0] diameter,
                 input logic start, output logic done,
@@ -161,7 +160,6 @@ module reuleaux(input logic clk, input logic rst_n, input logic [2:0] colour,
 			c1o1: begin
 
 				if((pleft_x + offset_x[8:0]) > 159 || (pleft_x + offset_x[8:0]) < 0 
-					|| (pleft_x + offset_x[8:0]) < ptop_x || (pleft_y + offset_y[8:0]) > ptop_y 
 					|| (pleft_y + offset_y[8:0]) > 119 || (pleft_y + offset_y[8:0]) < 0) begin
 					vga_x = 0;
 					vga_y = 0;
@@ -177,7 +175,6 @@ module reuleaux(input logic clk, input logic rst_n, input logic [2:0] colour,
 			c1o2: begin
 
 				if((pleft_x + offset_y[8:0]) > 159 || (pleft_x + offset_y[8:0]) < 0 
-					||(pleft_x + offset_x[8:0]) < ptop_x || (pleft_y + offset_y[8:0]) > ptop_y
 					|| (pleft_y + offset_x[8:0]) > 119 || (pleft_y + offset_x[8:0]) < 0) begin
 					vga_x = 0;
 					vga_y = 0;
@@ -193,7 +190,6 @@ module reuleaux(input logic clk, input logic rst_n, input logic [2:0] colour,
 
 			c3o4: begin
 				if((pright_x - offset_x[8:0]) > 159 || (pright_x - offset_x[8:0]) < 0 
-					|| (pright_x - offset_x[8:0]) > ptop_x || (pright_y + offset_y[8:0]) > ptop_y
 					|| (pright_y + offset_y[8:0]) > 119 || (pright_y + offset_y[8:0]) < 0) begin
 					vga_x = 0;
 					vga_y = 0;
@@ -208,7 +204,6 @@ module reuleaux(input logic clk, input logic rst_n, input logic [2:0] colour,
 
 			c3o3: begin
 				if((pright_x - offset_y[8:0]) > 159 || (pright_x - offset_y[8:0]) < 0 
-					|| (pright_x - offset_x[8:0]) > ptop_x || (pright_y + offset_y[8:0]) > ptop_y
 					|| (pright_y + offset_x[8:0]) > 119 || (pright_y + offset_x[8:0]) < 0) begin
 					vga_x = 0;
 					vga_y = 0;
@@ -224,8 +219,6 @@ module reuleaux(input logic clk, input logic rst_n, input logic [2:0] colour,
 
 			c2o6: begin
 				if((ptop_x - offset_y[8:0]) > 159 || (ptop_x - offset_y[8:0]) < 0 
-					|| (ptop_x - offset_y[8:0]) < pleft_x || (ptop_x - offset_y[8:0]) > pright_x
-					|| (ptop_y - offset_x[8:0]) > pleft_y
 					|| (ptop_y - offset_x[8:0]) > 119 || (ptop_y - offset_x[8:0]) < 0) begin
 					vga_x = 0;
 					vga_y = 0;

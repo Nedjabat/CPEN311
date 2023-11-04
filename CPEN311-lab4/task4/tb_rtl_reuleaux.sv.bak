@@ -25,7 +25,7 @@ rst_n = 1;
 start = 0;
 centre_x = 80;
 centre_y = 60;
-diameter = 4;
+diameter = 40;
 colour = 3'b111;
 #5;
 
