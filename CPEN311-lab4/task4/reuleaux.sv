@@ -12,7 +12,7 @@ module reuleaux(input logic clk, input logic rst_n, input logic [2:0] colour,
 	reg signed [9:0] offset_y;
 	reg signed [9:0] crit;
 
-	enum reg [5:0] {state_rest, state_start, c1o1, c1o2, c2o6, c2o7, c3o3, c3o4} state;
+	enum reg [5:0] {state_rest, state_start, c1o7, c1o8, c2o2, c2o3, c3o5, c3o6} state;
 
 	//my idea is that we only need to draw octant 1 and 2 of the left circle, octant 6 and 7 of the top circle,
 	//and octant 3 and 4 of the right circle
@@ -28,11 +28,11 @@ module reuleaux(input logic clk, input logic rst_n, input logic [2:0] colour,
 
 
 	assign ptop_x = centre_x;
-	assign ptop_y = centre_y + (diameter/2);
+	assign ptop_y = centre_y - (diameter * 433/1000);
 	assign pleft_x = centre_x - (diameter/2);
-	assign pleft_y = centre_y - (diameter/2);
+	assign pleft_y = centre_y + (diameter * 433/1000);
 	assign pright_x = centre_x + (diameter/2);
-	assign pright_y = centre_y - (diameter/2);
+	assign pright_y = centre_y + (diameter * 433/1000);
 
 
 	//state machine calculates offset_x, offset_y, and crit because they need to be remembered
@@ -61,11 +61,11 @@ module reuleaux(input logic clk, input logic rst_n, input logic [2:0] colour,
 				offset_x <= diameter;
 				crit <= 1 - diameter;
 
-				if (offset_y <= offset_x) state <= c1o1; 
+				if (offset_y <= offset_x) state <= c1o7; 
 				else state <= state_rest;
 			end
-			c1o1: state <= c1o2; 
-			c1o2: begin
+			c1o7: state <= c1o8; 
+			c1o8: begin
 
 				offset_y <= offset_y + 1;
 				
@@ -76,19 +76,19 @@ module reuleaux(input logic clk, input logic rst_n, input logic [2:0] colour,
 				
 				end
 
-				if (offset_y <= offset_x) state <= c1o1; 
+				if (offset_y <= offset_x) state <= c1o7; 
 				else 
 				begin
 					offset_y <= 0;
 					offset_x <= diameter;
 					crit <= 1 - diameter;
-					state <= c2o6;
+					state <= c2o2;
 				end
 				
 			end
 
-			c2o6: state <= c2o7; 
-			c2o7: begin
+			c2o2: state <= c2o3; 
+			c2o3: begin
 
 				offset_y <= offset_y + 1;
 				
@@ -99,19 +99,19 @@ module reuleaux(input logic clk, input logic rst_n, input logic [2:0] colour,
 				
 				end
 
-				if (offset_y <= offset_x) state <= c2o6; 
+				if (offset_y <= offset_x) state <= c2o2; 
 				else 
 				begin
 					offset_y <= 0;
 					offset_x <= diameter;
 					crit <= 1 - diameter;
-					state <= c3o3;
+					state <= c3o5;
 				end
 				
 			end
 
-			c3o3: state <= c3o4; 
-			c3o4: begin
+			c3o5: state <= c3o6; 
+			c3o6: begin
 
 				offset_y <= offset_y + 1;
 				
@@ -122,7 +122,7 @@ module reuleaux(input logic clk, input logic rst_n, input logic [2:0] colour,
 				
 				end
 
-				if (offset_y <= offset_x) state <= c3o3; 
+				if (offset_y <= offset_x) state <= c3o5; 
 				else 
 				begin
 					state <= state_rest;
@@ -158,97 +158,99 @@ module reuleaux(input logic clk, input logic rst_n, input logic [2:0] colour,
 				vga_plot = 0;
 			end
 
-			c1o1: begin
-
-				if((pleft_x + offset_x[8:0]) > 159 || (pleft_x + offset_x[8:0]) < 0 
-					|| (pleft_x + offset_x[8:0]) < ptop_x || (pleft_y + offset_y[8:0]) > ptop_y 
-					|| (pleft_y + offset_y[8:0]) > 119 || (pleft_y + offset_y[8:0]) < 0) begin
-					vga_x = 0;
-					vga_y = 0;
-					vga_plot = 0;
-				end
-				else begin
-					vga_x = (pleft_x + offset_x[8:0]);
-					vga_y = (pleft_y + offset_y[8:0]);
-					vga_plot = 1;
-				end 
-			end
-
-			c1o2: begin
+			c1o7: begin
 
 				if((pleft_x + offset_y[8:0]) > 159 || (pleft_x + offset_y[8:0]) < 0 
-					||(pleft_x + offset_x[8:0]) < ptop_x || (pleft_y + offset_y[8:0]) > ptop_y
-					|| (pleft_y + offset_x[8:0]) > 119 || (pleft_y + offset_x[8:0]) < 0) begin
+					|| (pleft_x + offset_y[8:0]) < ptop_x || (pleft_y - offset_x[8:0]) < ptop_y 
+					|| (pleft_y - offset_x[8:0]) > 119 || (pleft_y - offset_x[8:0]) < 0) begin
 					vga_x = 0;
 					vga_y = 0;
 					vga_plot = 0;
 				end
 				else begin
 					vga_x = (pleft_x + offset_y[8:0]);
-					vga_y = (pleft_y + offset_x[8:0]);
+					vga_y = (pleft_y - offset_x[8:0]);
 					vga_plot = 1;
 				end 
-
 			end
 
-			c3o4: begin
-				if((pright_x - offset_x[8:0]) > 159 || (pright_x - offset_x[8:0]) < 0 
-					|| (pright_x - offset_x[8:0]) > ptop_x || (pright_y + offset_y[8:0]) > ptop_y
-					|| (pright_y + offset_y[8:0]) > 119 || (pright_y + offset_y[8:0]) < 0) begin
+			c1o8: begin
+
+				if((pleft_x + offset_x[8:0]) > 159 || (pleft_x + offset_x[8:0]) < 0 
+					||(pleft_x + offset_x[8:0]) < ptop_x || (pleft_y - offset_y[8:0]) < ptop_y
+					|| (pleft_y - offset_y[8:0]) > 119 || (pleft_y - offset_y[8:0]) < 0) begin
 					vga_x = 0;
 					vga_y = 0;
 					vga_plot = 0;
 				end
 				else begin
-					vga_x = (pright_x - offset_x[8:0]);
-					vga_y = (pright_y + offset_y[8:0]);
+					vga_x = (pleft_x + offset_x[8:0]);
+					vga_y = (pleft_y - offset_y[8:0]);
 					vga_plot = 1;
 				end 
+
 			end
 
-			c3o3: begin
+			c3o6: begin
 				if((pright_x - offset_y[8:0]) > 159 || (pright_x - offset_y[8:0]) < 0 
-					|| (pright_x - offset_x[8:0]) > ptop_x || (pright_y + offset_y[8:0]) > ptop_y
-					|| (pright_y + offset_x[8:0]) > 119 || (pright_y + offset_x[8:0]) < 0) begin
+					|| (pright_x - offset_y[8:0]) > ptop_x || (pright_y - offset_x[8:0]) < ptop_y
+					|| (pright_y - offset_x[8:0]) > 119 || (pright_y - offset_x[8:0]) < 0) begin
 					vga_x = 0;
 					vga_y = 0;
 					vga_plot = 0;
 				end
 				else begin
 					vga_x = (pright_x - offset_y[8:0]);
-					vga_y = (pright_y + offset_x[8:0]);
+					vga_y = (pright_y - offset_x[8:0]);
 					vga_plot = 1;
 				end 
 			end
 
-
-			c2o6: begin
-				if((ptop_x - offset_y[8:0]) > 159 || (ptop_x - offset_y[8:0]) < 0 
-					|| (ptop_x - offset_y[8:0]) < pleft_x || (ptop_x - offset_y[8:0]) > pright_x
-					|| (ptop_y - offset_x[8:0]) > pleft_y
-					|| (ptop_y - offset_x[8:0]) > 119 || (ptop_y - offset_x[8:0]) < 0) begin
+			c3o5: begin
+				if((pright_x - offset_x[8:0]) > 159 || (pright_x - offset_x[8:0]) < 0 
+					|| (pright_x - offset_x[8:0]) > ptop_x || (pright_y - offset_y[8:0]) < ptop_y
+					|| (pright_y - offset_y[8:0]) > 119 || (pright_y - offset_y[8:0]) < 0) begin
 					vga_x = 0;
 					vga_y = 0;
 					vga_plot = 0;
 				end
 				else begin
-					vga_x = (ptop_x - offset_y[8:0]);
-					vga_y = (centre_y - offset_x[8:0]);
+					vga_x = (pright_x - offset_x[8:0]);
+					vga_y = (pright_y - offset_y[8:0]);
 					vga_plot = 1;
 				end 
 			end
 
 
-			c2o7: begin
+			c2o2: begin
 				if((ptop_x + offset_y[8:0]) > 159 || (ptop_x + offset_y[8:0]) < 0 
-					|| (ptop_y - offset_x[8:0]) > 119 || (ptop_y - offset_x[8:0]) < 0) begin
+					|| (ptop_x + offset_y[8:0]) < pleft_x || (ptop_x + offset_y[8:0]) > pright_x
+					|| (ptop_y + offset_x[8:0]) < pleft_y
+					|| (ptop_y + offset_x[8:0]) > 119 || (ptop_y + offset_x[8:0]) < 0) begin
 					vga_x = 0;
 					vga_y = 0;
 					vga_plot = 0;
 				end
 				else begin
 					vga_x = (ptop_x + offset_y[8:0]);
-					vga_y = (ptop_y - offset_x[8:0]);
+					vga_y = (ptop_y + offset_x[8:0]);
+					vga_plot = 1;
+				end 
+			end
+
+
+			c2o3: begin
+				if((ptop_x - offset_y[8:0]) > 159 || (ptop_x - offset_y[8:0]) < 0 
+					|| (ptop_x - offset_y[8:0]) < pleft_x || (ptop_x - offset_y[8:0]) > pright_x
+					|| (ptop_y + offset_x[8:0]) < pleft_y
+					|| (ptop_y + offset_x[8:0]) > 119 || (ptop_y + offset_x[8:0]) < 0) begin
+					vga_x = 0;
+					vga_y = 0;
+					vga_plot = 0;
+				end
+				else begin
+					vga_x = (ptop_x - offset_y[8:0]);
+					vga_y = (ptop_y + offset_x[8:0]);
 					vga_plot = 1;
 				end 
 			end
@@ -266,4 +268,3 @@ module reuleaux(input logic clk, input logic rst_n, input logic [2:0] colour,
 
 
 endmodule
-
