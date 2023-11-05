@@ -40,6 +40,7 @@ module blackscreen(input logic clk, input logic rst_n,
 
                state_fillx: 
                begin
+                    done <= 1;
                     if(vga_x == 160)
                     begin 
                          done <= 1;
