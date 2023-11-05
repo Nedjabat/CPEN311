@@ -5,26 +5,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	vga_address_translator
 
-} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task4/blackscreen.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task4/blackscreen.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module blackscreen
-
-Top level modules:
-	blackscreen
-
 } {} {}} {C:/School/CPEN 311/CPEN311-lab4/task4/vga_controller.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task4/vga_controller.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module vga_controller
 
 Top level modules:
 	vga_controller
-
-} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task4/tb_syn_task4.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task4/tb_syn_task4.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module tb_syn_task4
-
-Top level modules:
-	tb_syn_task4
 
 } {} {}} {C:/School/CPEN 311/CPEN311-lab4/task4/tb_syn_reuleaux.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task4/tb_syn_reuleaux.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -60,6 +46,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	vga_adapter
+
+} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module reuleaux
+
+Top level modules:
+	reuleaux
 
 } {} {}} {C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
