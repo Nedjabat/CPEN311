@@ -12,7 +12,7 @@ module task4(input logic CLOCK_50, input logic [3:0] KEY,
 logic [9:0] VGA_R_10;
 logic [9:0] VGA_G_10;
 logic [9:0] VGA_B_10;
-
+logic VGA_BLANK, VGA_SYNC;
 logic rst_n;
 
 logic startb, startc;
@@ -44,6 +44,14 @@ assign VGA_Y = vga_y;
 assign VGA_PLOT = vga_plot; 
 assign VGA_COLOUR = vga_colour;
 
+assign VGA_R = VGA_R_10[9:2];
+assign VGA_G = VGA_G_10[9:2];
+assign VGA_B = VGA_B_10[9:2];
+
+vga_adapter#(.RESOLUTION("160x120")) vga_u0(.resetn(KEY[3]), .clock(CLOCK_50), .colour(vga_colour),
+                                            .x(vga_x), .y(vga_y), .plot(vga_plot),
+                                            .VGA_R(VGA_R_10), .VGA_G(VGA_G_10), .VGA_B(VGA_B_10), 
+						.VGA_HS, .VGA_VS, .VGA_BLANK, .VGA_SYNC, .VGA_CLK);
 
 reuleaux c (.clk(CLOCK_50), .rst_n, .colour(3'b010), .centre_x(8'd80), .centre_y(7'd60), .diameter(8'd80), .start(startc), .done(circle_done), .vga_x(vga_xc), .vga_y(vga_yc), .vga_colour(vga_colourc), .vga_plot(vga_plotc));
 blackscreen b (.clk(CLOCK_50), .rst_n, .start(startb), .done(blackscreen_done), .vga_x(vga_xb), .vga_y(vga_yb), .vga_colour(vga_colourb), .vga_plot(vga_plotb));
