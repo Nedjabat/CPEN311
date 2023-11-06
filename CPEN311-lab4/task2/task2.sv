@@ -1,3 +1,4 @@
+
 `timescale 1ps / 1ps
 
 module task2(input logic CLOCK_50, input logic [3:0] KEY,
@@ -29,6 +30,12 @@ assign VGA_G = VGA_G_10[9:2];
 assign VGA_B = VGA_B_10[9:2];
 
 
+vga_adapter#(.RESOLUTION("160x120")) vga_u0(.resetn(KEY[3]), .clock(CLOCK_50), .colour(VGA_COLOUR),
+                                            .x(VGA_X), .y(VGA_Y), .plot(VGA_PLOT),
+                                            .VGA_R(VGA_R_10), .VGA_G(VGA_G_10), .VGA_B(VGA_B_10), 
+                        .VGA_HS, .VGA_VS, .VGA_BLANK, .VGA_SYNC, .VGA_CLK);
+
+
 fillscreen dut (.clk(CLOCK_50), .rst_n, .colour(SW[2:0]), .start, .done, .vga_x, .vga_y, .vga_colour, .vga_plot);
 
 
@@ -54,7 +61,4 @@ begin
 end
 
 
-
-
 endmodule: task2
-
