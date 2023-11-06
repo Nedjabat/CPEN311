@@ -43,12 +43,13 @@ module reuleaux(input logic clk, input logic rst_n, input logic [2:0] colour,
 
 		if (rst_n == 0)
 		begin
-			state = state_rest;
+			done <= 0;
+			state <= state_rest;
 		end
 
 		else if (start == 1 && state == state_rest)
 		begin
-			state = state_start;
+			state <= state_start;
 		end
 
 		else begin
@@ -57,6 +58,7 @@ module reuleaux(input logic clk, input logic rst_n, input logic [2:0] colour,
 
 			state_rest: state <= state_rest;
 			state_start: begin
+				done <= 0;
 				offset_y <= 0;
 				offset_x <= diameter;
 				crit <= 1 - diameter;

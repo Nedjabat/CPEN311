@@ -22,19 +22,13 @@ logic [7:0] VGA_X;
 logic [6:0] VGA_Y;
 logic [2:0] VGA_COLOUR;
 logic VGA_PLOT;
-logic [9:0] VGA_R_10;
-logic [9:0] VGA_G_10;
-logic [9:0] VGA_B_10;
-logic VGA_BLANK, VGA_SYNC;
 
-assign VGA_R = VGA_R_10[9:2];
-assign VGA_G = VGA_G_10[9:2];
-assign VGA_B = VGA_B_10[9:2];
 
-vga_adapter#(.RESOLUTION("160x120")) vga_u0(.resetn(KEY[3]), .clock(CLOCK_50), .colour(VGA_COLOUR),
-                                            .x(VGA_X), .y(VGA_Y), .plot(VGA_PLOT),
-                                            .VGA_R(VGA_R_10), .VGA_G(VGA_G_10), .VGA_B(VGA_B_10), 
-						.VGA_HS, .VGA_VS, .VGA_BLANK, .VGA_SYNC, .VGA_CLK);
+reg [6:0] counter;
+
+
+//de1_gui gui(.SW, .KEY, .LEDR, .HEX5, .HEX4, .HEX3, .HEX2, .HEX1, .HEX0);
+
 task3 DUT (.CLOCK_50, .KEY,
              .SW, .LEDR, .HEX0, .HEX1, .HEX2,
              .HEX3, .HEX4, .HEX5, .VGA_R, .VGA_G, .VGA_B,
@@ -47,6 +41,7 @@ initial
 begin
 
 CLOCK_50 = 0;
+counter = 0;
 #20000;
 KEY[3] = 1;
 #20000;
@@ -54,6 +49,79 @@ KEY[3] = 0;
 #20000;
 KEY[3] = 1;
 
+#60000;
+
+
+	if(VGA_PLOT == 1)begin
+		counter = counter + 1'b1;
+		$display ("PASSED plot on test");
+	end else begin
+		$error ("FAILED plot on test");
+	end
+
+	if(VGA_X == 0)begin
+		counter = counter + 1'b1;
+		$display ("PASSED blackscreen x test");
+	end else begin
+		$error ("FAILED blackscreen x test");
+	end
+
+	if(VGA_Y == 1)begin
+		counter = counter + 1'b1;
+		$display ("PASSED blackscreen y test");
+	end else begin
+		$error ("FAILED blackscreen y test");
+	end
+
+	if(VGA_COLOUR == 3'b111)begin
+		counter = counter + 1'b1;
+		$display ("PASSED blackscreen colour test");
+	end else begin
+		$error ("FAILED blackscreen colour test");
+	end
+
+#384000000;
+
+	if(VGA_PLOT == 1)begin
+		counter = counter + 1'b1;
+		$display ("PASSED plot on test");
+	end else begin
+		$error ("FAILED plot on test");
+	end
+
+	if(VGA_X == 0)begin
+		counter = counter + 1'b1;
+		$display ("PASSED circle x test");
+	end else begin
+		$error ("FAILED circle x test");
+	end
+
+	if(VGA_Y == 1)begin
+		counter = counter + 1'b1;
+		$display ("PASSED circle y test");
+	end else begin
+		$error ("FAILED circle y test");
+	end
+
+	if(VGA_COLOUR == 3'b010)begin
+		counter = counter + 1'b1;
+		$display ("PASSED circle colour test");
+	end else begin
+		$error ("FAILED circle colour test");
+	end
+
+#38400000;
+
+
+	if(VGA_PLOT == 0)begin
+		counter = counter + 1'b1;
+		$display ("PASSED done test");
+	end else begin
+		$error ("FAILED done test");
+	end
+
+
+	$display("%d tests passed out of %d tests.", counter, 6'd9);
 
 
 end

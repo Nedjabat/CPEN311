@@ -12,7 +12,7 @@ module task4(input logic CLOCK_50, input logic [3:0] KEY,
 logic [9:0] VGA_R_10;
 logic [9:0] VGA_G_10;
 logic [9:0] VGA_B_10;
-
+logic VGA_BLANK, VGA_SYNC;
 logic rst_n;
 
 logic startb, startc;
@@ -44,14 +44,12 @@ assign VGA_Y = vga_y;
 assign VGA_PLOT = vga_plot; 
 assign VGA_COLOUR = vga_colour;
 
-logic VGA_BLANK, VGA_SYNC;
-
 assign VGA_R = VGA_R_10[9:2];
 assign VGA_G = VGA_G_10[9:2];
 assign VGA_B = VGA_B_10[9:2];
 
-vga_adapter#(.RESOLUTION("160x120")) vga_u0(.resetn(KEY[3]), .clock(CLOCK_50), .colour(VGA_COLOUR),
-                                            .x(VGA_X), .y(VGA_Y), .plot(VGA_PLOT),
+vga_adapter#(.RESOLUTION("160x120")) vga_u0(.resetn(KEY[3]), .clock(CLOCK_50), .colour(vga_colour),
+                                            .x(vga_x), .y(vga_y), .plot(vga_plot),
                                             .VGA_R(VGA_R_10), .VGA_G(VGA_G_10), .VGA_B(VGA_B_10), 
 						.VGA_HS, .VGA_VS, .VGA_BLANK, .VGA_SYNC, .VGA_CLK);
 
