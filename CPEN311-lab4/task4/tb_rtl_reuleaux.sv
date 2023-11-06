@@ -7,7 +7,7 @@ reg [2:0] colour;
 reg start;
 reg [7:0] centre_x, diameter;
 reg [6:0] centre_y;
-
+reg [6:0] counter;
 
 wire done;
 wire [7:0] vga_x;
@@ -25,8 +25,9 @@ rst_n = 1;
 start = 0;
 centre_x = 80;
 centre_y = 60;
-diameter = 4;
+diameter = 40;
 colour = 3'b111;
+counter = 0;
 #5;
 
 rst_n = 0;
@@ -34,6 +35,90 @@ start = 1;
 #10;
 
 rst_n = 1;
+
+#45;
+
+	if(vga_x == 100)begin
+		counter = counter + 1'b1;
+		$display ("PASSED x1 test");
+	end else begin
+		$error ("FAILED x1 test");
+	end
+
+	if(vga_y == 78)begin
+		counter = counter + 1'b1;
+		$display ("PASSED y1 test");
+	end else begin
+		$error ("FAILED y1 test");
+	end
+
+	if(vga_plot == 1)begin
+		counter = counter + 1'b1;
+		$display ("PASSED plot1 test");
+	end else begin
+		$error ("FAILED plot1 test");
+	end
+
+#10;
+
+	if(vga_x == 0)begin
+		counter = counter + 1'b1;
+		$display ("PASSED x invalid test");
+	end else begin
+		$error ("FAILED x invalid test");
+	end
+
+	if(vga_y == 0)begin
+		counter = counter + 1'b1;
+		$display ("PASSED y invalid test");
+	end else begin
+		$error ("FAILED y invalid test");
+	end
+
+	if(vga_plot == 0)begin
+		counter = counter + 1'b1;
+		$display ("PASSED plot test");
+	end else begin
+		$error ("FAILED plot test");
+	end
+
+#50;
+
+	if(vga_x == 100)begin
+		counter = counter + 1'b1;
+		$display ("PASSED x2 test");
+	end else begin
+		$error ("FAILED x2 test");
+	end
+
+	if(vga_y == 75)begin
+		counter = counter + 1'b1;
+		$display ("PASSED y2 test");
+	end else begin
+		$error ("FAILED y2 test");
+	end
+
+	if(vga_plot == 1)begin
+		counter = counter + 1'b1;
+		$display ("PASSED plot2 test");
+	end else begin
+		$error ("FAILED plot2 test");
+	end
+
+
+
+#13190;
+
+	if(done == 1)begin
+		counter = counter + 1'b1;
+		$display ("PASSED done test");
+	end else begin
+		$error ("FAILED done test");
+	end
+
+    
+	$display("%d tests passed out of %d tests.", counter, 6'd10);
+
 
 end
 
