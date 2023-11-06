@@ -1,0 +1,6 @@
+Info (10281): Verilog HDL Declaration information at task4.sv(8): object "VGA_X" differs only in case from object "vga_x" in the same scope File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 8
+Info (10281): Verilog HDL Declaration information at task4.sv(8): object "VGA_Y" differs only in case from object "vga_y" in the same scope File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 8
+Info (10281): Verilog HDL Declaration information at task4.sv(9): object "VGA_PLOT" differs only in case from object "vga_plot" in the same scope File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 9
+Info (10281): Verilog HDL Declaration information at task4.sv(9): object "VGA_COLOUR" differs only in case from object "vga_colour" in the same scope File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 9
+Warning (10268): Verilog HDL information at reuleaux.sv(41): always construct contains both blocking and non-blocking assignments File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 41
+Warning (10268): Verilog HDL information at blackscreen.sv(12): always construct contains both blocking and non-blocking assignments File: C:/School/CPEN 311/CPEN311-lab4/task4/blackscreen.sv Line: 12

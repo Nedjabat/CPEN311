@@ -47,10 +47,6 @@ assign VGA_R = VGA_R_10[9:2];
 assign VGA_G = VGA_G_10[9:2];
 assign VGA_B = VGA_B_10[9:2];
 
-vga_adapter#(.RESOLUTION("160x120")) vga_u0(.resetn(KEY[3]), .clock(CLOCK_50), .colour(vga_colour),
-                                            .x(vga_x), .y(vga_y), .plot(vga_plot),
-                                            .VGA_R(VGA_R_10), .VGA_G(VGA_G_10), .VGA_B(VGA_B_10), 
-						.VGA_HS, .VGA_VS, .VGA_BLANK, .VGA_SYNC, .VGA_CLK);
 
 circle c (.clk(CLOCK_50), .rst_n, .colour(3'b010), .centre_x(8'd80), .centre_y(7'd60), .radius(8'd40), .start(startc), .done(circle_done), .vga_x(vga_xc), .vga_y(vga_yc), .vga_colour(vga_colourc), .vga_plot(vga_plotc));
 blackscreen b (.clk(CLOCK_50), .rst_n, .start(startb), .done(blackscreen_done), .vga_x(vga_xb), .vga_y(vga_yb), .vga_colour(vga_colourb), .vga_plot(vga_plotb));

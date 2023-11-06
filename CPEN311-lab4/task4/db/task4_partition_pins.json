@@ -1,0 +1,85 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "VGA_X[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_X[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_X[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_X[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_X[4]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_X[5]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_X[6]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_X[7]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_Y[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_Y[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_Y[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_Y[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_Y[4]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_Y[5]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_Y[6]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_COLOUR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_PLOT",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,26 @@
+
+State Machine - |task4|state
+Name state.state_done state.state_rest state.state_c state.state_b 
+state.state_b 0 0 0 0 
+state.state_c 0 0 1 1 
+state.state_rest 0 1 0 1 
+state.state_done 1 0 0 1 
+
+State Machine - |task4|blackscreen:b|state
+Name state.state_filly state.state_fillx state.state_start state.state_rest state.state_done 
+state.state_rest 0 0 0 0 0 
+state.state_start 0 0 1 1 0 
+state.state_fillx 0 1 0 1 0 
+state.state_filly 1 0 0 1 0 
+state.state_done 0 0 0 1 1 
+
+State Machine - |task4|reuleaux:c|state
+Name state.c3o6 state.c3o5 state.c2o3 state.c2o2 state.c1o8 state.c1o7 state.state_start state.state_rest 
+state.state_rest 0 0 0 0 0 0 0 0 
+state.state_start 0 0 0 0 0 0 1 1 
+state.c1o7 0 0 0 0 0 1 0 1 
+state.c1o8 0 0 0 0 1 0 0 1 
+state.c2o2 0 0 0 1 0 0 0 1 
+state.c2o3 0 0 1 0 0 0 0 1 
+state.c3o5 0 1 0 0 0 0 0 1 
+state.c3o6 1 0 0 0 0 0 0 1 

@@ -22,9 +22,19 @@ logic [7:0] VGA_X;
 logic [6:0] VGA_Y;
 logic [2:0] VGA_COLOUR;
 logic VGA_PLOT;
+logic [9:0] VGA_R_10;
+logic [9:0] VGA_G_10;
+logic [9:0] VGA_B_10;
+logic VGA_BLANK, VGA_SYNC;
 
-//de1_gui gui(.SW, .KEY, .LEDR, .HEX5, .HEX4, .HEX3, .HEX2, .HEX1, .HEX0);
+assign VGA_R = VGA_R_10[9:2];
+assign VGA_G = VGA_G_10[9:2];
+assign VGA_B = VGA_B_10[9:2];
 
+vga_adapter#(.RESOLUTION("160x120")) vga_u0(.resetn(KEY[3]), .clock(CLOCK_50), .colour(VGA_COLOUR),
+                                            .x(VGA_X), .y(VGA_Y), .plot(VGA_PLOT),
+                                            .VGA_R(VGA_R_10), .VGA_G(VGA_G_10), .VGA_B(VGA_B_10), 
+						.VGA_HS, .VGA_VS, .VGA_BLANK, .VGA_SYNC, .VGA_CLK);
 task3 DUT (.CLOCK_50, .KEY,
              .SW, .LEDR, .HEX0, .HEX1, .HEX2,
              .HEX3, .HEX4, .HEX5, .VGA_R, .VGA_G, .VGA_B,

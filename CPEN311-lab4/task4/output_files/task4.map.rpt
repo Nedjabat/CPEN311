@@ -1,0 +1,659 @@
+Analysis & Synthesis report for task4
+Sun Nov 05 16:56:21 2023
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. State Machine - |task4|state
+ 10. State Machine - |task4|blackscreen:b|state
+ 11. State Machine - |task4|reuleaux:c|state
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Parameter Settings for Inferred Entity Instance: reuleaux:c|lpm_divide:Div0
+ 17. Port Connectivity Checks: "reuleaux:c"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+ 21. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun Nov 05 16:56:21 2023       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; task4                                       ;
+; Top-level Entity Name           ; task4                                       ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 64                                          ;
+; Total pins                      ; 113                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 1                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; task4              ; task4              ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; task4.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv                             ;         ;
+; reuleaux.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv                          ;         ;
+; blackscreen.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/School/CPEN 311/CPEN311-lab4/task4/blackscreen.sv                       ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc      ;         ;
+; db/lpm_divide_2dm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/School/CPEN 311/CPEN311-lab4/task4/db/lpm_divide_2dm.tdf                ;         ;
+; db/sign_div_unsign_8nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/School/CPEN 311/CPEN311-lab4/task4/db/sign_div_unsign_8nh.tdf           ;         ;
+; db/alt_u_div_m2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/School/CPEN 311/CPEN311-lab4/task4/db/alt_u_div_m2f.tdf                 ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 336            ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 559            ;
+;     -- 7 input functions                    ; 9              ;
+;     -- 6 input functions                    ; 102            ;
+;     -- 5 input functions                    ; 11             ;
+;     -- 4 input functions                    ; 61             ;
+;     -- <=3 input functions                  ; 376            ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 64             ;
+;                                             ;                ;
+; I/O pins                                    ; 113            ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 1              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 64             ;
+; Total fan-out                               ; 2261           ;
+; Average fan-out                             ; 2.66           ;
++---------------------------------------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                               ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |task4                                    ; 559 (77)            ; 64 (5)                    ; 0                 ; 1          ; 113  ; 0            ; |task4                                                                                                            ; task4               ; work         ;
+;    |blackscreen:b|                        ; 26 (26)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |task4|blackscreen:b                                                                                              ; blackscreen         ; work         ;
+;    |reuleaux:c|                           ; 456 (266)           ; 38 (38)                   ; 0                 ; 1          ; 0    ; 0            ; |task4|reuleaux:c                                                                                                 ; reuleaux            ; work         ;
+;       |lpm_divide:Div0|                   ; 190 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |task4|reuleaux:c|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_2dm:auto_generated|  ; 190 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |task4|reuleaux:c|lpm_divide:Div0|lpm_divide_2dm:auto_generated                                                   ; lpm_divide_2dm      ; work         ;
+;             |sign_div_unsign_8nh:divider| ; 190 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |task4|reuleaux:c|lpm_divide:Div0|lpm_divide_2dm:auto_generated|sign_div_unsign_8nh:divider                       ; sign_div_unsign_8nh ; work         ;
+;                |alt_u_div_m2f:divider|    ; 190 (190)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |task4|reuleaux:c|lpm_divide:Div0|lpm_divide_2dm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_m2f:divider ; alt_u_div_m2f       ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary  ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Independent 9x9                 ; 1           ;
+; Total number of DSP blocks      ; 1           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 1           ;
++---------------------------------+-------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------+
+; State Machine - |task4|state                                                           ;
++------------------+------------------+------------------+---------------+---------------+
+; Name             ; state.state_done ; state.state_rest ; state.state_c ; state.state_b ;
++------------------+------------------+------------------+---------------+---------------+
+; state.state_b    ; 0                ; 0                ; 0             ; 0             ;
+; state.state_c    ; 0                ; 0                ; 1             ; 1             ;
+; state.state_rest ; 0                ; 1                ; 0             ; 1             ;
+; state.state_done ; 1                ; 0                ; 0             ; 1             ;
++------------------+------------------+------------------+---------------+---------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------+
+; State Machine - |task4|blackscreen:b|state                                                                          ;
++-------------------+-------------------+-------------------+-------------------+------------------+------------------+
+; Name              ; state.state_filly ; state.state_fillx ; state.state_start ; state.state_rest ; state.state_done ;
++-------------------+-------------------+-------------------+-------------------+------------------+------------------+
+; state.state_rest  ; 0                 ; 0                 ; 0                 ; 0                ; 0                ;
+; state.state_start ; 0                 ; 0                 ; 1                 ; 1                ; 0                ;
+; state.state_fillx ; 0                 ; 1                 ; 0                 ; 1                ; 0                ;
+; state.state_filly ; 1                 ; 0                 ; 0                 ; 1                ; 0                ;
+; state.state_done  ; 0                 ; 0                 ; 0                 ; 1                ; 1                ;
++-------------------+-------------------+-------------------+-------------------+------------------+------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |task4|reuleaux:c|state                                                                                                ;
++-------------------+------------+------------+------------+------------+------------+------------+-------------------+------------------+
+; Name              ; state.c3o6 ; state.c3o5 ; state.c2o3 ; state.c2o2 ; state.c1o8 ; state.c1o7 ; state.state_start ; state.state_rest ;
++-------------------+------------+------------+------------+------------+------------+------------+-------------------+------------------+
+; state.state_rest  ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 0                ;
+; state.state_start ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1                 ; 1                ;
+; state.c1o7        ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0                 ; 1                ;
+; state.c1o8        ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0                 ; 1                ;
+; state.c2o2        ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0                 ; 1                ;
+; state.c2o3        ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0                 ; 1                ;
+; state.c3o5        ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 1                ;
+; state.c3o6        ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0                 ; 1                ;
++-------------------+------------+------------+------------+------------+------------+------------+-------------------+------------------+
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; reuleaux:c|done                        ; Stuck at VCC due to stuck port data_in ;
+; state.state_c                          ; Lost fanout                            ;
+; state~4                                ; Lost fanout                            ;
+; state~5                                ; Lost fanout                            ;
+; state~6                                ; Lost fanout                            ;
+; blackscreen:b|state~4                  ; Lost fanout                            ;
+; blackscreen:b|state~5                  ; Lost fanout                            ;
+; blackscreen:b|state~7                  ; Lost fanout                            ;
+; blackscreen:b|state~8                  ; Lost fanout                            ;
+; reuleaux:c|state~4                     ; Lost fanout                            ;
+; reuleaux:c|state~5                     ; Lost fanout                            ;
+; reuleaux:c|state~6                     ; Lost fanout                            ;
+; reuleaux:c|state~7                     ; Lost fanout                            ;
+; reuleaux:c|state~8                     ; Lost fanout                            ;
+; reuleaux:c|state~9                     ; Lost fanout                            ;
+; state.state_rest                       ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 16 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 64    ;
+; Number of registers using Synchronous Clear  ; 25    ;
+; Number of registers using Synchronous Load   ; 20    ;
+; Number of registers using Asynchronous Clear ; 17    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 45    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; startb                                 ; 3       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; 6:1                ; 8 bits    ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |task4|blackscreen:b|vga_x[0] ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |task4|blackscreen:b|vga_y[6] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |task4|reuleaux:c|offset_y[0] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |task4|reuleaux:c|offset_x[8] ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |task4|reuleaux:c|crit[5]     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |task4|reuleaux:c|state       ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |task4|reuleaux:c|Add17       ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |task4|reuleaux:c|Add17       ;
+; 14:1               ; 7 bits    ; 63 LEs        ; 28 LEs               ; 35 LEs                 ; No         ; |task4|vga_y                  ;
+; 14:1               ; 3 bits    ; 27 LEs        ; 24 LEs               ; 3 LEs                  ; No         ; |task4|vga_x                  ;
+; 14:1               ; 5 bits    ; 45 LEs        ; 45 LEs               ; 0 LEs                  ; No         ; |task4|vga_x                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: reuleaux:c|lpm_divide:Div0 ;
++------------------------+----------------+-----------------------------------+
+; Parameter Name         ; Value          ; Type                              ;
++------------------------+----------------+-----------------------------------+
+; LPM_WIDTHN             ; 17             ; Untyped                           ;
+; LPM_WIDTHD             ; 10             ; Untyped                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                           ;
+; CBXI_PARAMETER         ; lpm_divide_2dm ; Untyped                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                           ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                    ;
++------------------------+----------------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "reuleaux:c"           ;
++----------------+-------+----------+--------------+
+; Port           ; Type  ; Severity ; Details      ;
++----------------+-------+----------+--------------+
+; colour[2]      ; Input ; Info     ; Stuck at GND ;
+; colour[1]      ; Input ; Info     ; Stuck at VCC ;
+; colour[0]      ; Input ; Info     ; Stuck at GND ;
+; centre_x[3..0] ; Input ; Info     ; Stuck at GND ;
+; centre_x[7]    ; Input ; Info     ; Stuck at GND ;
+; centre_x[6]    ; Input ; Info     ; Stuck at VCC ;
+; centre_x[5]    ; Input ; Info     ; Stuck at GND ;
+; centre_x[4]    ; Input ; Info     ; Stuck at VCC ;
+; centre_y[5..2] ; Input ; Info     ; Stuck at VCC ;
+; centre_y[1..0] ; Input ; Info     ; Stuck at GND ;
+; centre_y[6]    ; Input ; Info     ; Stuck at GND ;
+; diameter[3..0] ; Input ; Info     ; Stuck at GND ;
+; diameter[7]    ; Input ; Info     ; Stuck at GND ;
+; diameter[6]    ; Input ; Info     ; Stuck at VCC ;
+; diameter[5]    ; Input ; Info     ; Stuck at GND ;
+; diameter[4]    ; Input ; Info     ; Stuck at VCC ;
++----------------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 64                          ;
+;     CLR               ; 17                          ;
+;     ENA SCLR          ; 25                          ;
+;     ENA SLD           ; 20                          ;
+;     plain             ; 2                           ;
+; arriav_lcell_comb     ; 559                         ;
+;     arith             ; 238                         ;
+;         0 data inputs ; 24                          ;
+;         1 data inputs ; 110                         ;
+;         2 data inputs ; 32                          ;
+;         3 data inputs ; 46                          ;
+;         4 data inputs ; 26                          ;
+;     extend            ; 9                           ;
+;         7 data inputs ; 9                           ;
+;     normal            ; 272                         ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 85                          ;
+;         3 data inputs ; 38                          ;
+;         4 data inputs ; 35                          ;
+;         5 data inputs ; 11                          ;
+;         6 data inputs ; 102                         ;
+;     shared            ; 40                          ;
+;         0 data inputs ; 3                           ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 27                          ;
+; arriav_mac            ; 1                           ;
+; boundary_port         ; 113                         ;
+;                       ;                             ;
+; Max LUT depth         ; 24.40                       ;
+; Average LUT depth     ; 15.24                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sun Nov 05 16:56:06 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off task4 -c task4
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file task4.sv
+    Info (12023): Found entity 1: task4 File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file reuleaux.sv
+    Info (12023): Found entity 1: reuleaux File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file blackscreen.sv
+    Info (12023): Found entity 1: blackscreen File: C:/School/CPEN 311/CPEN311-lab4/task4/blackscreen.sv Line: 3
+Info (12127): Elaborating entity "task4" for the top level hierarchy
+Warning (10034): Output port "LEDR" at task4.sv(3) has no driver File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 3
+Warning (10034): Output port "HEX0" at task4.sv(4) has no driver File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+Warning (10034): Output port "HEX1" at task4.sv(4) has no driver File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+Warning (10034): Output port "HEX2" at task4.sv(4) has no driver File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+Warning (10034): Output port "HEX3" at task4.sv(5) has no driver File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+Warning (10034): Output port "HEX4" at task4.sv(5) has no driver File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+Warning (10034): Output port "HEX5" at task4.sv(5) has no driver File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+Warning (10034): Output port "VGA_R" at task4.sv(6) has no driver File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+Warning (10034): Output port "VGA_G" at task4.sv(6) has no driver File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+Warning (10034): Output port "VGA_B" at task4.sv(6) has no driver File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+Warning (10034): Output port "VGA_HS" at task4.sv(7) has no driver File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 7
+Warning (10034): Output port "VGA_VS" at task4.sv(7) has no driver File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 7
+Warning (10034): Output port "VGA_CLK" at task4.sv(7) has no driver File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 7
+Info (12128): Elaborating entity "reuleaux" for hierarchy "reuleaux:c" File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 48
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(31): truncated value with size 32 to match size of target (9) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 31
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(32): truncated value with size 32 to match size of target (9) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 32
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(33): truncated value with size 32 to match size of target (9) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 33
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(34): truncated value with size 32 to match size of target (9) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 34
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(35): truncated value with size 32 to match size of target (9) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 35
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(62): truncated value with size 32 to match size of target (10) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 62
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(70): truncated value with size 32 to match size of target (10) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 70
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(72): truncated value with size 32 to match size of target (10) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 72
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(74): truncated value with size 32 to match size of target (10) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 74
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(75): truncated value with size 32 to match size of target (10) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 75
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(84): truncated value with size 32 to match size of target (10) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 84
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(93): truncated value with size 32 to match size of target (10) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 93
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(95): truncated value with size 32 to match size of target (10) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 95
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(97): truncated value with size 32 to match size of target (10) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 97
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(98): truncated value with size 32 to match size of target (10) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 98
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(107): truncated value with size 32 to match size of target (10) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 107
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(116): truncated value with size 32 to match size of target (10) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 116
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(118): truncated value with size 32 to match size of target (10) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 118
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(120): truncated value with size 32 to match size of target (10) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 120
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(121): truncated value with size 32 to match size of target (10) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 121
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(171): truncated value with size 9 to match size of target (8) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 171
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(172): truncated value with size 32 to match size of target (7) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 172
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(187): truncated value with size 9 to match size of target (8) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 187
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(188): truncated value with size 32 to match size of target (7) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 188
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(203): truncated value with size 9 to match size of target (8) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 203
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(204): truncated value with size 32 to match size of target (7) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 204
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(218): truncated value with size 9 to match size of target (8) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 218
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(219): truncated value with size 32 to match size of target (7) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 219
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(235): truncated value with size 9 to match size of target (8) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 235
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(236): truncated value with size 9 to match size of target (7) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 236
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(252): truncated value with size 9 to match size of target (8) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 252
+Warning (10230): Verilog HDL assignment warning at reuleaux.sv(253): truncated value with size 9 to match size of target (7) File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 253
+Info (12128): Elaborating entity "blackscreen" for hierarchy "blackscreen:b" File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 49
+Warning (10230): Verilog HDL assignment warning at blackscreen.sv(51): truncated value with size 32 to match size of target (7) File: C:/School/CPEN 311/CPEN311-lab4/task4/blackscreen.sv Line: 51
+Warning (10230): Verilog HDL assignment warning at blackscreen.sv(59): truncated value with size 32 to match size of target (8) File: C:/School/CPEN 311/CPEN311-lab4/task4/blackscreen.sv Line: 59
+Warning (10230): Verilog HDL assignment warning at blackscreen.sv(64): truncated value with size 32 to match size of target (7) File: C:/School/CPEN 311/CPEN311-lab4/task4/blackscreen.sv Line: 64
+Info (10264): Verilog HDL Case Statement information at blackscreen.sv(81): all case item expressions in this case statement are onehot File: C:/School/CPEN 311/CPEN311-lab4/task4/blackscreen.sv Line: 81
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "reuleaux:c|Div0" File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 33
+Info (12130): Elaborated megafunction instantiation "reuleaux:c|lpm_divide:Div0" File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 33
+Info (12133): Instantiated megafunction "reuleaux:c|lpm_divide:Div0" with the following parameter: File: C:/School/CPEN 311/CPEN311-lab4/task4/reuleaux.sv Line: 33
+    Info (12134): Parameter "LPM_WIDTHN" = "17"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_2dm.tdf
+    Info (12023): Found entity 1: lpm_divide_2dm File: C:/School/CPEN 311/CPEN311-lab4/task4/db/lpm_divide_2dm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_8nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_8nh File: C:/School/CPEN 311/CPEN311-lab4/task4/db/sign_div_unsign_8nh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_m2f.tdf
+    Info (12023): Found entity 1: alt_u_div_m2f File: C:/School/CPEN 311/CPEN311-lab4/task4/db/alt_u_div_m2f.tdf Line: 22
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 3
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 3
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 3
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 3
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 3
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 3
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 3
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 3
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 3
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 3
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 4
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+    Warning (13410): Pin "HEX4[6]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 5
+    Warning (13410): Pin "VGA_R[0]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_R[1]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_R[2]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_R[3]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_R[4]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_R[5]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_R[6]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_R[7]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_G[0]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_G[1]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_G[2]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_G[3]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_G[4]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_G[5]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_G[6]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_G[7]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_B[4]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_B[5]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_B[6]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_B[7]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 6
+    Warning (13410): Pin "VGA_HS" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 7
+    Warning (13410): Pin "VGA_VS" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 7
+    Warning (13410): Pin "VGA_CLK" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 7
+    Warning (13410): Pin "VGA_COLOUR[0]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 9
+    Warning (13410): Pin "VGA_COLOUR[2]" is stuck at GND File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 9
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 14 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/School/CPEN 311/CPEN311-lab4/task4/output_files/task4.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 13 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 2
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 2
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 2
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 3
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/School/CPEN 311/CPEN311-lab4/task4/task4.sv Line: 3
+Info (21057): Implemented 681 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 98 output pins
+    Info (21061): Implemented 567 logic cells
+    Info (21062): Implemented 1 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 145 warnings
+    Info: Peak virtual memory: 4913 megabytes
+    Info: Processing ended: Sun Nov 05 16:56:21 2023
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:13
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_files/task4.map.smsg.
+
+
