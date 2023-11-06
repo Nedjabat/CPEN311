@@ -1,5 +1,5 @@
 `timescale 1ps / 1ps
-module tb_rtl_fillscreen();
+module tb_syn_fillscreen();
 
 reg clk;
 reg rst_n;
@@ -70,5 +70,5 @@ end
 
 initial forever #5 clk = ~clk;
 
-endmodule: tb_rtl_fillscreen
+endmodule: tb_syn_fillscreen
 

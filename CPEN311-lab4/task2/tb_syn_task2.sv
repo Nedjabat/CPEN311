@@ -22,9 +22,11 @@ logic [7:0] VGA_X;
 logic [6:0] VGA_Y;
 logic [2:0] VGA_COLOUR;
 logic VGA_PLOT;
+reg [6:0] counter;
 
-//de1_gui gui(.SW, .KEY, .LEDR, .HEX5, .HEX4, .HEX3, .HEX2, .HEX1, .HEX0);
 
+
+                        
 task2 DUT (.CLOCK_50, .KEY,
              .SW, .LEDR, .HEX0, .HEX1, .HEX2,
              .HEX3, .HEX4, .HEX5, .VGA_R, .VGA_G, .VGA_B,
@@ -36,22 +38,74 @@ task2 DUT (.CLOCK_50, .KEY,
 initial 
 begin
 
-CLOCK_50 = 0;
-#5;
-KEY[3] = 1;
-#20000;
-KEY[3] = 0;
-#20000;
-KEY[3] = 1;
+	CLOCK_50 = 0;
+	counter = 0;
+	#5;
+	KEY[3] = 1;
+	#20000;
+	KEY[3] = 0;
+	#20000;
+	KEY[3] = 1;
 
+	#205000;
+
+	if(VGA_PLOT == 1)begin
+		counter = counter + 1'b1;
+		$display ("PASSED plot on test");
+	end else begin
+		$error ("FAILED plot on test");
+	end
+
+	if(VGA_X == 8'b00000000)begin
+		counter = counter + 1'b1;
+		$display ("PASSED x test");
+	end else begin
+		$error ("FAILED x test");
+	end
+
+	if(VGA_Y == 7'b0000111)begin
+		counter = counter + 1'b1;
+		$display ("PASSED y test");
+	end else begin
+		$error ("FAILED y test");
+	end
+
+	#2590000;
+
+	if(VGA_PLOT == 1)begin
+		counter = counter + 1'b1;
+		$display ("PASSED plot on test");
+	end else begin
+		$error ("FAILED plot on test");
+	end
+
+	if(VGA_X == 8'b00000001)begin
+		counter = counter + 1'b1;
+		$display ("PASSED x test");
+	end else begin
+		$error ("FAILED x test");
+	end
+
+	if(VGA_Y == 7'b0010001)begin
+		counter = counter + 1'b1;
+		$display ("PASSED y test");
+	end else begin
+		$error ("FAILED y test");
+	end
+	#381364995;
+	if(VGA_PLOT == 0)begin
+		counter = counter + 1'b1;
+		$display ("PASSED done test");
+	end else begin
+		$error ("FAILED done test");
+	end
+
+	$display("%d tests passed out of %d tests.", counter, 6'd7);
 
 
 end
 
 initial forever #10000 CLOCK_50 = ~CLOCK_50;
-
-
-
 
 
 endmodule: tb_syn_task2

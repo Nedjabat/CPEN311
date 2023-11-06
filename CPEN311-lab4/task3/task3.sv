@@ -84,6 +84,8 @@ begin
 			state_c: begin
 				if (circle_done) begin
 					startc <= 0;
+					vga_plotb <= 0;
+					vga_plotc <= 0;
 					state <= state_done;
 				end
 				else state <= state_c;

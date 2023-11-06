@@ -10,315 +10,315 @@ cModel Technology
 dC:/School/CPEN 311/CPEN311-lab4/task1
 vbutton_pusher
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z1 !s110 1699254461
+!s110 1699255017
 !i10b 1
 !s100 FdJfASPOg`ZfXQQU:2hJ^0
 IY9CUE1nRUGLhN;AA>jlAG0
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
 !s105 button_pusher_sv_unit
 S1
-Z3 dC:/School/CPEN 311/CPEN311-lab4/task2
-Z4 w1698039799
+Z2 dC:/School/CPEN 311/CPEN311-lab4/task2
+Z3 w1698039799
 8C:/School/CPEN 311/CPEN311-lab4/task2/button_pusher.sv
 FC:/School/CPEN 311/CPEN311-lab4/task2/button_pusher.sv
 L0 3
-Z5 OV;L;10.5b;63
+Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1699254461.000000
+!s108 1699255017.000000
 !s107 C:/School/CPEN 311/CPEN311-lab4/task2/button_pusher.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab4/task2/button_pusher.sv|
 !i113 1
-Z7 o-work work -sv
-Z8 tCvgOpt 0
+Z5 o-work work -sv
+Z6 tCvgOpt 0
 vde1_gui
 R0
-Z9 DXx6 sv_std 7 mti_fli 0 22 N`967G9WZ3=6fdOR5MX]S1
-R1
+Z7 DXx6 sv_std 7 mti_fli 0 22 N`967G9WZ3=6fdOR5MX]S1
+Z8 !s110 1699255018
 !i10b 1
 !s100 =QRS2jiFLjHjH3@F5mOc31
 I3RcG[gFeMH5aWM40_4?0Q2
-R2
+R1
 !s105 de1_gui_sv_unit
 S1
+R2
 R3
-R4
 8C:/School/CPEN 311/CPEN311-lab4/task2/de1_gui.sv
 FC:/School/CPEN 311/CPEN311-lab4/task2/de1_gui.sv
 L0 1
-R5
+R4
 r1
 !s85 0
 31
-R6
+Z9 !s108 1699255018.000000
 !s107 C:/School/CPEN 311/CPEN311-lab4/task2/de1_gui.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab4/task2/de1_gui.sv|
 !i113 1
-R7
-R8
+R5
+R6
 vfillscreen
 R0
-R1
+R8
 !i10b 1
 !s100 o^mj6i2gd7bbz^9Fz7lYG1
 IV1?U;L4YhDiO1Q_h=jXKa2
-R2
+R1
 !s105 fillscreen_sv_unit
 S1
-R3
+R2
 Z10 w1699249726
 8C:/School/CPEN 311/CPEN311-lab4/task2/fillscreen.sv
 FC:/School/CPEN 311/CPEN311-lab4/task2/fillscreen.sv
 L0 3
-R5
+R4
 r1
 !s85 0
 31
-R6
+R9
 !s107 C:/School/CPEN 311/CPEN311-lab4/task2/fillscreen.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab4/task2/fillscreen.sv|
 !i113 1
-R7
-R8
+R5
+R6
 vtask2
 R0
-R1
+R8
 !i10b 1
 !s100 SmM_ll5?D07nD^@z]io:m0
 I<]bg]Y7:cLK?IRJ4SU@G>1
-R2
+R1
 !s105 task2_sv_unit
 S1
-R3
+R2
 w1699254445
 8C:/School/CPEN 311/CPEN311-lab4/task2/task2.sv
 FC:/School/CPEN 311/CPEN311-lab4/task2/task2.sv
 L0 4
-R5
+R4
 r1
 !s85 0
 31
-R6
+R9
 !s107 C:/School/CPEN 311/CPEN311-lab4/task2/task2.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab4/task2/task2.sv|
 !i113 1
-R7
-R8
+R5
+R6
 vtb_de1_gui
 R0
-R1
+R8
 !i10b 1
 !s100 Xk3lKUcB8Cc2C]J>nDbM:1
 I7jFem4bN5Q^O>Q@aIEELX0
-R2
+R1
 !s105 tb_de1_gui_sv_unit
 S1
+R2
 R3
-R4
 8C:/School/CPEN 311/CPEN311-lab4/task2/tb_de1_gui.sv
 FC:/School/CPEN 311/CPEN311-lab4/task2/tb_de1_gui.sv
 L0 3
-R5
+R4
 r1
 !s85 0
 31
-R6
+R9
 !s107 C:/School/CPEN 311/CPEN311-lab4/task2/tb_de1_gui.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab4/task2/tb_de1_gui.sv|
 !i113 1
-R7
-R8
+R5
+R6
 vtb_rtl_fillscreen
 R0
-Z11 !s110 1699254462
+R8
 !i10b 1
 !s100 G6o=m0B[aV2BJU>ioVCa@2
 IRQg7=ld[P2lk;b>ENmAzD0
-R2
+R1
 !s105 tb_rtl_fillscreen_sv_unit
 S1
-R3
+R2
 R10
 8C:/School/CPEN 311/CPEN311-lab4/task2/tb_rtl_fillscreen.sv
 FC:/School/CPEN 311/CPEN311-lab4/task2/tb_rtl_fillscreen.sv
 L0 2
-R5
+R4
 r1
 !s85 0
 31
-R6
+R9
 !s107 C:/School/CPEN 311/CPEN311-lab4/task2/tb_rtl_fillscreen.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab4/task2/tb_rtl_fillscreen.sv|
 !i113 1
-R7
-R8
+R5
+R6
 vtb_rtl_task2
 R0
-R11
+R8
 !i10b 1
 !s100 zfSKYcmkQHhloRH;S1@oc3
 IQf>?]NF2dXeRVjeSWMSY<0
-R2
+R1
 !s105 tb_rtl_task2_sv_unit
 S1
-R3
-w1699254141
+R2
+w1699254702
 8C:/School/CPEN 311/CPEN311-lab4/task2/tb_rtl_task2.sv
 FC:/School/CPEN 311/CPEN311-lab4/task2/tb_rtl_task2.sv
 L0 3
-R5
+R4
 r1
 !s85 0
 31
-Z12 !s108 1699254462.000000
+R9
 !s107 C:/School/CPEN 311/CPEN311-lab4/task2/tb_rtl_task2.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab4/task2/tb_rtl_task2.sv|
 !i113 1
-R7
-R8
+R5
+R6
 vtb_syn_fillscreen
 R0
-R11
+R8
 !i10b 1
-!s100 6NIHhU7T752kol^=J0ZF?3
-I6`iVVlXoKU`T80X2Jka7=2
-R2
+!s100 D;PCTL=>Gj1W@RHlZbT@K2
+I]TCWLnhmX5SoQ=cLfFGkh3
+R1
 !s105 tb_syn_fillscreen_sv_unit
 S1
-R3
-w1698967948
+R2
+w1699254918
 8C:/School/CPEN 311/CPEN311-lab4/task2/tb_syn_fillscreen.sv
 FC:/School/CPEN 311/CPEN311-lab4/task2/tb_syn_fillscreen.sv
 L0 2
-R5
+R4
 r1
 !s85 0
 31
-R12
+R9
 !s107 C:/School/CPEN 311/CPEN311-lab4/task2/tb_syn_fillscreen.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab4/task2/tb_syn_fillscreen.sv|
 !i113 1
-R7
-R8
+R5
+R6
 vtb_syn_task2
 R0
-R11
+R8
 !i10b 1
-!s100 KOiG4i`[RgNWZ9eN6DHdY0
-I1NMN@z>>0ZRe3liZ9z4<a1
-R2
+!s100 ]mFW9<^Em^?M8`fCfYE?M0
+IabDoV@jKI1o19g>LnR4@g3
+R1
 !s105 tb_syn_task2_sv_unit
 S1
-R3
-w1698967409
+R2
+w1699254899
 8C:/School/CPEN 311/CPEN311-lab4/task2/tb_syn_task2.sv
 FC:/School/CPEN 311/CPEN311-lab4/task2/tb_syn_task2.sv
 L0 3
-R5
+R4
 r1
 !s85 0
 31
-R12
+R9
 !s107 C:/School/CPEN 311/CPEN311-lab4/task2/tb_syn_task2.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab4/task2/tb_syn_task2.sv|
 !i113 1
-R7
-R8
+R5
+R6
 vvga_adapter
 R0
-R9
-R11
+R7
+R8
 !i10b 1
 !s100 h8aB6A^ia_odOh=<4`Ka>0
 IPc6VnXlPSjdI9:?F`B3QU1
-R2
+R1
 !s105 vga_adapter_sv_unit
 S1
-R3
-Z13 w1641691623
+R2
+Z11 w1641691623
 8C:/School/CPEN 311/CPEN311-lab4/task2/vga_adapter.sv
 FC:/School/CPEN 311/CPEN311-lab4/task2/vga_adapter.sv
 L0 82
-R5
+R4
 r1
 !s85 0
 31
-R12
+R9
 !s107 C:/School/CPEN 311/CPEN311-lab4/task2/vga_adapter.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab4/task2/vga_adapter.sv|
 !i113 1
-R7
-R8
+R5
+R6
 vvga_address_translator
 R0
-R11
+R8
 !i10b 1
 !s100 >4Ck2[^7MRo410`;`mBhG0
 I>10L1Zz;XAPP0P4:RS_e>1
-R2
+R1
 !s105 vga_address_translator_sv_unit
 S1
-R3
-R13
+R2
+R11
 8C:/School/CPEN 311/CPEN311-lab4/task2/vga_address_translator.sv
 FC:/School/CPEN 311/CPEN311-lab4/task2/vga_address_translator.sv
 L0 8
-R5
+R4
 r1
 !s85 0
 31
-R12
+R9
 !s107 C:/School/CPEN 311/CPEN311-lab4/task2/vga_address_translator.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab4/task2/vga_address_translator.sv|
 !i113 1
-R7
-R8
+R5
+R6
 vvga_controller
 R0
-R11
+Z12 !s110 1699255019
 !i10b 1
 !s100 K^Z0JG9FjLR6T71PJVY]`2
 IzV2zdZE70g=[aFjGmUKg63
-R2
+R1
 !s105 vga_controller_sv_unit
 S1
-R3
-R13
+R2
+R11
 8C:/School/CPEN 311/CPEN311-lab4/task2/vga_controller.sv
 FC:/School/CPEN 311/CPEN311-lab4/task2/vga_controller.sv
 L0 13
-R5
+R4
 r1
 !s85 0
 31
-R12
+R9
 !s107 C:/School/CPEN 311/CPEN311-lab4/task2/vga_controller.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab4/task2/vga_controller.sv|
 !i113 1
-R7
-R8
+R5
+R6
 vvga_pll
 R0
-R11
+R12
 !i10b 1
 !s100 B@RTRAe2BCUY;gLZj0kH`3
 IFj_Smg74TB09e1o3goMHb2
-R2
+R1
 !s105 vga_pll_sv_unit
 S1
-R3
-R13
+R2
+R11
 8C:/School/CPEN 311/CPEN311-lab4/task2/vga_pll.sv
 FC:/School/CPEN 311/CPEN311-lab4/task2/vga_pll.sv
 L0 36
-R5
+R4
 r1
 !s85 0
 31
-R12
+!s108 1699255019.000000
 !s107 C:/School/CPEN 311/CPEN311-lab4/task2/vga_pll.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab4/task2/vga_pll.sv|
 !i113 1
-R7
-R8
+R5
+R6
