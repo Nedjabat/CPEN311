@@ -38,39 +38,16 @@ task2 DUT (.CLOCK_50, .KEY,
 initial 
 begin
 
-CLOCK_50 = 0;
-counter = 0;
-#5;
-KEY[3] = 1;
-#20000;
-KEY[3] = 0;
-#20000;
-KEY[3] = 1;
+	CLOCK_50 = 0;
+	counter = 0;
+	#5;
+	KEY[3] = 1;
+	#20000;
+	KEY[3] = 0;
+	#20000;
+	KEY[3] = 1;
 
-#35;
-
-	if(VGA_PLOT == 1)begin
-		counter = counter + 1'b1;
-		$display ("PASSED plot on test");
-	end else begin
-		$error ("FAILED plot on test");
-	end
-
-	if(VGA_X == 0)begin
-		counter = counter + 1'b1;
-		$display ("PASSED x test");
-	end else begin
-		$error ("FAILED x test");
-	end
-
-	if(VGA_Y == 1)begin
-		counter = counter + 1'b1;
-		$display ("PASSED y test");
-	end else begin
-		$error ("FAILED y test");
-	end
-
-#35;
+	#205000;
 
 	if(VGA_PLOT == 1)begin
 		counter = counter + 1'b1;
@@ -79,30 +56,49 @@ KEY[3] = 1;
 		$error ("FAILED plot on test");
 	end
 
-	if(VGA_X == 0)begin
+	if(VGA_X == 8'b00000000)begin
 		counter = counter + 1'b1;
 		$display ("PASSED x test");
 	end else begin
 		$error ("FAILED x test");
 	end
 
-	if(VGA_Y == 1)begin
+	if(VGA_Y == 7'b0000111)begin
 		counter = counter + 1'b1;
 		$display ("PASSED y test");
 	end else begin
 		$error ("FAILED y test");
 	end
 
-#192020;
+	#2590000;
 
+	if(VGA_PLOT == 1)begin
+		counter = counter + 1'b1;
+		$display ("PASSED plot on test");
+	end else begin
+		$error ("FAILED plot on test");
+	end
 
+	if(VGA_X == 8'b00000001)begin
+		counter = counter + 1'b1;
+		$display ("PASSED x test");
+	end else begin
+		$error ("FAILED x test");
+	end
+
+	if(VGA_Y == 7'b0010001)begin
+		counter = counter + 1'b1;
+		$display ("PASSED y test");
+	end else begin
+		$error ("FAILED y test");
+	end
+	#381364995;
 	if(VGA_PLOT == 0)begin
 		counter = counter + 1'b1;
 		$display ("PASSED done test");
 	end else begin
 		$error ("FAILED done test");
 	end
-
 
 	$display("%d tests passed out of %d tests.", counter, 6'd7);
 

@@ -33,13 +33,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	button_pusher
 
-} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task2/tb_rtl_task2.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task2/tb_rtl_task2.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module tb_rtl_task2
-
-Top level modules:
-	tb_rtl_task2
-
 } {} {}} {C:/School/CPEN 311/CPEN311-lab4/task2/tb_syn_task2.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task2/tb_syn_task2.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module tb_syn_task2

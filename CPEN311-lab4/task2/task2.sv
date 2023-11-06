@@ -55,6 +55,7 @@ begin
 	if(done) 
     begin
 		start <= 0;
+        vga_plot <= 0;
 	end
 
 	
