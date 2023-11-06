@@ -22,20 +22,10 @@ logic [7:0] VGA_X;
 logic [6:0] VGA_Y;
 logic [2:0] VGA_COLOUR;
 logic VGA_PLOT;
+reg [6:0] counter;
 
-logic [9:0] VGA_R_10;
-logic [9:0] VGA_G_10;
-logic [9:0] VGA_B_10;
-logic VGA_BLANK, VGA_SYNC;
 
-assign VGA_R = VGA_R_10[9:2];
-assign VGA_G = VGA_G_10[9:2];
-assign VGA_B = VGA_B_10[9:2];
 
-vga_adapter#(.RESOLUTION("160x120")) vga_u0(.resetn(KEY[3]), .clock(CLOCK_50), .colour(VGA_COLOUR),
-                                            .x(VGA_X), .y(VGA_Y), .plot(VGA_PLOT),
-                                            .VGA_R(VGA_R_10), .VGA_G(VGA_G_10), .VGA_B(VGA_B_10), 
-						.VGA_HS, .VGA_VS, .VGA_BLANK, .VGA_SYNC, .VGA_CLK);
                         
 task2 DUT (.CLOCK_50, .KEY,
              .SW, .LEDR, .HEX0, .HEX1, .HEX2,
@@ -49,6 +39,7 @@ initial
 begin
 
 CLOCK_50 = 0;
+counter = 0;
 #5;
 KEY[3] = 1;
 #20000;
@@ -56,14 +47,69 @@ KEY[3] = 0;
 #20000;
 KEY[3] = 1;
 
+#35;
+
+	if(VGA_PLOT == 1)begin
+		counter = counter + 1'b1;
+		$display ("PASSED plot on test");
+	end else begin
+		$error ("FAILED plot on test");
+	end
+
+	if(VGA_X == 0)begin
+		counter = counter + 1'b1;
+		$display ("PASSED x test");
+	end else begin
+		$error ("FAILED x test");
+	end
+
+	if(VGA_Y == 1)begin
+		counter = counter + 1'b1;
+		$display ("PASSED y test");
+	end else begin
+		$error ("FAILED y test");
+	end
+
+#35;
+
+	if(VGA_PLOT == 1)begin
+		counter = counter + 1'b1;
+		$display ("PASSED plot on test");
+	end else begin
+		$error ("FAILED plot on test");
+	end
+
+	if(VGA_X == 0)begin
+		counter = counter + 1'b1;
+		$display ("PASSED x test");
+	end else begin
+		$error ("FAILED x test");
+	end
+
+	if(VGA_Y == 1)begin
+		counter = counter + 1'b1;
+		$display ("PASSED y test");
+	end else begin
+		$error ("FAILED y test");
+	end
+
+#192020;
+
+
+	if(VGA_PLOT == 0)begin
+		counter = counter + 1'b1;
+		$display ("PASSED done test");
+	end else begin
+		$error ("FAILED done test");
+	end
+
+
+	$display("%d tests passed out of %d tests.", counter, 6'd7);
 
 
 end
 
 initial forever #10000 CLOCK_50 = ~CLOCK_50;
-
-
-
 
 
 endmodule: tb_rtl_task2
