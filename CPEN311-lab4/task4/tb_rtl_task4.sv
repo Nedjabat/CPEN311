@@ -65,14 +65,14 @@ KEY[3] = 1;
 		$error ("FAILED blackscreen x test");
 	end
 
-	if(VGA_Y == 1)begin
+	if(VGA_Y == 0)begin
 		counter = counter + 1'b1;
 		$display ("PASSED blackscreen y test");
 	end else begin
 		$error ("FAILED blackscreen y test");
 	end
 
-	if(VGA_COLOUR == 3'b111)begin
+	if(VGA_COLOUR == 3'b000)begin
 		counter = counter + 1'b1;
 		$display ("PASSED blackscreen colour test");
 	end else begin
@@ -80,6 +80,7 @@ KEY[3] = 1;
 	end
 
 #384000000;
+#500000;
 
 	if(VGA_PLOT == 1)begin
 		counter = counter + 1'b1;
@@ -88,14 +89,14 @@ KEY[3] = 1;
 		$error ("FAILED plot on test");
 	end
 
-	if(VGA_X == 0)begin
+	if(VGA_X == 8'b01111000)begin
 		counter = counter + 1'b1;
 		$display ("PASSED circle x test");
 	end else begin
 		$error ("FAILED circle x test");
 	end
 
-	if(VGA_Y == 1)begin
+	if(VGA_Y == 7'b1010110)begin
 		counter = counter + 1'b1;
 		$display ("PASSED circle y test");
 	end else begin

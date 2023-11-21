@@ -1,0 +1,28 @@
+
+State Machine - |task3|state
+Name state.state_done state.state_rest state.state_c state.state_b 
+state.state_b 0 0 0 0 
+state.state_c 0 0 1 1 
+state.state_rest 0 1 0 1 
+state.state_done 1 0 0 1 
+
+State Machine - |task3|blackscreen:b|state
+Name state.state_filly state.state_fillx state.state_start state.state_rest state.state_done 
+state.state_rest 0 0 0 0 0 
+state.state_start 0 0 1 1 0 
+state.state_fillx 0 1 0 1 0 
+state.state_filly 1 0 0 1 0 
+state.state_done 0 0 0 1 1 
+
+State Machine - |task3|circle:c|state
+Name state.p8 state.p7 state.p6 state.p5 state.p4 state.p3 state.p2 state.p1 state.state_start state.state_rest 
+state.state_rest 0 0 0 0 0 0 0 0 0 0 
+state.state_start 0 0 0 0 0 0 0 0 1 1 
+state.p1 0 0 0 0 0 0 0 1 0 1 
+state.p2 0 0 0 0 0 0 1 0 0 1 
+state.p3 0 0 0 0 0 1 0 0 0 1 
+state.p4 0 0 0 0 1 0 0 0 0 1 
+state.p5 0 0 0 1 0 0 0 0 0 1 
+state.p6 0 0 1 0 0 0 0 0 0 1 
+state.p7 0 1 0 0 0 0 0 0 0 1 
+state.p8 1 0 0 0 0 0 0 0 0 1 

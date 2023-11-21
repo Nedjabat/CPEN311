@@ -90,7 +90,7 @@ KEY[3] = 1;
 		$error ("FAILED plot on test");
 	end
 
-	if(VGA_X == 8'b01010010)begin
+	if(VGA_X == 8'b01001110)begin
 		counter = counter + 1'b1;
 		$display ("PASSED circle x test");
 	end else begin

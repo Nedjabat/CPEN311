@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sun Nov 05 21:37:27 2023
+Analysis & Synthesis Status : Successful - Sun Nov 05 23:51:27 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : task4
 Top-level Entity Name : task4
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 92
+Total registers : 93
 Total pins : 113
 Total virtual pins : 0
 Total block memory bits : 57,600

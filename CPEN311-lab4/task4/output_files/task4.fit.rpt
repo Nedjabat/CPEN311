@@ -1,5 +1,5 @@
 Fitter report for task4
-Sun Nov 05 21:39:53 2023
+Sun Nov 05 23:54:22 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -67,15 +67,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Sun Nov 05 21:39:53 2023       ;
+; Fitter Status                   ; Successful - Sun Nov 05 23:54:22 2023       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; task4                                       ;
 ; Top-level Entity Name           ; task4                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 354 / 32,070 ( 1 % )                        ;
-; Total registers                 ; 122                                         ;
+; Logic utilization (in ALMs)     ; 355 / 32,070 ( 1 % )                        ;
+; Total registers                 ; 123                                         ;
 ; Total pins                      ; 113 / 457 ( 25 % )                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 57,600 / 4,065,280 ( 1 % )                  ;
@@ -170,7 +170,7 @@ refer to the applicable agreement for further details.
 ;     Processor 7            ;   0.3%      ;
 ;     Processor 8            ;   0.3%      ;
 ;     Processor 9            ;   0.3%      ;
-;     Processor 10           ;   0.3%      ;
+;     Processor 10           ;   0.2%      ;
 ;     Processor 11           ;   0.2%      ;
 ;     Processor 12           ;   0.2%      ;
 ;     Processor 13           ;   0.2%      ;
@@ -180,44 +180,44 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Netlist Optimizations                                                                                                                                                                                                                                                                                                                 ;
-+---------------------------------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+--------------------------------------------------------------------+------------------+-----------------------+
-; Node                                                                                              ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                                                   ; Destination Port ; Destination Port Name ;
-+---------------------------------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+--------------------------------------------------------------------+------------------+-----------------------+
-; vga_adapter:vga_u0|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|clk[0]~CLKENA0 ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                    ;                  ;                       ;
-; CLOCK_50~inputCLKENA0                                                                             ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                    ;                  ;                       ;
-; blackscreen:b|vga_x[2]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; blackscreen:b|vga_x[2]~DUPLICATE                                   ;                  ;                       ;
-; blackscreen:b|vga_y[3]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; blackscreen:b|vga_y[3]~DUPLICATE                                   ;                  ;                       ;
-; blackscreen:b|vga_y[6]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; blackscreen:b|vga_y[6]~DUPLICATE                                   ;                  ;                       ;
-; reuleaux:c|crit[1]                                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|crit[1]~DUPLICATE                                       ;                  ;                       ;
-; reuleaux:c|crit[6]                                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|crit[6]~DUPLICATE                                       ;                  ;                       ;
-; reuleaux:c|offset_x[0]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_x[0]~DUPLICATE                                   ;                  ;                       ;
-; reuleaux:c|offset_x[1]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_x[1]~DUPLICATE                                   ;                  ;                       ;
-; reuleaux:c|offset_x[2]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_x[2]~DUPLICATE                                   ;                  ;                       ;
-; reuleaux:c|offset_x[3]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_x[3]~DUPLICATE                                   ;                  ;                       ;
-; reuleaux:c|offset_x[6]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_x[6]~DUPLICATE                                   ;                  ;                       ;
-; reuleaux:c|offset_x[7]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_x[7]~DUPLICATE                                   ;                  ;                       ;
-; reuleaux:c|offset_y[0]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_y[0]~DUPLICATE                                   ;                  ;                       ;
-; reuleaux:c|offset_y[1]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_y[1]~DUPLICATE                                   ;                  ;                       ;
-; reuleaux:c|offset_y[3]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_y[3]~DUPLICATE                                   ;                  ;                       ;
-; reuleaux:c|offset_y[5]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_y[5]~DUPLICATE                                   ;                  ;                       ;
-; reuleaux:c|offset_y[6]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_y[6]~DUPLICATE                                   ;                  ;                       ;
-; reuleaux:c|offset_y[7]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_y[7]~DUPLICATE                                   ;                  ;                       ;
-; reuleaux:c|offset_y[8]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_y[8]~DUPLICATE                                   ;                  ;                       ;
-; reuleaux:c|state.c1o7                                                                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|state.c1o7~DUPLICATE                                    ;                  ;                       ;
-; reuleaux:c|state.c3o5                                                                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|state.c3o5~DUPLICATE                                    ;                  ;                       ;
-; reuleaux:c|state.c3o6                                                                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|state.c3o6~DUPLICATE                                    ;                  ;                       ;
-; reuleaux:c|state.state_rest                                                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|state.state_rest~DUPLICATE                              ;                  ;                       ;
-; reuleaux:c|state.state_start                                                                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|state.state_start~DUPLICATE                             ;                  ;                       ;
-; vga_adapter:vga_u0|vga_controller:controller|xCounter[3]                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_adapter:vga_u0|vga_controller:controller|xCounter[3]~DUPLICATE ;                  ;                       ;
-; vga_adapter:vga_u0|vga_controller:controller|xCounter[7]                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_adapter:vga_u0|vga_controller:controller|xCounter[7]~DUPLICATE ;                  ;                       ;
-; vga_adapter:vga_u0|vga_controller:controller|xCounter[8]                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_adapter:vga_u0|vga_controller:controller|xCounter[8]~DUPLICATE ;                  ;                       ;
-; vga_adapter:vga_u0|vga_controller:controller|xCounter[9]                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_adapter:vga_u0|vga_controller:controller|xCounter[9]~DUPLICATE ;                  ;                       ;
-; vga_adapter:vga_u0|vga_controller:controller|yCounter[1]                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_adapter:vga_u0|vga_controller:controller|yCounter[1]~DUPLICATE ;                  ;                       ;
-; vga_adapter:vga_u0|vga_controller:controller|yCounter[2]                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_adapter:vga_u0|vga_controller:controller|yCounter[2]~DUPLICATE ;                  ;                       ;
-; vga_adapter:vga_u0|vga_controller:controller|yCounter[5]                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_adapter:vga_u0|vga_controller:controller|yCounter[5]~DUPLICATE ;                  ;                       ;
-+---------------------------------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+--------------------------------------------------------------------+------------------+-----------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Netlist Optimizations                                                                                                                                                                                                                                                                                                                                                      ;
++---------------------------------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------------------------------------------------------------------------------+------------------+-----------------------+
+; Node                                                                                              ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                                                                                        ; Destination Port ; Destination Port Name ;
++---------------------------------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------------------------------------------------------------------------------+------------------+-----------------------+
+; vga_adapter:vga_u0|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|clk[0]~CLKENA0 ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                                                         ;                  ;                       ;
+; CLOCK_50~inputCLKENA0                                                                             ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                                                         ;                  ;                       ;
+; blackscreen:b|vga_x[5]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; blackscreen:b|vga_x[5]~DUPLICATE                                                                        ;                  ;                       ;
+; blackscreen:b|vga_x[6]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; blackscreen:b|vga_x[6]~DUPLICATE                                                                        ;                  ;                       ;
+; blackscreen:b|vga_y[1]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; blackscreen:b|vga_y[1]~DUPLICATE                                                                        ;                  ;                       ;
+; blackscreen:b|vga_y[4]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; blackscreen:b|vga_y[4]~DUPLICATE                                                                        ;                  ;                       ;
+; blackscreen:b|vga_y[6]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; blackscreen:b|vga_y[6]~DUPLICATE                                                                        ;                  ;                       ;
+; reuleaux:c|crit[2]                                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|crit[2]~DUPLICATE                                                                            ;                  ;                       ;
+; reuleaux:c|crit[5]                                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|crit[5]~DUPLICATE                                                                            ;                  ;                       ;
+; reuleaux:c|crit[6]                                                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|crit[6]~DUPLICATE                                                                            ;                  ;                       ;
+; reuleaux:c|offset_x[0]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_x[0]~DUPLICATE                                                                        ;                  ;                       ;
+; reuleaux:c|offset_x[1]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_x[1]~DUPLICATE                                                                        ;                  ;                       ;
+; reuleaux:c|offset_x[3]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_x[3]~DUPLICATE                                                                        ;                  ;                       ;
+; reuleaux:c|offset_x[5]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_x[5]~DUPLICATE                                                                        ;                  ;                       ;
+; reuleaux:c|offset_x[6]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_x[6]~DUPLICATE                                                                        ;                  ;                       ;
+; reuleaux:c|offset_x[7]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_x[7]~DUPLICATE                                                                        ;                  ;                       ;
+; reuleaux:c|offset_x[8]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_x[8]~DUPLICATE                                                                        ;                  ;                       ;
+; reuleaux:c|offset_y[4]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_y[4]~DUPLICATE                                                                        ;                  ;                       ;
+; reuleaux:c|offset_y[6]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_y[6]~DUPLICATE                                                                        ;                  ;                       ;
+; reuleaux:c|offset_y[8]                                                                            ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|offset_y[8]~DUPLICATE                                                                        ;                  ;                       ;
+; reuleaux:c|state.c1o7                                                                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|state.c1o7~DUPLICATE                                                                         ;                  ;                       ;
+; reuleaux:c|state.c1o8                                                                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|state.c1o8~DUPLICATE                                                                         ;                  ;                       ;
+; reuleaux:c|state.c2o2                                                                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|state.c2o2~DUPLICATE                                                                         ;                  ;                       ;
+; reuleaux:c|state.c2o3                                                                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|state.c2o3~DUPLICATE                                                                         ;                  ;                       ;
+; reuleaux:c|state.state_start                                                                      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; reuleaux:c|state.state_start~DUPLICATE                                                                  ;                  ;                       ;
+; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|out_address_reg_b[0]     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|out_address_reg_b[0]~DUPLICATE ;                  ;                       ;
+; vga_adapter:vga_u0|vga_controller:controller|yCounter[2]                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_adapter:vga_u0|vga_controller:controller|yCounter[2]~DUPLICATE                                      ;                  ;                       ;
+; vga_adapter:vga_u0|vga_controller:controller|yCounter[3]                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_adapter:vga_u0|vga_controller:controller|yCounter[3]~DUPLICATE                                      ;                  ;                       ;
+; vga_adapter:vga_u0|vga_controller:controller|yCounter[4]                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_adapter:vga_u0|vga_controller:controller|yCounter[4]~DUPLICATE                                      ;                  ;                       ;
+; vga_adapter:vga_u0|vga_controller:controller|yCounter[7]                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_adapter:vga_u0|vga_controller:controller|yCounter[7]~DUPLICATE                                      ;                  ;                       ;
+; vga_adapter:vga_u0|vga_controller:controller|yCounter[8]                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_adapter:vga_u0|vga_controller:controller|yCounter[8]~DUPLICATE                                      ;                  ;                       ;
+; vga_adapter:vga_u0|vga_controller:controller|yCounter[9]                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; vga_adapter:vga_u0|vga_controller:controller|yCounter[9]~DUPLICATE                                      ;                  ;                       ;
++---------------------------------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------------------------------------------------------------------------------+------------------+-----------------------+
 
 
 +--------------------------------------------------------------------------------------------+
@@ -398,8 +398,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 958 ) ; 0.00 % ( 0 / 958 )         ; 0.00 % ( 0 / 958 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 958 ) ; 0.00 % ( 0 / 958 )         ; 0.00 % ( 0 / 958 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 961 ) ; 0.00 % ( 0 / 961 )         ; 0.00 % ( 0 / 961 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 961 ) ; 0.00 % ( 0 / 961 )         ; 0.00 % ( 0 / 961 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -422,7 +422,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 948 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 951 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -438,40 +438,40 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 354 / 32,070       ; 1 %   ;
-; ALMs needed [=A-B+C]                                        ; 354                ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 354 / 32,070       ; 1 %   ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 355 / 32,070       ; 1 %   ;
+; ALMs needed [=A-B+C]                                        ; 355                ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 363 / 32,070       ; 1 %   ;
 ;         [a] ALMs used for LUT logic and registers           ; 42                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 308                ;       ;
-;         [c] ALMs used for registers                         ; 4                  ;       ;
+;         [b] ALMs used for LUT logic                         ; 316                ;       ;
+;         [c] ALMs used for registers                         ; 5                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 2 / 32,070         ; < 1 % ;
-;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 2 / 32,070         ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 9 / 32,070         ; < 1 % ;
+;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 1 / 32,070         ; < 1 % ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
-;         [c] Due to LAB input limits                         ; 2                  ;       ;
+;         [c] Due to LAB input limits                         ; 1                  ;       ;
 ;         [d] Due to virtual I/Os                             ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 41 / 3,207         ; 1 %   ;
-;     -- Logic LABs                                           ; 41                 ;       ;
+; Total LABs:  partially or completely used                   ; 47 / 3,207         ; 1 %   ;
+;     -- Logic LABs                                           ; 47                 ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 624                ;       ;
+; Combinational ALUT usage for logic                          ; 626                ;       ;
 ;     -- 7 input functions                                    ; 0                  ;       ;
-;     -- 6 input functions                                    ; 120                ;       ;
+;     -- 6 input functions                                    ; 122                ;       ;
 ;     -- 5 input functions                                    ; 20                 ;       ;
 ;     -- 4 input functions                                    ; 65                 ;       ;
 ;     -- <=3 input functions                                  ; 419                ;       ;
-; Combinational ALUT usage for route-throughs                 ; 1                  ;       ;
+; Combinational ALUT usage for route-throughs                 ; 2                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 122                ;       ;
+; Dedicated logic registers                                   ; 123                ;       ;
 ;     -- By type:                                             ;                    ;       ;
-;         -- Primary logic registers                          ; 92 / 64,140        ; < 1 % ;
+;         -- Primary logic registers                          ; 93 / 64,140        ; < 1 % ;
 ;         -- Secondary logic registers                        ; 30 / 64,140        ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
-;         -- Design implementation registers                  ; 92                 ;       ;
+;         -- Design implementation registers                  ; 93                 ;       ;
 ;         -- Routing optimization registers                   ; 30                 ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
@@ -527,11 +527,11 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 ; Oscillator blocks                                           ; 0 / 1              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 0.3% / 0.3% / 0.2% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 8.2% / 8.8% / 6.4% ;       ;
-; Maximum fan-out                                             ; 99                 ;       ;
-; Highest non-global fan-out                                  ; 99                 ;       ;
-; Total fan-out                                               ; 2983               ;       ;
+; Average interconnect usage (total/H/V)                      ; 0.2% / 0.2% / 0.2% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 7.1% / 7.5% / 5.7% ;       ;
+; Maximum fan-out                                             ; 100                ;       ;
+; Highest non-global fan-out                                  ; 100                ;       ;
+; Total fan-out                                               ; 3000               ;       ;
 ; Average fan-out                                             ; 3.02               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
@@ -541,43 +541,43 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Statistic                                                   ; Top                  ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 354 / 32070 ( 1 % )  ; 0 / 32070 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 354                  ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 354 / 32070 ( 1 % )  ; 0 / 32070 ( 0 % )              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 355 / 32070 ( 1 % )  ; 0 / 32070 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 355                  ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 363 / 32070 ( 1 % )  ; 0 / 32070 ( 0 % )              ;
 ;         [a] ALMs used for LUT logic and registers           ; 42                   ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 308                  ; 0                              ;
-;         [c] ALMs used for registers                         ; 4                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 316                  ; 0                              ;
+;         [c] ALMs used for registers                         ; 5                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 2 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
-;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 2 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 9 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
+;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 1 / 32070 ( < 1 % )  ; 0 / 32070 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                    ; 0                              ;
-;         [c] Due to LAB input limits                         ; 2                    ; 0                              ;
+;         [c] Due to LAB input limits                         ; 1                    ; 0                              ;
 ;         [d] Due to virtual I/Os                             ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Difficulty packing design                                   ; Low                  ; Low                            ;
 ;                                                             ;                      ;                                ;
-; Total LABs:  partially or completely used                   ; 41 / 3207 ( 1 % )    ; 0 / 3207 ( 0 % )               ;
-;     -- Logic LABs                                           ; 41                   ; 0                              ;
+; Total LABs:  partially or completely used                   ; 47 / 3207 ( 1 % )    ; 0 / 3207 ( 0 % )               ;
+;     -- Logic LABs                                           ; 47                   ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
-; Combinational ALUT usage for logic                          ; 624                  ; 0                              ;
+; Combinational ALUT usage for logic                          ; 626                  ; 0                              ;
 ;     -- 7 input functions                                    ; 0                    ; 0                              ;
-;     -- 6 input functions                                    ; 120                  ; 0                              ;
+;     -- 6 input functions                                    ; 122                  ; 0                              ;
 ;     -- 5 input functions                                    ; 20                   ; 0                              ;
 ;     -- 4 input functions                                    ; 65                   ; 0                              ;
 ;     -- <=3 input functions                                  ; 419                  ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 1                    ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 2                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
 ;     -- 32-address deep                                      ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Dedicated logic registers                                   ; 0                    ; 0                              ;
 ;     -- By type:                                             ;                      ;                                ;
-;         -- Primary logic registers                          ; 92 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
+;         -- Primary logic registers                          ; 93 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
 ;         -- Secondary logic registers                        ; 30 / 64140 ( < 1 % ) ; 0 / 64140 ( 0 % )              ;
 ;     -- By function:                                         ;                      ;                                ;
-;         -- Design implementation registers                  ; 92                   ; 0                              ;
+;         -- Design implementation registers                  ; 93                   ; 0                              ;
 ;         -- Routing optimization registers                   ; 30                   ; 0                              ;
 ;                                                             ;                      ;                                ;
 ;                                                             ;                      ;                                ;
@@ -595,18 +595,18 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 ; PLL Reference Clock Select Block                            ; 0 / 6 ( 0 % )        ; 1 / 6 ( 16 % )                 ;
 ;                                                             ;                      ;                                ;
 ; Connections                                                 ;                      ;                                ;
-;     -- Input Connections                                    ; 138                  ; 0                              ;
-;     -- Registered Input Connections                         ; 138                  ; 0                              ;
-;     -- Output Connections                                   ; 0                    ; 138                            ;
+;     -- Input Connections                                    ; 139                  ; 0                              ;
+;     -- Registered Input Connections                         ; 139                  ; 0                              ;
+;     -- Output Connections                                   ; 0                    ; 139                            ;
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 3135                 ; 173                            ;
-;     -- Registered Connections                               ; 771                  ; 0                              ;
+;     -- Total Connections                                    ; 3152                 ; 174                            ;
+;     -- Registered Connections                               ; 784                  ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
-;     -- Top                                                  ; 0                    ; 138                            ;
-;     -- hard_block:auto_generated_inst                       ; 138                  ; 0                              ;
+;     -- Top                                                  ; 0                    ; 139                            ;
+;     -- hard_block:auto_generated_inst                       ; 139                  ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Partition Interface                                         ;                      ;                                ;
 ;     -- Input Ports                                          ; 15                   ; 1                              ;
@@ -634,11 +634,11 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; CLOCK_50 ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 96                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; CLOCK_50 ; AF14  ; 3B       ; 32           ; 0            ; 0            ; 97                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY[0]   ; AA14  ; 3B       ; 36           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY[1]   ; AA15  ; 3B       ; 36           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; KEY[2]   ; W15   ; 3B       ; 40           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; KEY[3]   ; Y16   ; 3B       ; 40           ; 0            ; 17           ; 32                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; KEY[3]   ; Y16   ; 3B       ; 40           ; 0            ; 17           ; 31                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; SW[0]    ; AB12  ; 3A       ; 12           ; 0            ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; SW[1]    ; AC12  ; 3A       ; 16           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; SW[2]    ; AF9   ; 3A       ; 8            ; 0            ; 34           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
@@ -718,9 +718,9 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 ; VGA_B[6]      ; G15   ; 8A       ; 40           ; 81           ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; VGA_B[7]      ; J14   ; 8A       ; 32           ; 81           ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; VGA_CLK       ; A11   ; 8A       ; 38           ; 81           ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
-; VGA_COLOUR[0] ; AC20  ; 4A       ; 76           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; VGA_COLOUR[1] ; E9    ; 8A       ; 30           ; 81           ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; VGA_COLOUR[2] ; AK3   ; 3B       ; 20           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; VGA_COLOUR[0] ; AF23  ; 4A       ; 74           ; 0            ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; VGA_COLOUR[1] ; H15   ; 8A       ; 40           ; 81           ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; VGA_COLOUR[2] ; AG11  ; 3B       ; 18           ; 0            ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 ; VGA_G[0]      ; J9    ; 8A       ; 4            ; 81           ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; VGA_G[1]      ; J10   ; 8A       ; 4            ; 81           ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; VGA_G[2]      ; H12   ; 8A       ; 20           ; 81           ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
@@ -730,7 +730,7 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 ; VGA_G[6]      ; F11   ; 8A       ; 18           ; 81           ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; VGA_G[7]      ; E11   ; 8A       ; 18           ; 81           ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; VGA_HS        ; B11   ; 8A       ; 36           ; 81           ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
-; VGA_PLOT      ; D9    ; 8A       ; 30           ; 81           ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; VGA_PLOT      ; B8    ; 8A       ; 30           ; 81           ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 ; VGA_R[0]      ; A13   ; 8A       ; 40           ; 81           ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; VGA_R[1]      ; C13   ; 8A       ; 38           ; 81           ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; VGA_R[2]      ; E13   ; 8A       ; 26           ; 81           ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
@@ -740,21 +740,21 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 ; VGA_R[6]      ; E12   ; 8A       ; 22           ; 81           ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; VGA_R[7]      ; F13   ; 8A       ; 26           ; 81           ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
 ; VGA_VS        ; D11   ; 8A       ; 34           ; 81           ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; User                 ; -                    ; -                   ;
-; VGA_X[0]      ; D10   ; 8A       ; 34           ; 81           ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; VGA_X[1]      ; C9    ; 8A       ; 28           ; 81           ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; VGA_X[2]      ; C10   ; 8A       ; 28           ; 81           ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; VGA_X[3]      ; A6    ; 8A       ; 26           ; 81           ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; VGA_X[4]      ; A9    ; 8A       ; 34           ; 81           ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; VGA_X[5]      ; A8    ; 8A       ; 34           ; 81           ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; VGA_X[6]      ; C7    ; 8A       ; 32           ; 81           ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; VGA_X[7]      ; B8    ; 8A       ; 30           ; 81           ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; VGA_Y[0]      ; H8    ; 8A       ; 24           ; 81           ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; VGA_Y[1]      ; A4    ; 8A       ; 24           ; 81           ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; VGA_Y[2]      ; A5    ; 8A       ; 26           ; 81           ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; VGA_Y[3]      ; A3    ; 8A       ; 24           ; 81           ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; VGA_Y[4]      ; B7    ; 8A       ; 32           ; 81           ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; VGA_Y[5]      ; C8    ; 8A       ; 30           ; 81           ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; VGA_Y[6]      ; K14   ; 8A       ; 32           ; 81           ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; VGA_X[0]      ; D9    ; 8A       ; 30           ; 81           ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; VGA_X[1]      ; A9    ; 8A       ; 34           ; 81           ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; VGA_X[2]      ; A10   ; 8A       ; 38           ; 81           ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; VGA_X[3]      ; B7    ; 8A       ; 32           ; 81           ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; VGA_X[4]      ; D10   ; 8A       ; 34           ; 81           ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; VGA_X[5]      ; C8    ; 8A       ; 30           ; 81           ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; VGA_X[6]      ; A8    ; 8A       ; 34           ; 81           ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; VGA_X[7]      ; AH15  ; 3B       ; 38           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; VGA_Y[0]      ; A5    ; 8A       ; 26           ; 81           ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; VGA_Y[1]      ; C10   ; 8A       ; 28           ; 81           ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; VGA_Y[2]      ; A6    ; 8A       ; 26           ; 81           ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; VGA_Y[3]      ; C9    ; 8A       ; 28           ; 81           ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; VGA_Y[4]      ; C7    ; 8A       ; 32           ; 81           ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; VGA_Y[5]      ; K14   ; 8A       ; 32           ; 81           ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; VGA_Y[6]      ; E9    ; 8A       ; 30           ; 81           ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 +---------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -766,7 +766,7 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 ; B2L      ; 0 / 0 ( -- )      ; --            ; --           ; --            ;
 ; B1L      ; 0 / 0 ( -- )      ; --            ; --           ; --            ;
 ; 3A       ; 10 / 32 ( 31 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 3B       ; 6 / 48 ( 13 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 3B       ; 7 / 48 ( 15 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 4A       ; 8 / 80 ( 10 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 5A       ; 32 / 32 ( 100 % ) ; 2.5V          ; --           ; 2.5V          ;
 ; 5B       ; 13 / 16 ( 81 % )  ; 2.5V          ; --           ; 2.5V          ;
@@ -776,7 +776,7 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 ; 7B       ; 0 / 22 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
 ; 7C       ; 0 / 12 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
 ; 7D       ; 0 / 14 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
-; 8A       ; 44 / 80 ( 55 % )  ; 2.5V          ; --           ; 2.5V          ;
+; 8A       ; 43 / 80 ( 54 % )  ; 2.5V          ; --           ; 2.5V          ;
 +----------+-------------------+---------------+--------------+---------------+
 
 
@@ -786,14 +786,14 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 ; Location ; Pad Number ; I/O Bank       ; Pin Name/Usage                  ; Dir.   ; I/O Standard ; Voltage             ; I/O Type     ; User Assignment ; Bus Hold ; Weak Pull Up ;
 +----------+------------+----------------+---------------------------------+--------+--------------+---------------------+--------------+-----------------+----------+--------------+
 ; A2       ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; A3       ; 493        ; 8A             ; VGA_Y[3]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; A4       ; 491        ; 8A             ; VGA_Y[1]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; A5       ; 489        ; 8A             ; VGA_Y[2]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; A6       ; 487        ; 8A             ; VGA_X[3]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; A3       ; 493        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; A4       ; 491        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; A5       ; 489        ; 8A             ; VGA_Y[0]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; A6       ; 487        ; 8A             ; VGA_Y[2]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; A7       ;            ; 8A             ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; A8       ; 473        ; 8A             ; VGA_X[5]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; A9       ; 471        ; 8A             ; VGA_X[4]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; A10      ; 465        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; A8       ; 473        ; 8A             ; VGA_X[6]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; A9       ; 471        ; 8A             ; VGA_X[1]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; A10      ; 465        ; 8A             ; VGA_X[2]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; A11      ; 463        ; 8A             ; VGA_CLK                         ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; A12      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; A13      ; 461        ; 8A             ; VGA_R[0]                        ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
@@ -892,7 +892,7 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 ; AC17     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AC18     ; 162        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC19     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AC20     ; 186        ; 4A             ; VGA_COLOUR[0]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AC20     ; 186        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC21     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AC22     ; 207        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC23     ; 205        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -985,7 +985,7 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 ; AF20     ; 175        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF21     ; 173        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF22     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AF23     ; 183        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AF23     ; 183        ; 4A             ; VGA_COLOUR[0]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AF24     ; 181        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF25     ; 206        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF26     ; 204        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1003,7 +1003,7 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 ; AG8      ; 65         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG9      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AG10     ; 86         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AG11     ; 85         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AG11     ; 85         ; 3B             ; VGA_COLOUR[2]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AG12     ; 103        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG13     ; 101        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG14     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -1037,7 +1037,7 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 ; AH12     ; 126        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH13     ; 111        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH14     ; 109        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AH15     ; 125        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AH15     ; 125        ; 3B             ; VGA_X[7]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AH16     ;            ; 4A             ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AH17     ; 147        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH18     ; 145        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1084,7 +1084,7 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 ; AJ29     ; 216        ; 5A             ; HEX1[0]                         ; output ; 2.5 V        ;                     ; Row I/O      ; Y               ; no       ; Off          ;
 ; AJ30     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AK2      ; 91         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AK3      ; 89         ; 3B             ; VGA_COLOUR[2]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AK3      ; 89         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AK4      ; 92         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AK5      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AK6      ; 97         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1117,8 +1117,8 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 ; B4       ;            ; 8A             ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; B5       ; 512        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B6       ; 510        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; B7       ; 477        ; 8A             ; VGA_Y[4]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; B8       ; 481        ; 8A             ; VGA_X[7]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; B7       ; 477        ; 8A             ; VGA_X[3]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; B8       ; 481        ; 8A             ; VGA_PLOT                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; B9       ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; B10      ;            ; 8A             ; VREFB8AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; B11      ; 469        ; 8A             ; VGA_HS                          ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
@@ -1147,10 +1147,10 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 ; C4       ; 501        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C5       ; 497        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C6       ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; C7       ; 475        ; 8A             ; VGA_X[6]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; C8       ; 479        ; 8A             ; VGA_Y[5]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; C9       ; 485        ; 8A             ; VGA_X[1]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; C10      ; 483        ; 8A             ; VGA_X[2]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; C7       ; 475        ; 8A             ; VGA_Y[4]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; C8       ; 479        ; 8A             ; VGA_X[5]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; C9       ; 485        ; 8A             ; VGA_Y[3]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; C10      ; 483        ; 8A             ; VGA_Y[1]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; C11      ;            ; 8A             ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; C12      ; 467        ; 8A             ; VGA_R[4]                        ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; C13      ; 462        ; 8A             ; VGA_R[1]                        ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
@@ -1179,8 +1179,8 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 ; D6       ; 495        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D7       ; 505        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D8       ;            ; 8A             ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; D9       ; 480        ; 8A             ; VGA_PLOT                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; D10      ; 472        ; 8A             ; VGA_X[0]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; D9       ; 480        ; 8A             ; VGA_X[0]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; D10      ; 472        ; 8A             ; VGA_X[4]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; D11      ; 470        ; 8A             ; VGA_VS                          ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; D12      ; 496        ; 8A             ; VGA_R[5]                        ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; D13      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -1209,7 +1209,7 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 ; E6       ; 533        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E7       ; 531        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E8       ; 503        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; E9       ; 478        ; 8A             ; VGA_COLOUR[1]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; E9       ; 478        ; 8A             ; VGA_Y[6]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; E10      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; E11      ; 504        ; 8A             ; VGA_G[7]                        ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; E12      ; 494        ; 8A             ; VGA_R[6]                        ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
@@ -1298,14 +1298,14 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 ; H5       ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; H6       ;            ; 8A             ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; H7       ; 508        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; H8       ; 490        ; 8A             ; VGA_Y[0]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; H8       ; 490        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H9       ;            ; --             ; VCCBAT                          ; power  ;              ; 1.2V                ; --           ;                 ; --       ; --           ;
 ; H10      ;            ; --             ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; H11      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; H12      ; 500        ; 8A             ; VGA_G[2]                        ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; H13      ; 498        ; 8A             ; VGA_B[2]                        ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
 ; H14      ; 482        ; 8A             ; VGA_B[4]                        ; output ; 2.5 V        ;                     ; Column I/O   ; Y               ; no       ; Off          ;
-; H15      ; 458        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; H15      ; 458        ; 8A             ; VGA_COLOUR[1]                   ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; H16      ;            ; 7D             ; VCCIO7D_HPS                     ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; H17      ; 434        ; 7C             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H18      ; 422        ; 7B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1364,7 +1364,7 @@ The pin-out file can be found in C:/School/CPEN 311/CPEN311-lab4/task4/output_fi
 ; K11      ;            ; 8A             ; VCCPD8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; K12      ; 514        ; 8A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; K13      ;            ; 8A             ; VCCPD8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; K14      ; 474        ; 8A             ; VGA_Y[6]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; K14      ; 474        ; 8A             ; VGA_Y[5]                        ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; K15      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; K16      ;            ; 7D             ; VCCPD7D_HPS                     ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; K17      ; 414        ; 7B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1878,21 +1878,21 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                              ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                               ; Entity Name            ; Library Name ;
 +---------------------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |task4                                                  ; 353.5 (49.5)         ; 353.5 (49.2)                     ; 1.5 (0.0)                                         ; 1.5 (0.3)                        ; 0.0 (0.0)            ; 624 (70)            ; 122 (5)                   ; 0 (0)         ; 57600             ; 8     ; 1          ; 113  ; 0            ; |task4                                                                                                            ; task4                  ; work         ;
-;    |blackscreen:b|                                      ; 15.7 (15.7)          ; 15.6 (15.6)                      ; 0.0 (0.0)                                         ; 0.1 (0.1)                        ; 0.0 (0.0)            ; 27 (27)             ; 24 (24)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |task4|blackscreen:b                                                                                              ; blackscreen            ; work         ;
-;    |reuleaux:c|                                         ; 248.5 (153.8)        ; 247.9 (153.3)                    ; 0.4 (0.5)                                         ; 1.0 (1.0)                        ; 0.0 (0.0)            ; 457 (267)           ; 58 (58)                   ; 0 (0)         ; 0                 ; 0     ; 1          ; 0    ; 0            ; |task4|reuleaux:c                                                                                                 ; reuleaux               ; work         ;
-;       |lpm_divide:Div0|                                 ; 94.6 (0.0)           ; 94.6 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 190 (0)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |task4|reuleaux:c|lpm_divide:Div0                                                                                 ; lpm_divide             ; work         ;
-;          |lpm_divide_2dm:auto_generated|                ; 94.6 (0.0)           ; 94.6 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 190 (0)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |task4|reuleaux:c|lpm_divide:Div0|lpm_divide_2dm:auto_generated                                                   ; lpm_divide_2dm         ; work         ;
-;             |sign_div_unsign_8nh:divider|               ; 94.6 (0.0)           ; 94.6 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 190 (0)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |task4|reuleaux:c|lpm_divide:Div0|lpm_divide_2dm:auto_generated|sign_div_unsign_8nh:divider                       ; sign_div_unsign_8nh    ; work         ;
-;                |alt_u_div_m2f:divider|                  ; 94.6 (94.6)          ; 94.6 (94.6)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 190 (190)           ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |task4|reuleaux:c|lpm_divide:Div0|lpm_divide_2dm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_m2f:divider ; alt_u_div_m2f          ; work         ;
-;    |vga_adapter:vga_u0|                                 ; 39.7 (2.0)           ; 40.8 (2.0)                       ; 1.2 (0.0)                                         ; 0.1 (0.0)                        ; 0.0 (0.0)            ; 70 (2)              ; 35 (0)                    ; 0 (0)         ; 57600             ; 8     ; 0          ; 0    ; 0            ; |task4|vga_adapter:vga_u0                                                                                         ; vga_adapter            ; work         ;
-;       |altsyncram:VideoMemory|                          ; 4.2 (0.0)            ; 4.5 (0.0)                        ; 0.3 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 6 (0)               ; 4 (0)                     ; 0 (0)         ; 57600             ; 8     ; 0          ; 0    ; 0            ; |task4|vga_adapter:vga_u0|altsyncram:VideoMemory                                                                  ; altsyncram             ; work         ;
-;          |altsyncram_g6k1:auto_generated|               ; 4.2 (1.2)            ; 4.5 (1.5)                        ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 6 (0)               ; 4 (4)                     ; 0 (0)         ; 57600             ; 8     ; 0          ; 0    ; 0            ; |task4|vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated                                   ; altsyncram_g6k1        ; work         ;
-;             |decode_01a:rden_decode_b|                  ; 1.5 (1.5)            ; 1.5 (1.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |task4|vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|decode_01a:rden_decode_b          ; decode_01a             ; work         ;
+; |task4                                                  ; 355.0 (50.6)         ; 362.5 (53.5)                     ; 8.5 (3.5)                                         ; 1.0 (0.6)                        ; 0.0 (0.0)            ; 626 (71)            ; 123 (5)                   ; 0 (0)         ; 57600             ; 8     ; 1          ; 113  ; 0            ; |task4                                                                                                            ; task4                  ; work         ;
+;    |blackscreen:b|                                      ; 15.2 (15.2)          ; 15.5 (15.5)                      ; 0.3 (0.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 27 (27)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |task4|blackscreen:b                                                                                              ; blackscreen            ; work         ;
+;    |reuleaux:c|                                         ; 249.6 (154.6)        ; 252.5 (157.5)                    ; 3.3 (3.3)                                         ; 0.4 (0.4)                        ; 0.0 (0.0)            ; 458 (268)           ; 57 (57)                   ; 0 (0)         ; 0                 ; 0     ; 1          ; 0    ; 0            ; |task4|reuleaux:c                                                                                                 ; reuleaux               ; work         ;
+;       |lpm_divide:Div0|                                 ; 95.0 (0.0)           ; 95.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 190 (0)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |task4|reuleaux:c|lpm_divide:Div0                                                                                 ; lpm_divide             ; work         ;
+;          |lpm_divide_2dm:auto_generated|                ; 95.0 (0.0)           ; 95.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 190 (0)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |task4|reuleaux:c|lpm_divide:Div0|lpm_divide_2dm:auto_generated                                                   ; lpm_divide_2dm         ; work         ;
+;             |sign_div_unsign_8nh:divider|               ; 95.0 (0.0)           ; 95.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 190 (0)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |task4|reuleaux:c|lpm_divide:Div0|lpm_divide_2dm:auto_generated|sign_div_unsign_8nh:divider                       ; sign_div_unsign_8nh    ; work         ;
+;                |alt_u_div_m2f:divider|                  ; 95.0 (95.0)          ; 95.0 (95.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 190 (190)           ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |task4|reuleaux:c|lpm_divide:Div0|lpm_divide_2dm:auto_generated|sign_div_unsign_8nh:divider|alt_u_div_m2f:divider ; alt_u_div_m2f          ; work         ;
+;    |vga_adapter:vga_u0|                                 ; 39.7 (2.0)           ; 41.0 (2.0)                       ; 1.3 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 70 (2)              ; 35 (0)                    ; 0 (0)         ; 57600             ; 8     ; 0          ; 0    ; 0            ; |task4|vga_adapter:vga_u0                                                                                         ; vga_adapter            ; work         ;
+;       |altsyncram:VideoMemory|                          ; 4.0 (0.0)            ; 4.8 (0.0)                        ; 0.8 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 6 (0)               ; 5 (0)                     ; 0 (0)         ; 57600             ; 8     ; 0          ; 0    ; 0            ; |task4|vga_adapter:vga_u0|altsyncram:VideoMemory                                                                  ; altsyncram             ; work         ;
+;          |altsyncram_g6k1:auto_generated|               ; 4.0 (1.2)            ; 4.8 (1.8)                        ; 0.8 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 6 (0)               ; 5 (5)                     ; 0 (0)         ; 57600             ; 8     ; 0          ; 0    ; 0            ; |task4|vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated                                   ; altsyncram_g6k1        ; work         ;
+;             |decode_01a:rden_decode_b|                  ; 1.3 (1.3)            ; 1.5 (1.5)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |task4|vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|decode_01a:rden_decode_b          ; decode_01a             ; work         ;
 ;             |decode_7la:decode2|                        ; 1.5 (1.5)            ; 1.5 (1.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |task4|vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|decode_7la:decode2                ; decode_7la             ; work         ;
 ;       |vga_address_translator:user_input_translator|    ; 8.0 (8.0)            ; 8.0 (8.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 16 (16)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |task4|vga_adapter:vga_u0|vga_address_translator:user_input_translator                                            ; vga_address_translator ; work         ;
-;       |vga_controller:controller|                       ; 25.5 (21.0)          ; 26.3 (21.7)                      ; 0.8 (0.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 46 (36)             ; 31 (31)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |task4|vga_adapter:vga_u0|vga_controller:controller                                                               ; vga_controller         ; work         ;
-;          |vga_address_translator:controller_translator| ; 4.5 (4.5)            ; 4.7 (4.7)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 10 (10)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |task4|vga_adapter:vga_u0|vga_controller:controller|vga_address_translator:controller_translator                  ; vga_address_translator ; work         ;
+;       |vga_controller:controller|                       ; 25.7 (21.2)          ; 26.2 (21.2)                      ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 46 (36)             ; 30 (30)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |task4|vga_adapter:vga_u0|vga_controller:controller                                                               ; vga_controller         ; work         ;
+;          |vga_address_translator:controller_translator| ; 4.5 (4.5)            ; 5.0 (5.0)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 10 (10)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |task4|vga_adapter:vga_u0|vga_controller:controller|vga_address_translator:controller_translator                  ; vga_address_translator ; work         ;
 ;       |vga_pll:mypll|                                   ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |task4|vga_adapter:vga_u0|vga_pll:mypll                                                                           ; vga_pll                ; work         ;
 ;          |altpll:altpll_component|                      ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |task4|vga_adapter:vga_u0|vga_pll:mypll|altpll:altpll_component                                                   ; altpll                 ; work         ;
 ;             |altpll_80u:auto_generated|                 ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |task4|vga_adapter:vga_u0|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated                         ; altpll_80u             ; work         ;
@@ -2041,6 +2041,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SW[9]                                                                     ;                   ;         ;
 ; CLOCK_50                                                                  ;                   ;         ;
 ; KEY[3]                                                                    ;                   ;         ;
+;      - vga_adapter:vga_u0|vga_controller:controller|xCounter[9]           ; 0                 ; 0       ;
+;      - vga_adapter:vga_u0|vga_controller:controller|xCounter[8]           ; 0                 ; 0       ;
+;      - vga_adapter:vga_u0|vga_controller:controller|xCounter[7]           ; 0                 ; 0       ;
 ;      - vga_adapter:vga_u0|vga_controller:controller|xCounter[6]           ; 0                 ; 0       ;
 ;      - vga_adapter:vga_u0|vga_controller:controller|xCounter[5]           ; 0                 ; 0       ;
 ;      - vga_adapter:vga_u0|vga_controller:controller|xCounter[4]           ; 0                 ; 0       ;
@@ -2048,9 +2051,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - vga_adapter:vga_u0|vga_controller:controller|xCounter[2]           ; 0                 ; 0       ;
 ;      - vga_adapter:vga_u0|vga_controller:controller|xCounter[1]           ; 0                 ; 0       ;
 ;      - vga_adapter:vga_u0|vga_controller:controller|xCounter[0]           ; 0                 ; 0       ;
-;      - vga_adapter:vga_u0|vga_controller:controller|xCounter[9]           ; 0                 ; 0       ;
-;      - vga_adapter:vga_u0|vga_controller:controller|xCounter[8]           ; 0                 ; 0       ;
-;      - vga_adapter:vga_u0|vga_controller:controller|xCounter[7]           ; 0                 ; 0       ;
+;      - vga_adapter:vga_u0|vga_controller:controller|yCounter[3]           ; 0                 ; 0       ;
 ;      - vga_adapter:vga_u0|vga_controller:controller|yCounter[9]           ; 0                 ; 0       ;
 ;      - vga_adapter:vga_u0|vga_controller:controller|yCounter[8]           ; 0                 ; 0       ;
 ;      - vga_adapter:vga_u0|vga_controller:controller|yCounter[7]           ; 0                 ; 0       ;
@@ -2060,19 +2061,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - vga_adapter:vga_u0|vga_controller:controller|yCounter[1]           ; 0                 ; 0       ;
 ;      - vga_adapter:vga_u0|vga_controller:controller|yCounter[2]           ; 0                 ; 0       ;
 ;      - vga_adapter:vga_u0|vga_controller:controller|yCounter[4]           ; 0                 ; 0       ;
-;      - vga_adapter:vga_u0|vga_controller:controller|yCounter[3]           ; 0                 ; 0       ;
 ;      - rst_n                                                              ; 0                 ; 0       ;
 ;      - startb                                                             ; 0                 ; 0       ;
-;      - startc                                                             ; 0                 ; 0       ;
 ;      - state.state_b                                                      ; 0                 ; 0       ;
-;      - state.state_done                                                   ; 0                 ; 0       ;
-;      - vga_adapter:vga_u0|vga_controller:controller|xCounter[9]~DUPLICATE ; 0                 ; 0       ;
-;      - vga_adapter:vga_u0|vga_controller:controller|xCounter[8]~DUPLICATE ; 0                 ; 0       ;
-;      - vga_adapter:vga_u0|vga_controller:controller|xCounter[7]~DUPLICATE ; 0                 ; 0       ;
-;      - vga_adapter:vga_u0|vga_controller:controller|xCounter[3]~DUPLICATE ; 0                 ; 0       ;
-;      - vga_adapter:vga_u0|vga_controller:controller|yCounter[5]~DUPLICATE ; 0                 ; 0       ;
+;      - state.state_c                                                      ; 0                 ; 0       ;
+;      - startc~2                                                           ; 0                 ; 0       ;
+;      - vga_adapter:vga_u0|vga_controller:controller|yCounter[9]~DUPLICATE ; 0                 ; 0       ;
+;      - vga_adapter:vga_u0|vga_controller:controller|yCounter[8]~DUPLICATE ; 0                 ; 0       ;
+;      - vga_adapter:vga_u0|vga_controller:controller|yCounter[7]~DUPLICATE ; 0                 ; 0       ;
+;      - vga_adapter:vga_u0|vga_controller:controller|yCounter[4]~DUPLICATE ; 0                 ; 0       ;
+;      - vga_adapter:vga_u0|vga_controller:controller|yCounter[3]~DUPLICATE ; 0                 ; 0       ;
 ;      - vga_adapter:vga_u0|vga_controller:controller|yCounter[2]~DUPLICATE ; 0                 ; 0       ;
-;      - vga_adapter:vga_u0|vga_controller:controller|yCounter[1]~DUPLICATE ; 0                 ; 0       ;
 +---------------------------------------------------------------------------+-------------------+---------+
 
 
@@ -2081,25 +2080,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------------------------------+----------------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                                                             ; Location                   ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------------------------------------------------------------------------------------------------------------+----------------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; CLOCK_50                                                                                                         ; PIN_AF14                   ; 95      ; Clock                      ; yes    ; Global Clock         ; GCLK5            ; --                        ;
-; KEY[3]                                                                                                           ; PIN_Y16                    ; 32      ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
-; blackscreen:b|state.state_filly                                                                                  ; FF_X30_Y80_N14             ; 12      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; blackscreen:b|vga_x[0]~0                                                                                         ; LABCELL_X30_Y80_N30        ; 9       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; blackscreen:b|vga_y[0]~1                                                                                         ; LABCELL_X30_Y80_N24        ; 9       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; blackscreen:b|vga_y[6]~0                                                                                         ; LABCELL_X30_Y80_N48        ; 10      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; reuleaux:c|offset_x[8]~0                                                                                         ; LABCELL_X33_Y77_N0         ; 28      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; reuleaux:c|offset_x[8]~1                                                                                         ; LABCELL_X31_Y77_N39        ; 30      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; reuleaux:c|offset_x[8]~2                                                                                         ; LABCELL_X33_Y77_N18        ; 16      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; reuleaux:c|offset_y[2]~0                                                                                         ; LABCELL_X33_Y77_N36        ; 17      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; rst_n                                                                                                            ; FF_X31_Y79_N47             ; 23      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
-; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|decode_01a:rden_decode_b|w_anode143w[2] ; MLABCELL_X34_Y76_N21       ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|decode_01a:rden_decode_b|w_anode157w[2] ; MLABCELL_X34_Y76_N18       ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|decode_01a:rden_decode_b|w_anode166w[2] ; MLABCELL_X34_Y76_N0        ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|decode_7la:decode2|w_anode105w[2]       ; LABCELL_X29_Y79_N27        ; 3       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
-; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|decode_7la:decode2|w_anode118w[2]       ; LABCELL_X31_Y79_N9         ; 3       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
-; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|decode_7la:decode2|w_anode126w[2]       ; LABCELL_X29_Y79_N24        ; 2       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
-; vga_adapter:vga_u0|vga_controller:controller|Equal0~2                                                            ; LABCELL_X33_Y76_N9         ; 27      ; Clock enable, Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; vga_adapter:vga_u0|vga_controller:controller|always1~2                                                           ; LABCELL_X33_Y76_N24        ; 13      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; CLOCK_50                                                                                                         ; PIN_AF14                   ; 96      ; Clock                      ; yes    ; Global Clock         ; GCLK5            ; --                        ;
+; KEY[3]                                                                                                           ; PIN_Y16                    ; 31      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; blackscreen:b|state.state_filly                                                                                  ; FF_X42_Y77_N26             ; 13      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; blackscreen:b|vga_x[0]~0                                                                                         ; LABCELL_X42_Y77_N42        ; 10      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; blackscreen:b|vga_y[0]~1                                                                                         ; LABCELL_X42_Y77_N54        ; 10      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; blackscreen:b|vga_y[5]~0                                                                                         ; LABCELL_X42_Y77_N36        ; 11      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; reuleaux:c|offset_x[8]~0                                                                                         ; LABCELL_X40_Y77_N15        ; 30      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; reuleaux:c|offset_x[8]~1                                                                                         ; LABCELL_X40_Y77_N9         ; 27      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; reuleaux:c|offset_x[8]~2                                                                                         ; LABCELL_X40_Y77_N48        ; 17      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; reuleaux:c|offset_y[3]~0                                                                                         ; LABCELL_X40_Y77_N12        ; 13      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; rst_n                                                                                                            ; FF_X40_Y78_N11             ; 24      ; Async. clear               ; no     ; --                   ; --               ; --                        ;
+; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|decode_01a:rden_decode_b|w_anode143w[2] ; MLABCELL_X39_Y78_N45       ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|decode_01a:rden_decode_b|w_anode157w[2] ; LABCELL_X40_Y78_N0         ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|decode_01a:rden_decode_b|w_anode166w[2] ; MLABCELL_X39_Y78_N36       ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|decode_7la:decode2|w_anode105w[2]       ; MLABCELL_X39_Y79_N18       ; 3       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
+; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|decode_7la:decode2|w_anode118w[2]       ; MLABCELL_X39_Y79_N27       ; 3       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
+; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|decode_7la:decode2|w_anode126w[2]       ; MLABCELL_X39_Y79_N21       ; 2       ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ;
+; vga_adapter:vga_u0|vga_controller:controller|Equal0~2                                                            ; LABCELL_X37_Y78_N45        ; 26      ; Clock enable, Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; vga_adapter:vga_u0|vga_controller:controller|always1~2                                                           ; LABCELL_X37_Y78_N54        ; 16      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
 ; vga_adapter:vga_u0|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|clk[0]                        ; PLLOUTPUTCOUNTER_X0_Y20_N1 ; 44      ; Clock                      ; yes    ; Global Clock         ; GCLK6            ; --                        ;
 +------------------------------------------------------------------------------------------------------------------+----------------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
@@ -2109,7 +2108,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------+----------------------------+---------+----------------------+------------------+---------------------------+
 ; Name                                                                                        ; Location                   ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------------------------------------------------------------------------------------+----------------------------+---------+----------------------+------------------+---------------------------+
-; CLOCK_50                                                                                    ; PIN_AF14                   ; 95      ; Global Clock         ; GCLK5            ; --                        ;
+; CLOCK_50                                                                                    ; PIN_AF14                   ; 96      ; Global Clock         ; GCLK5            ; --                        ;
 ; vga_adapter:vga_u0|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|clk[0]   ; PLLOUTPUTCOUNTER_X0_Y20_N1 ; 44      ; Global Clock         ; GCLK6            ; --                        ;
 ; vga_adapter:vga_u0|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|fb_clkin ; FRACTIONALPLL_X0_Y15_N0    ; 1       ; Global Clock         ; --               ; --                        ;
 +---------------------------------------------------------------------------------------------+----------------------------+---------+----------------------+------------------+---------------------------+
@@ -2120,7 +2119,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------+------+------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
 ; Name                                                                                ; Type ; Mode             ; Clock Mode  ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M10K blocks ; MLABs ; MIF  ; Location                                                                                                                               ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ; ECC Mode ; ECC Pipeline Registers ; Fits in MLABs         ;
 +-------------------------------------------------------------------------------------+------+------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
-; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Dual Clocks ; 19200        ; 3            ; 19200        ; 3            ; yes                    ; no                      ; yes                    ; yes                     ; 57600 ; 19200                       ; 3                           ; 19200                       ; 3                           ; 57600               ; 8           ; 0     ; None ; M10K_X26_Y77_N0, M10K_X38_Y78_N0, M10K_X26_Y76_N0, M10K_X26_Y78_N0, M10K_X38_Y79_N0, M10K_X26_Y75_N0, M10K_X38_Y77_N0, M10K_X38_Y76_N0 ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Address Too Wide ;
+; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Dual Clocks ; 19200        ; 3            ; 19200        ; 3            ; yes                    ; no                      ; yes                    ; yes                     ; 57600 ; 19200                       ; 3                           ; 19200                       ; 3                           ; 57600               ; 8           ; 0     ; None ; M10K_X41_Y79_N0, M10K_X41_Y77_N0, M10K_X38_Y77_N0, M10K_X38_Y80_N0, M10K_X38_Y79_N0, M10K_X38_Y78_N0, M10K_X41_Y80_N0, M10K_X41_Y78_N0 ; Don't care           ; New data        ; New data        ; Off      ; No                     ; No - Address Too Wide ;
 +-------------------------------------------------------------------------------------+------+------------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+-------------+-------+------+----------------------------------------------------------------------------------------------------------------------------------------+----------------------+-----------------+-----------------+----------+------------------------+-----------------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -2142,7 +2141,7 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +--------------------+-----------------+----------------+---------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-----------------+--------------------------------+---------------------+-------------------------------+------------------------------+------------------------------+
 ; Name               ; Mode            ; Location       ; Sign Representation ; Data AX Input Register ; Data AY Input Register ; Data AZ Input Register ; Data BX Input Register ; Data BY Input Register ; Data BZ Input Register ; Output Register ; Dedicated Shift Register Chain ; Dedicated Pre-Adder ; Dedicated Coefficient Storage ; Dedicated Output Adder Chain ; Dedicated Output Accumulator ;
 +--------------------+-----------------+----------------+---------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-----------------+--------------------------------+---------------------+-------------------------------+------------------------------+------------------------------+
-; reuleaux:c|Mult0~8 ; Independent 9x9 ; DSP_X20_Y77_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
+; reuleaux:c|Mult0~8 ; Independent 9x9 ; DSP_X32_Y75_N0 ; Unsigned            ; no                     ; no                     ; --                     ; --                     ; --                     ; --                     ; no              ; no                             ; no                  ; no                            ; no                           ; no                           ;
 +--------------------+-----------------+----------------+---------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+-----------------+--------------------------------+---------------------+-------------------------------+------------------------------+------------------------------+
 
 
@@ -2151,14 +2150,14 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +---------------------------------------------+---------------------------+
 ; Routing Resource Type                       ; Usage                     ;
 +---------------------------------------------+---------------------------+
-; Block interconnects                         ; 1,178 / 289,320 ( < 1 % ) ;
+; Block interconnects                         ; 1,165 / 289,320 ( < 1 % ) ;
 ; C12 interconnects                           ; 7 / 13,420 ( < 1 % )      ;
-; C2 interconnects                            ; 371 / 119,108 ( < 1 % )   ;
-; C4 interconnects                            ; 131 / 56,300 ( < 1 % )    ;
+; C2 interconnects                            ; 325 / 119,108 ( < 1 % )   ;
+; C4 interconnects                            ; 125 / 56,300 ( < 1 % )    ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )            ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )            ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )            ;
-; Direct links                                ; 155 / 289,320 ( < 1 % )   ;
+; Direct links                                ; 137 / 289,320 ( < 1 % )   ;
 ; Global clocks                               ; 2 / 16 ( 13 % )           ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )             ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )             ;
@@ -2214,12 +2213,12 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )             ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )            ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )            ;
-; Local interconnects                         ; 238 / 84,580 ( < 1 % )    ;
+; Local interconnects                         ; 213 / 84,580 ( < 1 % )    ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )            ;
-; R14 interconnects                           ; 6 / 12,676 ( < 1 % )      ;
-; R14/C12 interconnect drivers                ; 11 / 20,720 ( < 1 % )     ;
-; R3 interconnects                            ; 476 / 130,992 ( < 1 % )   ;
-; R6 interconnects                            ; 631 / 266,960 ( < 1 % )   ;
+; R14 interconnects                           ; 14 / 12,676 ( < 1 % )     ;
+; R14/C12 interconnect drivers                ; 20 / 20,720 ( < 1 % )     ;
+; R3 interconnects                            ; 431 / 130,992 ( < 1 % )   ;
+; R6 interconnects                            ; 560 / 266,960 ( < 1 % )   ;
 ; Spine clocks                                ; 3 / 360 ( < 1 % )         ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )        ;
 +---------------------------------------------+---------------------------+
@@ -2443,13 +2442,14 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +---------------------------+--------+
 
 
-+------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary              ;
-+-----------------+----------------------+-------------------+
-; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
-+-----------------+----------------------+-------------------+
-; CLOCK_50        ; CLOCK_50             ; 5.7               ;
-+-----------------+----------------------+-------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary                                                                                                                                                 ;
++-------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+-------------------+
+; Source Clock(s)                                                                     ; Destination Clock(s)                                                                ; Delay Added in ns ;
++-------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+-------------------+
+; CLOCK_50                                                                            ; CLOCK_50                                                                            ; 6.9               ;
+; vga_u0|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; vga_u0|mypll|altpll_component|auto_generated|generic_pll1~PLL_OUTPUT_COUNTER|divclk ; 4.0               ;
++-------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
@@ -2459,51 +2459,63 @@ This will disable optimization of problematic paths and expose them for further 
 +----------------------------------------------------------+----------------------------------------------------------------------------------------------------------+-------------------+
 ; Source Register                                          ; Destination Register                                                                                     ; Delay Added in ns ;
 +----------------------------------------------------------+----------------------------------------------------------------------------------------------------------+-------------------+
-; reuleaux:c|crit[7]                                       ; reuleaux:c|crit[9]                                                                                       ; 0.618             ;
-; reuleaux:c|crit[6]                                       ; reuleaux:c|crit[9]                                                                                       ; 0.568             ;
-; reuleaux:c|crit[4]                                       ; reuleaux:c|crit[9]                                                                                       ; 0.538             ;
-; reuleaux:c|crit[3]                                       ; reuleaux:c|crit[9]                                                                                       ; 0.471             ;
-; reuleaux:c|crit[5]                                       ; reuleaux:c|crit[9]                                                                                       ; 0.457             ;
-; blackscreen:b|state.state_rest                           ; blackscreen:b|state.state_start                                                                          ; 0.436             ;
-; reuleaux:c|offset_y[8]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.289             ;
-; reuleaux:c|crit[9]                                       ; reuleaux:c|crit[9]                                                                                       ; 0.289             ;
-; reuleaux:c|offset_y[7]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.289             ;
-; reuleaux:c|crit[8]                                       ; reuleaux:c|crit[9]                                                                                       ; 0.289             ;
-; reuleaux:c|offset_y[6]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.289             ;
-; reuleaux:c|offset_y[5]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.289             ;
-; reuleaux:c|offset_y[4]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.289             ;
-; reuleaux:c|offset_y[3]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.289             ;
-; reuleaux:c|offset_y[2]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.289             ;
-; reuleaux:c|offset_y[1]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.289             ;
-; reuleaux:c|crit[2]                                       ; reuleaux:c|crit[9]                                                                                       ; 0.289             ;
-; reuleaux:c|offset_y[0]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.289             ;
-; reuleaux:c|crit[1]                                       ; reuleaux:c|crit[9]                                                                                       ; 0.289             ;
-; reuleaux:c|crit[0]                                       ; reuleaux:c|crit[9]                                                                                       ; 0.289             ;
-; reuleaux:c|state.state_rest                              ; reuleaux:c|state.state_start                                                                             ; 0.273             ;
-; reuleaux:c|state.state_start                             ; reuleaux:c|state.state_rest                                                                              ; 0.243             ;
-; state.state_b                                            ; rst_n                                                                                                    ; 0.240             ;
-; startc                                                   ; reuleaux:c|state.state_start                                                                             ; 0.238             ;
-; blackscreen:b|state.state_start                          ; blackscreen:b|done                                                                                       ; 0.201             ;
-; vga_adapter:vga_u0|vga_controller:controller|xCounter[7] ; vga_adapter:vga_u0|vga_controller:controller|VGA_HS1                                                     ; 0.183             ;
-; vga_adapter:vga_u0|vga_controller:controller|xCounter[8] ; vga_adapter:vga_u0|vga_controller:controller|VGA_HS1                                                     ; 0.152             ;
-; blackscreen:b|state.state_fillx                          ; blackscreen:b|state.state_done                                                                           ; 0.141             ;
-; blackscreen:b|state.state_filly                          ; blackscreen:b|done                                                                                       ; 0.135             ;
-; vga_adapter:vga_u0|vga_controller:controller|xCounter[5] ; vga_adapter:vga_u0|vga_controller:controller|VGA_HS1                                                     ; 0.133             ;
-; blackscreen:b|vga_x[2]                                   ; VGA_X[2]                                                                                                 ; 0.114             ;
-; reuleaux:c|offset_x[4]                                   ; reuleaux:c|crit[5]                                                                                       ; 0.104             ;
-; reuleaux:c|offset_x[3]                                   ; reuleaux:c|crit[5]                                                                                       ; 0.104             ;
-; reuleaux:c|offset_x[2]                                   ; reuleaux:c|crit[5]                                                                                       ; 0.104             ;
-; reuleaux:c|offset_x[1]                                   ; reuleaux:c|crit[5]                                                                                       ; 0.104             ;
-; reuleaux:c|offset_x[0]                                   ; reuleaux:c|crit[5]                                                                                       ; 0.104             ;
-; vga_adapter:vga_u0|vga_controller:controller|xCounter[2] ; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|ram_block1a8~portb_address_reg0 ; 0.089             ;
-; vga_adapter:vga_u0|vga_controller:controller|xCounter[3] ; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|ram_block1a0~portb_address_reg0 ; 0.080             ;
-; reuleaux:c|offset_x[6]                                   ; reuleaux:c|crit[7]                                                                                       ; 0.074             ;
-; reuleaux:c|offset_x[5]                                   ; reuleaux:c|crit[7]                                                                                       ; 0.074             ;
-; blackscreen:b|done                                       ; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|ram_block1a4~porta_datain_reg0  ; 0.051             ;
-; vga_adapter:vga_u0|vga_controller:controller|xCounter[6] ; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|ram_block1a0~portb_address_reg0 ; 0.041             ;
-; vga_adapter:vga_u0|vga_controller:controller|xCounter[4] ; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|ram_block1a0~portb_address_reg0 ; 0.038             ;
+; reuleaux:c|crit[4]                                       ; reuleaux:c|crit[9]                                                                                       ; 0.506             ;
+; reuleaux:c|crit[1]                                       ; reuleaux:c|crit[9]                                                                                       ; 0.462             ;
+; reuleaux:c|crit[3]                                       ; reuleaux:c|crit[9]                                                                                       ; 0.438             ;
+; blackscreen:b|vga_y[2]                                   ; blackscreen:b|vga_x[6]                                                                                   ; 0.356             ;
+; vga_adapter:vga_u0|vga_controller:controller|xCounter[5] ; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|ram_block1a0~portb_address_reg0 ; 0.351             ;
+; vga_adapter:vga_u0|vga_controller:controller|xCounter[6] ; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|ram_block1a0~portb_address_reg0 ; 0.348             ;
+; vga_adapter:vga_u0|vga_controller:controller|xCounter[4] ; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|ram_block1a0~portb_address_reg0 ; 0.348             ;
+; reuleaux:c|crit[6]                                       ; reuleaux:c|crit[9]                                                                                       ; 0.335             ;
+; reuleaux:c|crit[0]                                       ; reuleaux:c|offset_x[9]                                                                                   ; 0.332             ;
+; reuleaux:c|crit[2]                                       ; reuleaux:c|offset_x[9]                                                                                   ; 0.328             ;
+; reuleaux:c|offset_x[8]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; reuleaux:c|offset_y[8]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; reuleaux:c|crit[9]                                       ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; reuleaux:c|offset_x[7]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; reuleaux:c|offset_y[7]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; reuleaux:c|crit[8]                                       ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; reuleaux:c|offset_x[6]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; reuleaux:c|offset_y[6]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; reuleaux:c|crit[7]                                       ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; reuleaux:c|offset_x[5]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; reuleaux:c|offset_y[5]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; reuleaux:c|offset_x[4]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; reuleaux:c|offset_y[4]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; reuleaux:c|crit[5]                                       ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; reuleaux:c|offset_x[3]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; reuleaux:c|offset_y[3]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; reuleaux:c|offset_x[2]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; reuleaux:c|offset_y[2]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; reuleaux:c|offset_x[1]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; reuleaux:c|offset_y[1]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; reuleaux:c|offset_y[0]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; reuleaux:c|offset_x[0]                                   ; reuleaux:c|crit[9]                                                                                       ; 0.304             ;
+; state.state_b                                            ; startc                                                                                                   ; 0.284             ;
+; blackscreen:b|vga_y[6]                                   ; blackscreen:b|vga_x[6]                                                                                   ; 0.283             ;
+; blackscreen:b|vga_y[4]                                   ; blackscreen:b|vga_x[6]                                                                                   ; 0.270             ;
+; blackscreen:b|vga_y[3]                                   ; blackscreen:b|vga_x[6]                                                                                   ; 0.270             ;
+; blackscreen:b|vga_y[1]                                   ; blackscreen:b|vga_x[6]                                                                                   ; 0.270             ;
+; blackscreen:b|vga_y[0]                                   ; blackscreen:b|vga_x[6]                                                                                   ; 0.270             ;
+; blackscreen:b|vga_y[5]                                   ; blackscreen:b|vga_x[6]                                                                                   ; 0.270             ;
+; reuleaux:c|state.state_rest                              ; reuleaux:c|done                                                                                          ; 0.260             ;
+; blackscreen:b|state.state_rest                           ; blackscreen:b|state.state_start                                                                          ; 0.231             ;
+; vga_adapter:vga_u0|vga_controller:controller|xCounter[3] ; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|ram_block1a0~portb_address_reg0 ; 0.224             ;
+; vga_adapter:vga_u0|vga_controller:controller|xCounter[2] ; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|ram_block1a0~portb_address_reg0 ; 0.172             ;
+; vga_adapter:vga_u0|vga_controller:controller|yCounter[8] ; vga_adapter:vga_u0|vga_controller:controller|VGA_VS1                                                     ; 0.155             ;
+; vga_adapter:vga_u0|vga_controller:controller|yCounter[6] ; vga_adapter:vga_u0|vga_controller:controller|VGA_VS1                                                     ; 0.155             ;
+; vga_adapter:vga_u0|vga_controller:controller|yCounter[5] ; vga_adapter:vga_u0|vga_controller:controller|VGA_VS1                                                     ; 0.155             ;
+; vga_adapter:vga_u0|vga_controller:controller|yCounter[7] ; vga_adapter:vga_u0|vga_controller:controller|VGA_VS1                                                     ; 0.155             ;
+; vga_adapter:vga_u0|vga_controller:controller|xCounter[7] ; vga_adapter:vga_u0|vga_controller:controller|VGA_HS1                                                     ; 0.139             ;
+; blackscreen:b|state.state_fillx                          ; blackscreen:b|state.state_done                                                                           ; 0.138             ;
+; blackscreen:b|done                                       ; vga_adapter:vga_u0|altsyncram:VideoMemory|altsyncram_g6k1:auto_generated|ram_block1a7~porta_datain_reg0  ; 0.136             ;
+; vga_adapter:vga_u0|vga_controller:controller|yCounter[9] ; vga_adapter:vga_u0|vga_controller:controller|VGA_VS1                                                     ; 0.135             ;
+; state.state_c                                            ; startc                                                                                                   ; 0.095             ;
+; vga_adapter:vga_u0|vga_controller:controller|yCounter[4] ; vga_adapter:vga_u0|vga_controller:controller|VGA_VS1                                                     ; 0.080             ;
+; vga_adapter:vga_u0|vga_controller:controller|yCounter[3] ; vga_adapter:vga_u0|vga_controller:controller|VGA_VS1                                                     ; 0.080             ;
+; vga_adapter:vga_u0|vga_controller:controller|yCounter[2] ; vga_adapter:vga_u0|vga_controller:controller|VGA_VS1                                                     ; 0.080             ;
 +----------------------------------------------------------+----------------------------------------------------------------------------------------------------------+-------------------+
-Note: This table only shows the top 43 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 55 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2528,7 +2540,7 @@ Warning (177007): PLL(s) placed in location FRACTIONALPLL_X0_Y15_N0 do not have 
 Info (11178): Promoted 1 clock (1 global)
     Info (11162): vga_adapter:vga_u0|vga_pll:mypll|altpll:altpll_component|altpll_80u:auto_generated|clk[0]~CLKENA0 with 38 fanout uses global clock CLKCTRL_G6
 Info (11191): Automatically promoted 1 clock (1 global)
-    Info (11162): CLOCK_50~inputCLKENA0 with 73 fanout uses global clock CLKCTRL_G5
+    Info (11162): CLOCK_50~inputCLKENA0 with 74 fanout uses global clock CLKCTRL_G5
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'task4.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained generated clocks found in the design
@@ -2709,33 +2721,33 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "USB_WR_N" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_BLANK_N" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_SYNC_N" is assigned to location or region, but does not exist in design
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:13
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:18
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:31
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:30
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 7% of the available device resources in the region that extends from location X22_Y70 to location X32_Y81
+    Info (170196): Router estimated peak interconnect usage is 6% of the available device resources in the region that extends from location X33_Y70 to location X44_Y81
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 1.50 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 1.81 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:06
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:07
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/School/CPEN 311/CPEN311-lab4/task4/output_files/task4.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 174 warnings
-    Info: Peak virtual memory: 7934 megabytes
-    Info: Processing ended: Sun Nov 05 21:39:53 2023
-    Info: Elapsed time: 00:02:25
-    Info: Total CPU time (on all processors): 00:05:55
+    Info: Peak virtual memory: 7925 megabytes
+    Info: Processing ended: Sun Nov 05 23:54:23 2023
+    Info: Elapsed time: 00:02:55
+    Info: Total CPU time (on all processors): 00:06:20
 
 
 +----------------------------+

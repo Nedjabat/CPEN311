@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at task2.sv(11): object "VGA_PLOT" differs only in case from object "vga_plot" in the same scope File: C:/School/CPEN 311/CPEN311-lab4/task2/task2.sv Line: 11
+Info (10281): Verilog HDL Declaration information at task2.sv(11): object "VGA_COLOUR" differs only in case from object "vga_colour" in the same scope File: C:/School/CPEN 311/CPEN311-lab4/task2/task2.sv Line: 11
+Info (10281): Verilog HDL Declaration information at task2.sv(10): object "VGA_X" differs only in case from object "vga_x" in the same scope File: C:/School/CPEN 311/CPEN311-lab4/task2/task2.sv Line: 10
+Info (10281): Verilog HDL Declaration information at task2.sv(10): object "VGA_Y" differs only in case from object "vga_y" in the same scope File: C:/School/CPEN 311/CPEN311-lab4/task2/task2.sv Line: 10

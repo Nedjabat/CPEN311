@@ -19,6 +19,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	vga_pll
 
+} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/task3.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/task3.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module task3
+
+Top level modules:
+	task3
+
 } {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/circle.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/circle.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module circle
@@ -33,6 +40,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	vga_adapter
 
+} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/tb_rtl_task3.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/tb_rtl_task3.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb_rtl_task3
+
+Top level modules:
+	tb_rtl_task3
+
 } {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/tb_syn_circle.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/tb_syn_circle.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module tb_rtl_circle
@@ -46,13 +60,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	tb_rtl_circle
-
-} {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/tb_syn_task3.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/tb_syn_task3.sv}
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module tb_syn_task3
-
-Top level modules:
-	tb_syn_task3
 
 } {} {}} {C:/School/CPEN 311/CPEN311-lab4/task3/vga_address_translator.sv} {1 {vlog -work work -sv -stats=none {C:/School/CPEN 311/CPEN311-lab4/task3/vga_address_translator.sv}
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016

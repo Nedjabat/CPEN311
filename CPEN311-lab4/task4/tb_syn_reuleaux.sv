@@ -124,4 +124,4 @@ end
 
 initial forever #5 clk = ~clk;
 
-endmodule: tb_rtl_reuleaux
+endmodule: tb_syn_reuleaux

@@ -14,7 +14,8 @@ logic [9:0] VGA_R_10;
 logic [9:0] VGA_G_10;
 logic [9:0] VGA_B_10;
 logic VGA_BLANK, VGA_SYNC;
-logic start, done, rst_n, vga_plot;
+logic start, rst_n, vga_plot;
+logic done = 0;
 logic [2:0] vga_colour;
 logic [7:0] vga_x;
 logic [6:0] vga_y;
@@ -55,7 +56,7 @@ begin
 	if(done) 
     begin
 		start <= 0;
-        vga_plot <= 0;
+        //vga_plot <= 0;
 	end
 
 	
