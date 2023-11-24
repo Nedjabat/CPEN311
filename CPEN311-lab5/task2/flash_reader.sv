@@ -68,11 +68,11 @@ begin
 			begin
 				if (counter < 128)
 				begin
-					state <= state_ready
+					state <= state_ready;
 				end
 				else
 				begin
-					state <= state_done
+					state <= state_done;
 				end
 			end
 			state_done:
