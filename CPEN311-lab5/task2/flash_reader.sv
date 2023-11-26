@@ -4,7 +4,7 @@ module flash_reader(input logic CLOCK_50, input logic [3:0] KEY, input logic [9:
                     output logic [9:0] LEDR);
 
 // You may use the SW/HEX/LEDR ports for debugging. DO NOT delete or rename any ports or signals.
-enum reg [4:0] {state_start,state_ready, state_read1, state_read2, state_read3, state_count,state_done} state;
+enum reg [4:0] {state_start,state_ready, state_write1, state_write2, state_store, state_count,state_done} state;
 
 logic clk, rst_n;
 
@@ -19,15 +19,17 @@ logic [22:0] flash_mem_address;
 logic [31:0] flash_mem_readdata;
 logic [3:0] flash_mem_byteenable;
 
+reg [31:0] readdata;
+
 logic [7:0] address;
 logic [15:0] data, q;
 logic wren;
 
-flash flash_inst(.clk_clk(clk), .reset_reset_n(rst_n), .flash_mem_write(1'b0), .flash_mem_burstcount(1'b1),
+flash flash_inst(.clk_clk(clk), .reset_reset_n(rst_n), .flash_mem_write(1'b0), .flash_mem_burstcount(7'b1),
                  .flash_mem_waitrequest(flash_mem_waitrequest), .flash_mem_read(flash_mem_read), .flash_mem_address(flash_mem_address),
                  .flash_mem_readdata(flash_mem_readdata), .flash_mem_readdatavalid(flash_mem_readdatavalid), .flash_mem_byteenable(flash_mem_byteenable), .flash_mem_writedata());
 
-s_mem samples(.address,.clock(CLOCK_50),.data(wrdata),.wren,.q);
+s_mem samples(.address,.clock(CLOCK_50),.data,.wren,.q);
 
 assign flash_mem_byteenable = 4'b1111;
 
@@ -35,49 +37,50 @@ assign flash_mem_byteenable = 4'b1111;
 always_ff @(posedge clk)
 begin
 	if(rst_n == 0)
-    begin
+  	begin
 		state <= state_start;
 	end
 	else 
-    begin
-        casez(state) 
-            state_start: 
-            begin
-                state <= state_read1;
-            end
-            state_ready: 
-            begin
-				if (flash_mem_waitrequest == 1'b0)
-				begin
-					state <= state_read1;
-				end
-				else
-				begin
-                	state <= state_ready;
-				end
-            end
-            state_read1: 
-            begin
-                state <= state_read2;
-            end
-			state_read2:
+	begin
+		casez(state) 
+		state_start: 
+		begin
+			counter <= 0;
+			state <= state_count;
+		end
+
+            	state_store: 
+            	begin
+			readdata <= flash_mem_readdata;
+			state <= state_write1;
+           	end
+
+		state_write1:
+		begin
+			state <= state_write2;
+		end
+
+		state_write2:
+		begin
+			counter <= counter + 1;
+			state <= state_count;
+		end
+
+		state_count:
+		begin
+			if (counter < 128)
 			begin
-				state <= state_count;
+				state <= state_store;
 			end
-			state_count:
+			else
 			begin
-				if (counter < 128)
-				begin
-					state <= state_ready;
-				end
-				else
-				begin
-					state <= state_done;
-				end
-			end
-			state_done:
 				state <= state_done;
-            default: state <= state_done;
+			end
+		end
+			
+		state_done: state <= state_done;
+
+            	default: state <= state_done;
         endcase
 
 	end
@@ -92,50 +95,58 @@ begin
 	casez(state)
 		state_start: 
 		begin
-			counter = 0;
 			wren = 1'b0;
 			flash_mem_read = 1'b0;
-			flash_mem_address = 23'b0;
-			address = 8'b0;
 		end
+
 		state_ready: 
 		begin
-			flash_mem_read = 1;
+			wren = 1'b0;
+			flash_mem_read = 1'b0;
 		end
-		state_read1: 
+
+		state_write1:
 		begin
-			if (flash_mem_waitrequest == 1'b0)
-				begin
-					flash_mem_read = 1'b1;
-				end
-		end
-		state_read2:
-		begin
-			sample = flash_mem_readdata;
-			data = sample[15:0];
+
 			wren = 1'b1;
+			flash_mem_read = 1'b0;
+			
+			address = counter * 2;
+			data = readdata[31:16];
+
 		end
-		state_read3:
+
+		state_write2:
 		begin
-			data = sample[31:16];
 			wren = 1'b1;
-			address = address + 8'b1;
+			flash_mem_read = 1'b0;
+			
+			address = counter * 2 + 1;
+			data = readdata[15:0];
 		end
+
 		state_count:
 		begin
-			counter = counter + 1;
 			wren = 1'b0;
-			if (counter < 128)
-			begin
-				address = address + 8'b1;
-				flash_mem_address = flash_mem_address + 23'b1;
-			end
+			flash_mem_read = 1'b1;
+
+			flash_mem_address = counter;
+
 		end
+
+		state_store:
+		begin
+			wren = 1'b0;
+			flash_mem_read = 1'b0;
+
+		end
+
 		state_done:
 		begin
 			wren = 1'b0;
 			flash_mem_read = 1'b0;
 		end
+
 		default: 
 		begin
 			wren = 1'b0;
