@@ -1,5 +1,3 @@
-`timescale 1ps / 1ps
-
 module tb_flash_reader();
 
 logic CLOCK_50;
@@ -25,7 +23,7 @@ initial begin
 	KEY[3] = 1;
 	#5;
 	KEY[3] = 0;
-	#5;
+	#10;
 	KEY[3] = 1;
 
 
