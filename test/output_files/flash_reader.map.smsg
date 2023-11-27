@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at flash_reader.sv(63): always construct contains both blocking and non-blocking assignments File: C:/School/CPEN 311/test/flash_reader.sv Line: 63
+Info (10281): Verilog HDL Declaration information at flash_reader.sv(30): object "address" differs only in case from object "ADDRESS" in the same scope File: C:/School/CPEN 311/test/flash_reader.sv Line: 30

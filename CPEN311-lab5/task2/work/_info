@@ -10,23 +10,23 @@ cModel Technology
 dC:/School/CPEN 311/CPEN311-lab4/task2
 vflash
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z1 !s110 1700780866
+Z1 !s110 1701069012
 !i10b 1
-!s100 z45]ZiPN@>jCkIjOZ]d7=1
-INmc=3A=[LOG]KhHDiCj`g1
+!s100 zgS6CRLF4h679jF;o<]1z1
+I9VWRRL4@PQeGk7`zAH8Ni3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 Z3 !s105 tb_flash_reader_sv_unit
 S1
 Z4 dC:/School/CPEN 311/CPEN311-lab5/task2
-Z5 w1641692363
+Z5 w1701038566
 Z6 8C:/School/CPEN 311/CPEN311-lab5/task2/tb_flash_reader.sv
 Z7 FC:/School/CPEN 311/CPEN311-lab5/task2/tb_flash_reader.sv
-L0 7
+L0 40
 Z8 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z9 !s108 1700780866.000000
+Z9 !s108 1701069011.000000
 Z10 !s107 C:/School/CPEN 311/CPEN311-lab5/task2/tb_flash_reader.sv|
 Z11 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab5/task2/tb_flash_reader.sv|
 !i113 1
@@ -36,13 +36,13 @@ vflash_reader
 R0
 R1
 !i10b 1
-!s100 E_0ITn`452?mEE7m75JUg1
-IlJCPczVV8o[QUWz0;:4`?1
+!s100 zhFh1>44V`a`DYLMSDRah0
+I=oEcc4T9CF3miTU6jg2A;3
 R2
 !s105 flash_reader_sv_unit
 S1
 R4
-w1700780862
+w1701068995
 8C:/School/CPEN 311/CPEN311-lab5/task2/flash_reader.sv
 FC:/School/CPEN 311/CPEN311-lab5/task2/flash_reader.sv
 L0 1
@@ -50,7 +50,7 @@ R8
 r1
 !s85 0
 31
-R9
+Z14 !s108 1701069012.000000
 !s107 C:/School/CPEN 311/CPEN311-lab5/task2/flash_reader.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/School/CPEN 311/CPEN311-lab5/task2/flash_reader.sv|
 !i113 1
@@ -71,7 +71,7 @@ R8
 r1
 !s85 0
 31
-R9
+R14
 !s107 C:/School/CPEN 311/CPEN311-lab5/task2/s_mem.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/School/CPEN 311/CPEN311-lab5/task2/s_mem.v|
 !i113 1
@@ -81,8 +81,8 @@ vtb_flash_reader
 R0
 R1
 !i10b 1
-!s100 _ZNa@_9]D8_7GTTF>MY>i0
-IIP^5Q4Ac[dUFkllCfLb=g3
+!s100 Z0X1Xc8A`7>8W`zE6Pgk>3
+IlWQF?RJEh4kagz[kGjAh]1
 R2
 R3
 S1
@@ -90,7 +90,7 @@ R4
 R5
 R6
 R7
-L0 1
+L0 3
 R8
 r1
 !s85 0

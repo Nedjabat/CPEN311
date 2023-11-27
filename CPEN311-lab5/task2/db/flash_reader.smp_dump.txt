@@ -1,0 +1,10 @@
+
+State Machine - |flash_reader|state
+Name state.state_done state.state_count state.state_store state.state_write2 state.state_write1 state.state_ready state.state_start 
+state.state_start 0 0 0 0 0 0 0 
+state.state_ready 0 0 0 0 0 1 1 
+state.state_write1 0 0 0 0 1 0 1 
+state.state_write2 0 0 0 1 0 0 1 
+state.state_store 0 0 1 0 0 0 1 
+state.state_count 0 1 0 0 0 0 1 
+state.state_done 1 0 0 0 0 0 1 
