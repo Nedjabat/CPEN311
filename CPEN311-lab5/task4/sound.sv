@@ -7,7 +7,7 @@ module sound(input CLOCK_50, input CLOCK2_50, input [3:0] KEY, input [9:0] SW,
 			
 // an enumerated type for our state machine
 
-typedef enum { state_wait_until_ready, state_send_sample, state_wait_for_accepted } state_type;
+typedef enum { state_wait_until_ready, state_send_sample, state_done, state_wait_for_accepted, state_count } state_type;
 
 // signals that are used to communicate with the audio core
 
@@ -18,15 +18,28 @@ wire reset, read_s;
 
 // some signals I will use in my always block
 
-integer cnt;
 state_type state;
 reg [15:0] sample;
+
+// signals that are used to communicate with the flash core
+// DO NOT alter these -- we will use them to test your design
+
+reg flash_mem_read;
+reg flash_mem_waitrequest;
+reg [22:0] flash_mem_address;
+reg [31:0] flash_mem_readdata;
+reg flash_mem_readdatavalid;
+reg [3:0] flash_mem_byteenable;
+reg rst_n, clk;
 
 // instantiate the parts of the audio core. 
 
 clock_generator my_clock_gen(CLOCK2_50, reset, AUD_XCK);
 audio_and_video_config cfg(CLOCK_50, reset, FPGA_I2C_SDAT, FPGA_I2C_SCLK);
 audio_codec codec(CLOCK_50,reset,read_s,write_s,writedata_left, writedata_right,AUD_ADCDAT,AUD_BCLK,AUD_ADCLRCK,AUD_DACLRCK,read_ready, write_ready,readdata_left, readdata_right,AUD_DACDAT);
+flash flash_inst(.clk_clk(clk), .reset_reset_n(rst_n), .flash_mem_write(1'b0), .flash_mem_burstcount(1'b1),
+                 .flash_mem_waitrequest(flash_mem_waitrequest), .flash_mem_read(flash_mem_read), .flash_mem_address(flash_mem_address),
+                 .flash_mem_readdata(flash_mem_readdata), .flash_mem_readdatavalid(flash_mem_readdatavalid), .flash_mem_byteenable(flash_mem_byteenable), .flash_mem_writedata());
 
 // The audio core requires an active high reset signal
 
@@ -35,6 +48,27 @@ assign reset = ~(KEY[3]);
 // we will never read from the microphone in this lab, so we might as well set read_s to 0.
 
 assign read_s = 1'b0;
+
+//flash reader stuff
+
+int counter;
+
+assign clk = CLOCK_50;
+assign rst_n = KEY[3];
+
+reg signed [31:0] readdata;
+reg signed [15:0] divisor;
+
+logic [2:0] loc;
+//integer cnt;
+
+assign flash_mem_byteenable = 4'b1111;
+assign divisor = 16'd64;
+
+reg [1:0] mode;
+
+assign mode = SW[1:0];
+
 
 // The main state machine in the design. The purpose of this state machien
 // is to send samples to the audio core. This machine will send 91 high samples
@@ -46,8 +80,11 @@ assign read_s = 1'b0;
 always_ff @(posedge CLOCK_50)
    if (reset == 1'b1) begin
          state <= state_wait_until_ready;
+			loc <= 0;
+			counter <= 0;
+			readdata <= 0;
          write_s <= 1'b0;
-         cnt <= 0;
+			//cnt <= 0;
 			
    end else begin
       case (state)
@@ -61,49 +98,98 @@ always_ff @(posedge CLOCK_50)
 					 // until this signal goes to a 1.
 					 
 				    write_s <= 1'b0;
-                if (write_ready == 1'b1)  
-	                 state <= state_send_sample;
+                if (write_ready == 1'b1)  					
+						if (loc[2] == 1) begin
+							
+							loc <= 3'b000;
+							counter <= counter + 1;
+							flash_mem_read <= 1'b1;
+							flash_mem_address <= counter;
+							state <= state_count;
+							
+						end
+						else state <= state_send_sample;
              end // state_wait_until_ready				   
    
-         state_send_sample: begin
-				 
-				     // Now that the core has indicated that it is ready to 
-					 // accept a sample, send one.  In this case, our samples are
-					 // calculated (rather than read from the flash memory)
-					 
-				    cnt = cnt + 1;  // used to calculate the sample value
-					 if (cnt == 182)
-					     cnt = 0;
+			state_count:
+			begin
+			
+				if (counter < 32'h100000)
+				begin
+				
+//					readdata <= counter * 32'h10000 + counter;
+//					state <= state_send_sample;
+//					flash_mem_read <= 1'b0;
+//									
+					if (flash_mem_readdatavalid)
+					begin
+						//if (flash_mem_readdata == readdata || readdata == 0 || readdata == 32'hFFFFFFFF) state <= state_count;
+						//else begin
+							readdata <= flash_mem_readdata;
+							state <= state_send_sample;
+						//end
+					end
+					else state <= state_count;
+
 					
-					 // The sample is either -256 or 256 depending on the count.
-					 // Note that we can scale this up (say -512 and 512) if we
-					 // want a louder volume.  I found 256 plenty loud for me.
-					 
-					 sample = -256;
-					 if (cnt > 91) 
-					    sample = 256;
-					 
-                     // send the sample to the core (it is added to the two FIFOs
-                     // as explained in the handout.  We need to be sure to send data
-					 // to both the right and left queue.  Since we are only playing a
-					 // mono sound (not stereo) we send the same sample to both FIFOs.
-					 // You will do the same in your implementation in the final task.
-					 
-				    writedata_right <= sample;
-				    writedata_left <= sample;
-			        write_s <= 1'b1;  // indicate we are writing a value
-                    state <= state_wait_for_accepted;
-				   end // state_send_sample
+				end
+				else
+				begin
+					//flash_mem_read <= 1'b0;
+					//state <= state_done;
+					counter <= 0;
+					state <= state_wait_until_ready;
+				end
+				
+			end
+	
+			state_done: state <= state_done;
+
+	
+         state_send_sample: begin
+			
+				flash_mem_read <= 1'b0;
+				flash_mem_address <= 0;
+				 
+					if (loc > 3) begin	
+					
+						writedata_right <= $signed($signed(readdata[31:16])/$signed(divisor));
+						writedata_left <= $signed($signed(readdata[31:16])/$signed(divisor));
+					
+					end else begin
+					
+						writedata_right <= $signed($signed(readdata[15:0])/$signed(divisor));
+						writedata_left <= $signed($signed(readdata[15:0])/$signed(divisor));
+						
+					end
+					
+					
+				if (mode == 2'b00 || mode == 2'b11) begin
+				
+					loc <= loc + 2;
+					
+				end else if (mode == 2'b01) begin
+
+					loc <= loc + 4;
+				
+				end else if (mode == 2'b10) begin
+
+					loc <= loc + 1;
+				
+				end
+				
+				
+				write_s <= 1'b1;  
+				state <= state_wait_for_accepted;
+			
+			end // state_send_sample
+					
 					
 		       state_wait_for_accepted: begin
 
-                     // now we have to wait until the core has accepted
-	                 // the value. We will know this has happened when
-	                 // write_ready goes to 0.   Once it does, we can 
-					 // go back to the top, set write_s to 0, and 
-					 // wait until the core is ready for a new sample.
-					 
-				    if (write_ready == 1'b0) 
+								
+				    if (write_ready == 1'b0)
+								
 				        state <= state_wait_until_ready;
 				    
 					end // state_wait_for_accepted
